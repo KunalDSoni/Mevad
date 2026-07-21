@@ -19,7 +19,7 @@
 
 window.MEVAD = {
 
-  PLACEHOLDER_MODE: true,
+  PLACEHOLDER_MODE: false,
 
   /* Words that JS builds strings from, rather than authoring in HTML.
      They live here so the Hindi file can override them like anything else. */
@@ -38,14 +38,20 @@ window.MEVAD = {
     exit: 'Exit',
     suits: 'Suits',
     bestBadge: 'Highest modelled IRR',
+    source: 'Source',
     placeholderNotice: 'Preview build · every figure on this page is placeholder data, not a real offer'
   },
 
   brand: {
     name: 'Mevad',
     positioning: "India's First Industrial Hotel Chain",
-    email: 'invest@mevad.example',
     phone: '+91 00000 00000',
+    /* Named contacts shown in the footer. Add `email` or `phone` to an entry
+       and it renders as a link; a bare name renders as plain text. */
+    contacts: [
+      { name: 'Hemendra Sinh Solanki' },
+      { name: 'Bheru Singh Rajput' }
+    ],
     // Third-party services — swap in real links before launch.
     schedulingUrl: '#',   // Calendly / Zoho Bookings
     kycUrl: '#',          // compliant KYC form provider
@@ -56,16 +62,28 @@ window.MEVAD = {
      MARKET — the numbers behind the thesis
      --------------------------------------------------------------------- */
   market: {
+    /* Each figure carries a `source`. Fill BOTH fields only when a real,
+       checkable citation supports that exact number: `label` is what the
+       reader sees ("CRISIL, Indian Hospitality Report, 2025"), `url` is where
+       they can verify it. While `label` is empty the marker renders nothing
+       and the Sources section stays hidden, so the site never shows a
+       reference it cannot honour. Never cite a source that does not state
+       the number it is attached to. */
     headline: [
-      { value: 0,  suffix: '',  label: 'Organised industrial hotel chains in India',       note: 'Mevad is the first' },
-      { value: 40, suffix: '+', label: 'Anchor factories within 5km of a typical site',    note: 'Demand does not need to be marketed' },
-      { value: 92, suffix: '%', label: 'Of industrial-corridor demand is weekday',         note: 'Counter-cyclical to leisure hotels' },
-      { value: 0,  suffix: '%', label: 'OTA commission on contracted corporate stays',     note: 'Booked direct, on rate agreements' }
+      { value: 0,  suffix: '',  label: 'Organised industrial hotel chains in India',       note: 'Mevad is the first',
+        source: { label: '', url: '' } },
+      { value: 40, suffix: '+', label: 'Anchor factories within 5km of a typical site',    note: 'Demand does not need to be marketed',
+        source: { label: '', url: '' } },
+      { value: 92, suffix: '%', label: 'Of industrial-corridor demand is weekday',         note: 'Counter-cyclical to leisure hotels',
+        source: { label: '', url: '' } },
+      { value: 0,  suffix: '%', label: 'OTA commission on contracted corporate stays',     note: 'Booked direct, on rate agreements',
+        source: { label: '', url: '' } }
     ],
 
     // Illustrative annual occupancy, Jan–Dec. The single most important
     // chart on the site: stability vs seasonality.
     occupancy: {
+      source: { label: '', url: '' },
       months: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
       series: [
         {
@@ -88,8 +106,9 @@ window.MEVAD = {
     // Organised hotel rooms per 1,000 industrial workers, by corridor.
     // The supply gap, made visible.
     supplyGap: {
+      source: { label: '', url: '' },
       unit: 'organised hotel rooms per 1,000 industrial workers',
-      benchmark: { label: 'Business-district benchmark', value: 24 },
+      benchmark: { label: 'Business-district benchmark', value: 24, source: { label: '', url: '' } },
       corridors: [
         { name: 'Sanand, GJ',    value: 2.1 },
         { name: 'Dahej, GJ',     value: 1.4 },
@@ -118,7 +137,7 @@ window.MEVAD = {
     {
       title: 'OEM service engineers',
       stay: '3–15 nights',
-      body: 'Every machine on the floor has a service contract behind it. When it stops, someone flies in that night — at whatever rate is available.'
+      body: 'Every machine on the floor has a service contract behind it. When it stops, someone flies in that night - at whatever rate is available.'
     },
     {
       title: 'Auditors & buyers',
@@ -271,11 +290,11 @@ window.MEVAD = {
       liquidity: 'Resale of the registered unit',
       risk: 'Fixed payment, dependent on Mevad\'s covenant',
       forWho: 'Investors who value predictability over participation in upside.',
-      detail: 'A lease/licence agreement fixes the annual payment. It does not vary with occupancy — which also means it does not rise when the property outperforms.'
+      detail: 'A lease/licence agreement fixes the annual payment. It does not vary with occupancy - which also means it does not rise when the property outperforms.'
     },
     {
       id: 'hybrid',
-      name: 'Hybrid — Floor then Share',
+      name: 'Hybrid: Floor then Share',
       short: 'Hybrid',
       summary: 'A guaranteed floor while the property stabilises, then a revenue share once it does.',
       ownerShare: 0.32,
@@ -327,7 +346,7 @@ window.MEVAD = {
       income: 'Income',
       exitValue: 'Exit value',
       multiple: 'Total / invested',
-      footnote: 'IRR is computed on the full cashflow: capital out at year zero, payouts each year, and sale of the holding at the end of the period. Construction and stabilisation are applied — a property that has not opened does not pay.'
+      footnote: 'IRR is computed on the full cashflow: capital out at year zero, payouts each year, and sale of the holding at the end of the period. Construction and stabilisation are applied - a property that has not opened does not pay.'
     },
     // Sensitivity applied to the base occupancy for the two side cases.
     scenarios: [
@@ -361,7 +380,7 @@ window.MEVAD = {
     },
     {
       q: 'Industrial ADR is lower than city hotels. Why is that good?',
-      a: 'It is not good on its own — it is good in combination. Lower rate, far higher and steadier occupancy, near-zero acquisition cost and no seasonal trough produce a RevPAR that is less impressive in a peak month and considerably more reliable across a decade. You are buying the shape of the curve, not its highest point.'
+      a: 'It is not good on its own - it is good in combination. Lower rate, far higher and steadier occupancy, near-zero acquisition cost and no seasonal trough produce a RevPAR that is less impressive in a peak month and considerably more reliable across a decade. You are buying the shape of the curve, not its highest point.'
     },
     {
       q: 'Is the assured return guaranteed?',
@@ -369,7 +388,7 @@ window.MEVAD = {
     },
     {
       q: 'Can I use the room myself?',
-      a: 'Owner stay entitlements are defined in the agreement and vary by structure. They are limited by design — an inventory that owners occupy is an inventory that is not earning.'
+      a: 'Owner stay entitlements are defined in the agreement and vary by structure. They are limited by design - an inventory that owners occupy is an inventory that is not earning.'
     },
     {
       q: 'How do I exit?',

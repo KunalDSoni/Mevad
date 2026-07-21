@@ -335,7 +335,7 @@
           '<div class="result__name">' + r.structure.name + '</div>' +
           '<div class="result__hero">' +
             '<span class="result__irr' + (neg ? ' result__irr--neg' : '') + '">' +
-              (r.irr === null ? '—' : pct(r.irr)) + '</span>' +
+              (r.irr === null ? '-' : pct(r.irr)) + '</span>' +
             '<span class="result__irrlabel">'+W.irr+'</span>' +
           '</div>' +
           '<dl class="result__rows">' +

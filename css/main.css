@@ -598,6 +598,39 @@ section { position: relative; }
   color: var(--text-3);
 }
 
+/* --- Citations ------------------------------------------------------------
+   The marker is deliberately quiet: a figure earns trust by being checkable,
+   not by shouting that it has a footnote. */
+
+.cite {
+  display: inline-block;
+  vertical-align: super;
+  margin-left: 0.15em;
+  font-family: var(--font-mono);
+  font-size: 0.34em;      /* relative, so it tracks the figure it annotates */
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--text-3);
+  text-decoration: none;
+}
+.cite:hover,
+.cite:focus-visible { color: var(--accent-ink); }
+
+.figure__title .cite { font-size: 0.7em; }
+
+.sources__list {
+  margin: 0;
+  padding-left: 1.4rem;
+  display: grid;
+  gap: 0.6rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--text-1);
+}
+.sources__list li { padding-left: 0.2rem; }
+.sources__list a { color: var(--accent-ink); }
+
 /* --- Split / argument ----------------------------------------------------- */
 
 .split {
@@ -645,7 +678,7 @@ section { position: relative; }
   line-height: 1.5;
 }
 .versus__list li::before {
-  content: '—';
+  content: '-';
   font-family: var(--font-mono);
   color: var(--text-3);
 }

@@ -35,11 +35,17 @@ window.MEVAD_HI = {
       exit: 'निकास',
       suits: 'किनके लिए',
       bestBadge: 'सर्वाधिक अनुमानित IRR',
+      source: 'स्रोत',
       placeholderNotice: 'पूर्वावलोकन संस्करण · इस पृष्ठ का हर आँकड़ा काल्पनिक है, वास्तविक प्रस्ताव नहीं'
     },
 
     brand: {
-      positioning: 'भारत की पहली औद्योगिक होटल श्रृंखला'
+      positioning: 'भारत की पहली औद्योगिक होटल श्रृंखला',
+      /* Transliterations — please confirm the spelling of both names. */
+      contacts: [
+        { name: 'हेमेंद्र सिंह सोलंकी' },
+        { name: 'भेरू सिंह राजपूत' }
+      ]
     },
 
     market: {
@@ -84,7 +90,7 @@ window.MEVAD_HI = {
       {
         title: 'OEM सेवा इंजीनियर',
         stay: '3–15 रातें',
-        body: 'फ़्लोर की हर मशीन के पीछे एक सेवा अनुबंध होता है। मशीन रुकते ही कोई उसी रात पहुँचता है — जो भी दर उपलब्ध हो।'
+        body: 'फ़्लोर की हर मशीन के पीछे एक सेवा अनुबंध होता है। मशीन रुकते ही कोई उसी रात पहुँचता है - जो भी दर उपलब्ध हो।'
       },
       {
         title: 'ऑडिटर और क्रेता',
@@ -171,15 +177,15 @@ window.MEVAD_HI = {
         liquidity: 'पंजीकृत इकाई की पुनर्बिक्री',
         risk: 'निश्चित भुगतान, मेवाड़ की साख पर निर्भर',
         forWho: 'वे निवेशक जो अधिक लाभ की संभावना से ऊपर निश्चितता को महत्व देते हैं।',
-        detail: 'पट्टा/लाइसेंस अनुबंध वार्षिक भुगतान तय कर देता है। यह अधिभोग के साथ नहीं बदलता — अर्थात् संपत्ति के बेहतर प्रदर्शन पर भी नहीं बढ़ता।'
+        detail: 'पट्टा/लाइसेंस अनुबंध वार्षिक भुगतान तय कर देता है। यह अधिभोग के साथ नहीं बदलता - अर्थात् संपत्ति के बेहतर प्रदर्शन पर भी नहीं बढ़ता।'
       },
       {
-        name: 'मिश्रित — पहले न्यूनतम, फिर हिस्सेदारी', short: 'मिश्रित',
+        name: 'मिश्रित: पहले न्यूनतम, फिर हिस्सेदारी', short: 'मिश्रित',
         summary: 'संपत्ति के स्थिर होने तक एक सुनिश्चित न्यूनतम, उसके बाद राजस्व हिस्सेदारी।',
         liquidity: 'पंजीकृत इकाई की पुनर्बिक्री',
         risk: 'शुरू में सुरक्षित, बाद में परिवर्तनशील',
         forWho: 'वे निवेशक जो उद्घाटन-पूर्व संपत्ति में निवेश करते हुए शुरुआती अवधि में सुरक्षा चाहते हैं।',
-        detail: 'पहले तीन वर्ष मालिक को न्यूनतम राशि या राजस्व हिस्सेदारी, जो अधिक हो, मिलती है। चौथे वर्ष से केवल राजस्व हिस्सेदारी, थोड़े कम प्रतिशत पर — यही पहले मिली सुरक्षा की कीमत है।'
+        detail: 'पहले तीन वर्ष मालिक को न्यूनतम राशि या राजस्व हिस्सेदारी, जो अधिक हो, मिलती है। चौथे वर्ष से केवल राजस्व हिस्सेदारी, थोड़े कम प्रतिशत पर - यही पहले मिली सुरक्षा की कीमत है।'
       },
       {
         name: 'SPV इकाइयाँ', short: 'SPV इकाइयाँ',
@@ -209,7 +215,7 @@ window.MEVAD_HI = {
         income: 'आय',
         exitValue: 'निकास मूल्य',
         multiple: 'कुल / निवेशित',
-        footnote: 'IRR पूरी नकदी-प्रवाह शृंखला पर निकाला जाता है: वर्ष शून्य में पूँजी बाहर, हर वर्ष भुगतान, और अवधि के अंत में हिस्सेदारी की बिक्री। निर्माण और स्थिरीकरण भी लागू हैं — जो संपत्ति खुली ही नहीं, वह भुगतान नहीं करती।'
+        footnote: 'IRR पूरी नकदी-प्रवाह शृंखला पर निकाला जाता है: वर्ष शून्य में पूँजी बाहर, हर वर्ष भुगतान, और अवधि के अंत में हिस्सेदारी की बिक्री। निर्माण और स्थिरीकरण भी लागू हैं - जो संपत्ति खुली ही नहीं, वह भुगतान नहीं करती।'
       }
     },
 
@@ -231,7 +237,7 @@ window.MEVAD_HI = {
       },
       {
         q: 'औद्योगिक ADR शहरी होटलों से कम है। यह अच्छा कैसे हुआ?',
-        a: 'अकेले यह अच्छा नहीं है — संयोजन में अच्छा है। कम दर, कहीं अधिक और स्थिर अधिभोग, लगभग शून्य ग्राहक-अधिग्रहण लागत और मौसमी गिरावट का अभाव मिलकर ऐसा RevPAR बनाते हैं जो किसी एक शिखर महीने में कम प्रभावशाली, पर दशक भर में कहीं अधिक भरोसेमंद होता है। आप वक्र का आकार खरीद रहे हैं, उसका सबसे ऊँचा बिंदु नहीं।'
+        a: 'अकेले यह अच्छा नहीं है - संयोजन में अच्छा है। कम दर, कहीं अधिक और स्थिर अधिभोग, लगभग शून्य ग्राहक-अधिग्रहण लागत और मौसमी गिरावट का अभाव मिलकर ऐसा RevPAR बनाते हैं जो किसी एक शिखर महीने में कम प्रभावशाली, पर दशक भर में कहीं अधिक भरोसेमंद होता है। आप वक्र का आकार खरीद रहे हैं, उसका सबसे ऊँचा बिंदु नहीं।'
       },
       {
         q: 'क्या निश्चित प्रतिफल की गारंटी है?',
@@ -239,7 +245,7 @@ window.MEVAD_HI = {
       },
       {
         q: 'क्या मैं स्वयं उस कमरे में रुक सकता हूँ?',
-        a: 'मालिक के ठहरने के अधिकार अनुबंध में तय हैं और संरचना के अनुसार बदलते हैं। ये जानबूझकर सीमित हैं — जिस कमरे में मालिक रुकता है, वह कमरा उस समय कमाई नहीं कर रहा होता।'
+        a: 'मालिक के ठहरने के अधिकार अनुबंध में तय हैं और संरचना के अनुसार बदलते हैं। ये जानबूझकर सीमित हैं - जिस कमरे में मालिक रुकता है, वह कमरा उस समय कमाई नहीं कर रहा होता।'
       },
       {
         q: 'मैं निवेश से बाहर कैसे निकलूँ?',
@@ -280,13 +286,13 @@ window.MEVAD_HI = {
     'Structures': 'संरचनाएँ',
     'Process': 'प्रक्रिया',
     "India's first industrial hotel chain.": 'भारत की पहली औद्योगिक होटल श्रृंखला।',
-    'Illustrative figures only — not an offer to invest.': 'केवल उदाहरणात्मक आँकड़े — निवेश का प्रस्ताव नहीं।',
+    'Illustrative figures only - not an offer to invest.': 'केवल उदाहरणात्मक आँकड़े - निवेश का प्रस्ताव नहीं।',
 
     /* Hero */
     "India's first industrial hotel chain": 'भारत की पहली औद्योगिक होटल श्रृंखला',
     "Tourists cancel.<br><em>Factories don't.</em>": 'पर्यटक रद्द करते हैं।<br><em>कारखाने नहीं।</em>',
-    "Mevad builds hotels inside India's industrial corridors — where a commissioning team of forty needs beds for eight months, and the nearest decent room is ninety minutes away. Demand here arrives on a purchase order, not a whim.":
-      'मेवाड़ भारत के औद्योगिक गलियारों के भीतर होटल बनाता है — जहाँ चालीस लोगों की कमीशनिंग टीम को आठ महीने तक कमरे चाहिए, और निकटतम ढंग का कमरा नब्बे मिनट दूर है। यहाँ मांग किसी सनक से नहीं, खरीद आदेश से आती है।',
+    "Mevad builds hotels inside India's industrial corridors - where a commissioning team of forty needs beds for eight months, and the nearest decent room is ninety minutes away. Demand here arrives on a purchase order, not a whim.":
+      'मेवाड़ भारत के औद्योगिक गलियारों के भीतर होटल बनाता है - जहाँ चालीस लोगों की कमीशनिंग टीम को आठ महीने तक कमरे चाहिए, और निकटतम ढंग का कमरा नब्बे मिनट दूर है। यहाँ मांग किसी सनक से नहीं, खरीद आदेश से आती है।',
     'Model your returns <span class="btn__arrow">→</span>': 'अपना प्रतिफल आँकें <span class="btn__arrow">→</span>',
     'Read the thesis': 'थीसिस पढ़ें',
 
@@ -309,35 +315,35 @@ window.MEVAD_HI = {
     'Booked direct, on annual corporate rate agreements': 'सीधी बुकिंग, वार्षिक कॉर्पोरेट दर अनुबंध पर',
     'Competes with a ninety-minute drive and an unbranded lodge': 'प्रतिस्पर्धा नब्बे मिनट की यात्रा और एक बेनाम लॉज से है',
     'Weekday-weighted, shift-driven, weather-indifferent': 'कार्यदिवसों पर केंद्रित, शिफ़्ट से संचालित, मौसम से निरपेक्ष',
-    'Rate is modest — and it is the same every month': 'दर मामूली है — और हर महीने वही रहती है',
+    'Rate is modest - and it is the same every month': 'दर मामूली है - और हर महीने वही रहती है',
     '<strong>Lower ADR. Higher, steadier RevPAR.</strong> That trade is the entire proposition, and it is the one most investors get backwards. A Mevad room will never command what a beachfront suite commands in December. It will also never sit empty in July.':
       '<strong>कम ADR। अधिक और अधिक स्थिर RevPAR।</strong> यही अदला-बदली पूरा प्रस्ताव है, और अधिकांश निवेशक इसे उल्टा समझते हैं। मेवाड़ का कमरा वह दर कभी नहीं पाएगा जो दिसंबर में समुद्रतट का सुइट पाता है। पर वह जुलाई में खाली भी कभी नहीं रहेगा।',
-    'You are not buying the highest point on the curve. You are buying <strong>the shape of the curve</strong> — and over a ten-year hold, shape beats peak. The chart below is the whole argument in one picture.':
-      'आप वक्र का सबसे ऊँचा बिंदु नहीं खरीद रहे। आप <strong>वक्र का आकार</strong> खरीद रहे हैं — और दस साल की अवधि में आकार शिखर से बड़ा पड़ता है। नीचे का चार्ट पूरा तर्क एक तस्वीर में है।',
+    'You are not buying the highest point on the curve. You are buying <strong>the shape of the curve</strong> - and over a ten-year hold, shape beats peak. The chart below is the whole argument in one picture.':
+      'आप वक्र का सबसे ऊँचा बिंदु नहीं खरीद रहे। आप <strong>वक्र का आकार</strong> खरीद रहे हैं - और दस साल की अवधि में आकार शिखर से बड़ा पड़ता है। नीचे का चार्ट पूरा तर्क एक तस्वीर में है।',
 
     /* Exhibit 1 */
-    'Exhibit 01 — occupancy': 'प्रदर्श 01 — अधिभोग',
+    'Exhibit 01: occupancy': 'प्रदर्श 01: अधिभोग',
     'One of these is an investment. The other is a season.': 'इनमें से एक निवेश है। दूसरा एक मौसम।',
-    'Monthly occupancy — industrial vs leisure': 'मासिक अधिभोग — औद्योगिक बनाम अवकाश',
+    'Monthly occupancy: industrial vs leisure': 'मासिक अधिभोग: औद्योगिक बनाम अवकाश',
     'Illustrative stabilised year. Hover for monthly values.': 'उदाहरणात्मक स्थिर वर्ष। मासिक आँकड़ों के लिए कर्सर ले जाएँ।',
-    'Industrial hotel — Mevad model': 'औद्योगिक होटल — मेवाड़ मॉडल',
-    'Leisure hotel — comparable tier': 'अवकाश होटल — समकक्ष श्रेणी',
+    'Industrial hotel - Mevad model': 'औद्योगिक होटल - मेवाड़ मॉडल',
+    'Leisure hotel - comparable tier': 'अवकाश होटल - समकक्ष श्रेणी',
     'Show data table': 'डेटा तालिका देखें',
     'Month': 'माह',
-    'The leisure line peaks higher. It also spends a third of the year below 50% — and a hotel at 40% occupancy is not earning a reduced return, it is losing money, because the cost base does not shrink when the guests leave.':
-      'अवकाश वाली रेखा ऊँचा शिखर छूती है। वह साल का एक तिहाई हिस्सा 50% से नीचे भी बिताती है — और 40% अधिभोग वाला होटल कम प्रतिफल नहीं कमा रहा होता, वह घाटे में होता है, क्योंकि मेहमानों के जाने से लागत घटती नहीं।',
-    'The industrial line never touches the leisure peak. It never touches the leisure trough either. <strong>Stability is the product</strong> — and it is what turns a hotel from a trade into an asset.':
-      'औद्योगिक रेखा अवकाश वाले शिखर को कभी नहीं छूती। वह उसकी गहराई को भी कभी नहीं छूती। <strong>स्थिरता ही उत्पाद है</strong> — और यही होटल को सौदे से संपत्ति बनाती है।',
+    'The leisure line peaks higher. It also spends a third of the year below 50% - and a hotel at 40% occupancy is not earning a reduced return, it is losing money, because the cost base does not shrink when the guests leave.':
+      'अवकाश वाली रेखा ऊँचा शिखर छूती है। वह साल का एक तिहाई हिस्सा 50% से नीचे भी बिताती है - और 40% अधिभोग वाला होटल कम प्रतिफल नहीं कमा रहा होता, वह घाटे में होता है, क्योंकि मेहमानों के जाने से लागत घटती नहीं।',
+    'The industrial line never touches the leisure peak. It never touches the leisure trough either. <strong>Stability is the product</strong> - and it is what turns a hotel from a trade into an asset.':
+      'औद्योगिक रेखा अवकाश वाले शिखर को कभी नहीं छूती। वह उसकी गहराई को भी कभी नहीं छूती। <strong>स्थिरता ही उत्पाद है</strong> - और यही होटल को सौदे से संपत्ति बनाती है।',
 
     /* Exhibit 2 */
-    'Exhibit 02 — supply': 'प्रदर्श 02 — आपूर्ति',
+    'Exhibit 02: supply': 'प्रदर्श 02: आपूर्ति',
     'India is building factories faster than it is building beds.': 'भारत कारखाने बिस्तरों से तेज़ बना रहा है।',
     'PLI, Gati Shakti and the freight corridors have moved hundreds of thousands of manufacturing jobs into industrial estates. Organised hospitality did not follow.':
       'PLI, गति शक्ति और माल गलियारों ने लाखों विनिर्माण नौकरियाँ औद्योगिक क्षेत्रों में पहुँचा दीं। संगठित आतिथ्य पीछे नहीं आया।',
     'Organised hotel rooms per 1,000 industrial workers': 'प्रति 1,000 औद्योगिक कर्मचारियों पर संगठित होटल कमरे',
     'Selected corridors, against the business-district benchmark.': 'चुनिंदा गलियारे, व्यावसायिक क्षेत्र के मानक के मुकाबले।',
-    'Every corridor above runs at a fraction of the benchmark. That gap is not a forecast or a projection — it is the current state of the ground, and it is why an engineer flying into Dahej tonight will sleep in an unbranded lodge or commute from Vadodara.':
-      'ऊपर का हर गलियारा मानक के एक अंश पर चल रहा है। यह अंतर कोई पूर्वानुमान या प्रक्षेपण नहीं — यह ज़मीन की मौजूदा हालत है, और इसीलिए आज रात दहेज पहुँचने वाला इंजीनियर या तो बेनाम लॉज में सोएगा या वडोदरा से आना-जाना करेगा।',
+    'Every corridor above runs at a fraction of the benchmark. That gap is not a forecast or a projection - it is the current state of the ground, and it is why an engineer flying into Dahej tonight will sleep in an unbranded lodge or commute from Vadodara.':
+      'ऊपर का हर गलियारा मानक के एक अंश पर चल रहा है। यह अंतर कोई पूर्वानुमान या प्रक्षेपण नहीं - यह ज़मीन की मौजूदा हालत है, और इसीलिए आज रात दहेज पहुँचने वाला इंजीनियर या तो बेनाम लॉज में सोएगा या वडोदरा से आना-जाना करेगा।',
     'Supply gaps this wide usually close fast. This one has not, because building a hotel for factories requires you to want the least glamorous asset in hospitality. <strong>That reluctance is the moat.</strong>':
       'इतने चौड़े आपूर्ति अंतर आमतौर पर जल्दी भर जाते हैं। यह नहीं भरा, क्योंकि कारखानों के लिए होटल बनाने का अर्थ है आतिथ्य की सबसे कम चमकदार संपत्ति चाहना। <strong>यही अनिच्छा हमारी खाई है।</strong>',
 
@@ -362,8 +368,8 @@ window.MEVAD_HI = {
     /* Chain */
     'The chain': 'श्रृंखला',
     'Five corridors. One operating standard.': 'पाँच गलियारे। एक संचालन मानक।',
-    'Each property is underwritten against the industrial base around it — the count of anchor employers, the sector mix, and the distance to the gate.':
-      'हर संपत्ति अपने आसपास के औद्योगिक आधार पर आँकी जाती है — एंकर नियोक्ताओं की संख्या, क्षेत्रों का मिश्रण, और गेट तक की दूरी।',
+    'Each property is underwritten against the industrial base around it - the count of anchor employers, the sector mix, and the distance to the gate.':
+      'हर संपत्ति अपने आसपास के औद्योगिक आधार पर आँकी जाती है - एंकर नियोक्ताओं की संख्या, क्षेत्रों का मिश्रण, और गेट तक की दूरी।',
     'We build where the trucks are.': 'हम वहाँ बनाते हैं जहाँ ट्रक हैं।',
     'Every Mevad site is chosen the same way: count the anchor employers inside a fixed radius, check the sector mix, measure the drive to the plant gate. If the industrial base does not carry the hotel on its own, we do not build.':
       'हर मेवाड़ स्थल एक ही तरीके से चुना जाता है: तय दायरे के भीतर एंकर नियोक्ता गिनें, क्षेत्रों का मिश्रण जाँचें, संयंत्र के गेट तक की दूरी नापें। यदि औद्योगिक आधार अकेले होटल को न सँभाल सके, तो हम नहीं बनाते।',
@@ -377,13 +383,13 @@ window.MEVAD_HI = {
 
     /* Calculator */
     'Model it yourself': 'स्वयं आँकें',
-    "Run your own numbers — including the ones we'd rather you didn't.":
-      'अपने आँकड़े चलाएँ — वे भी जो शायद हम आपको न दिखाना चाहते।',
+    "Run your own numbers - including the ones we'd rather you didn't.":
+      'अपने आँकड़े चलाएँ - वे भी जो शायद हम आपको न दिखाना चाहते।',
     'Every assumption behind these figures is exposed and adjustable. Drag occupancy down to 40% and watch what happens. We would rather you found the floor here than after you had signed.':
       'इन आँकड़ों के पीछे की हर मान्यता खुली और बदली जा सकने वाली है। अधिभोग को 40% तक खींचें और देखें क्या होता है। हम चाहेंगे कि आप तली यहीं देख लें, हस्ताक्षर के बाद नहीं।',
     'Every assumption, exposed.': 'हर मान्यता, खुली हुई।',
-    'Most investment calculators are a marketing device with a slider attached. This one lets you break it. Drag occupancy to 40%, cut the rate, extend the hold — and see which structure survives.':
-      'ज़्यादातर निवेश कैलकुलेटर स्लाइडर लगा हुआ विज्ञापन भर होते हैं। यह आपको इसे तोड़ने देता है। अधिभोग 40% पर लाएँ, दर घटाएँ, अवधि बढ़ाएँ — और देखें कौन-सी संरचना टिकती है।',
+    'Most investment calculators are a marketing device with a slider attached. This one lets you break it. Drag occupancy to 40%, cut the rate, extend the hold - and see which structure survives.':
+      'ज़्यादातर निवेश कैलकुलेटर स्लाइडर लगा हुआ विज्ञापन भर होते हैं। यह आपको इसे तोड़ने देता है। अधिभोग 40% पर लाएँ, दर घटाएँ, अवधि बढ़ाएँ - और देखें कौन-सी संरचना टिकती है।',
     '<strong>Why we show all four structures at once.</strong> An assured return looks best in a downside year and worst in a good decade. A revenue share is the reverse. Seeing them side by side against the same property is the only honest way to choose between them.':
       '<strong>हम चारों संरचनाएँ एक साथ क्यों दिखाते हैं।</strong> निश्चित प्रतिफल बुरे वर्ष में सबसे अच्छा और अच्छे दशक में सबसे कमज़ोर दिखता है। राजस्व हिस्सेदारी में उल्टा होता है। एक ही संपत्ति पर उन्हें अगल-बगल देखना ही उनके बीच चुनाव का एकमात्र ईमानदार तरीका है।',
     '<strong>Why the first payout is not year one.</strong> A property under construction cannot pay a return, and one that just opened does not reach stabilised occupancy for a further nine to twelve months. The model applies both. Projections that skip this are the reason investors are disappointed.':
@@ -399,32 +405,32 @@ window.MEVAD_HI = {
     'Four ways in': 'भीतर आने के चार रास्ते',
     'Own a room, own a floor of the return, or own the chain.':
       'एक कमरा रखें, प्रतिफल की एक न्यूनतम सीमा रखें, या पूरी श्रृंखला रखें।',
-    'The same asset, four risk profiles. Pick the one that matches how you want to be exposed — not the one with the largest number on it.':
-      'वही संपत्ति, चार जोखिम प्रोफ़ाइल। वह चुनें जो आपकी जोखिम इच्छा से मेल खाए — वह नहीं जिस पर सबसे बड़ा आँकड़ा लिखा है।',
+    'The same asset, four risk profiles. Pick the one that matches how you want to be exposed - not the one with the largest number on it.':
+      'वही संपत्ति, चार जोखिम प्रोफ़ाइल। वह चुनें जो आपकी जोखिम इच्छा से मेल खाए - वह नहीं जिस पर सबसे बड़ा आँकड़ा लिखा है।',
     'Choose your exposure, not your number.': 'अपना जोखिम चुनें, अपना आँकड़ा नहीं।',
-    'The same hotel can be bought four ways. The difference between them is not how much you might make — it is what you are exposed to, and when you get paid.':
-      'वही होटल चार तरीकों से खरीदा जा सकता है। इनका फ़र्क़ यह नहीं कि आप कितना कमा सकते हैं — बल्कि यह कि आप किस जोखिम में हैं, और भुगतान कब मिलता है।',
+    'The same hotel can be bought four ways. The difference between them is not how much you might make - it is what you are exposed to, and when you get paid.':
+      'वही होटल चार तरीकों से खरीदा जा सकता है। इनका फ़र्क़ यह नहीं कि आप कितना कमा सकते हैं - बल्कि यह कि आप किस जोखिम में हैं, और भुगतान कब मिलता है।',
 
     /* Process */
     'The process': 'प्रक्रिया',
     'From this page to a signed agreement.': 'इस पृष्ठ से हस्ताक्षरित अनुबंध तक।',
-    'Eight steps, no surprises. Nothing is asked of you until after the first conversation, and the site visit comes before the signature — never after.':
-      'आठ चरण, कोई अचरज नहीं। पहली बातचीत से पहले आपसे कुछ नहीं माँगा जाता, और स्थल का दौरा हस्ताक्षर से पहले होता है — बाद में कभी नहीं।',
+    'Eight steps, no surprises. Nothing is asked of you until after the first conversation, and the site visit comes before the signature - never after.':
+      'आठ चरण, कोई अचरज नहीं। पहली बातचीत से पहले आपसे कुछ नहीं माँगा जाता, और स्थल का दौरा हस्ताक्षर से पहले होता है - बाद में कभी नहीं।',
     'Eight steps. Nothing asked of you until step five.': 'आठ चरण। पाँचवें चरण तक आपसे कुछ नहीं माँगा जाता।',
     'You do not upload a document, share an ID or commit to anything before the first conversation. And you walk the property before you sign, not after.':
       'पहली बातचीत से पहले आप न कोई दस्तावेज़ अपलोड करते हैं, न पहचान साझा करते हैं, न कोई वचन देते हैं। और आप हस्ताक्षर से पहले संपत्ति देखते हैं, बाद में नहीं।',
-    'Book a 45-minute call <span class="btn__arrow">→</span>': '45 मिनट की बातचीत बुक करें <span class="btn__arrow">→</span>',
     'Documents &amp; compliance': 'दस्तावेज़ और अनुपालन',
     'Where your documents actually go.': 'आपके दस्तावेज़ असल में कहाँ जाते हैं।',
     'Not to this website': 'इस वेबसाइट पर नहीं',
     'What KYC covers': 'KYC में क्या शामिल है',
     'Signature and registration': 'हस्ताक्षर और पंजीकरण',
-    'Start with a call <span class="btn__arrow">→</span>': 'बातचीत से शुरू करें <span class="btn__arrow">→</span>',
 
     /* FAQ + legal */
     'Questions we get asked': 'हमसे पूछे जाने वाले सवाल',
     'The hard ones, answered plainly.': 'कठिन सवाल, सीधे जवाब।',
-    'Important — please read': 'महत्वपूर्ण — कृपया पढ़ें',
+    'Important: please read': 'महत्वपूर्ण: कृपया पढ़ें',
+    'Sources': 'स्रोत',
+    'Where these figures come from.': 'ये आँकड़े कहाँ से आते हैं।',
 
     /* CTAs */
     'Come and look': 'आइए, देखिए',
@@ -433,43 +439,41 @@ window.MEVAD_HI = {
       'न लॉबी का झरना। न इनफ़िनिटी पूल। न सूर्यास्त। बस वे कमरे जो पिछले मंगलवार भरे थे, उस संयंत्र के बगल में जो 2040 में भी चल रहा होगा।',
     'Rooms that were full last Tuesday, next to a plant that will still be running in 2040.':
       'वे कमरे जो पिछले मंगलवार भरे थे, उस संयंत्र के बगल में जो 2040 में भी चल रहा होगा।',
-    'Book a meeting <span class="btn__arrow">→</span>': 'मीटिंग बुक करें <span class="btn__arrow">→</span>',
-    'Model the returns first': 'पहले प्रतिफल आँकें',
-    'Model the returns': 'प्रतिफल आँकें',
-    'See the structures': 'संरचनाएँ देखें',
+    'Model the returns first <span class="btn__arrow">→</span>': 'पहले प्रतिफल आँकें <span class="btn__arrow">→</span>',
+    'Model the returns <span class="btn__arrow">→</span>': 'प्रतिफल आँकें <span class="btn__arrow">→</span>',
+    'See the structures <span class="btn__arrow">→</span>': 'संरचनाएँ देखें <span class="btn__arrow">→</span>',
     'Numbers look right? Come and stress-test them with us.': 'आँकड़े ठीक लगे? आइए, हमारे साथ इन्हें कसकर परखें।',
     'Bring your own assumptions. The investment team will run them against the actual operating data of a live property.':
       'अपनी मान्यताएँ लेकर आइए। निवेश टीम उन्हें किसी चालू संपत्ति के वास्तविक संचालन आँकड़ों पर चलाकर दिखाएगी।',
     'Walk one before you fund one.': 'पैसा लगाने से पहले एक बार चलकर देखिए।',
     'Site visits happen before signature, never after. Meet the operating team and talk to the anchor tenants next door.':
       'स्थल का दौरा हस्ताक्षर से पहले होता है, बाद में कभी नहीं। संचालन टीम से मिलिए और पड़ोस के एंकर किरायेदारों से बात कीजिए।',
-    'Arrange a site visit <span class="btn__arrow">→</span>': 'स्थल दौरा तय करें <span class="btn__arrow">→</span>',
 
     /* properties.html — the four site-selection tests */
-    'A minimum count of independent anchor employers within the catchment. Not one large plant — several, under separate ownership, so that a single closure is absorbed rather than fatal.':
-      'एक निश्चित दायरे के भीतर स्वतंत्र एंकर नियोक्ताओं की न्यूनतम संख्या। कोई एक बड़ा संयंत्र नहीं — बल्कि कई, अलग-अलग स्वामित्व वाले, ताकि किसी एक के बंद होने का असर झेला जा सके, घातक न हो।',
+    'A minimum count of independent anchor employers within the catchment. Not one large plant - several, under separate ownership, so that a single closure is absorbed rather than fatal.':
+      'एक निश्चित दायरे के भीतर स्वतंत्र एंकर नियोक्ताओं की न्यूनतम संख्या। कोई एक बड़ा संयंत्र नहीं - बल्कि कई, अलग-अलग स्वामित्व वाले, ताकि किसी एक के बंद होने का असर झेला जा सके, घातक न हो।',
     "More than one industry represented. Automotive, chemicals, electronics and pharma do not enter downturns on the same calendar, and a corridor that depends on one sector inherits that sector's cycle.":
       'एक से अधिक उद्योग मौजूद हों। ऑटोमोटिव, रसायन, इलेक्ट्रॉनिक्स और फार्मा एक ही समय मंदी में नहीं जाते, और जो गलियारा एक ही क्षेत्र पर निर्भर है वह उसी क्षेत्र का चक्र ढोता है।',
     'Under fifteen minutes to the anchor gate. Beyond that, a guest weighs the hotel against a longer commute from the nearest city, and the pricing power that makes the asset work disappears.':
       'एंकर गेट तक पंद्रह मिनट से कम। उससे आगे मेहमान होटल की तुलना नज़दीकी शहर से लंबी यात्रा के साथ करने लगता है, और वह मूल्य-शक्ति ख़त्म हो जाती है जो इस संपत्ति को चलाती है।',
-    'Organised room supply well below the business-district benchmark, with no credible pipeline. We are looking for a gap that has stayed open — because a gap that stayed open is a gap others considered and declined.':
-      'संगठित कमरों की आपूर्ति व्यावसायिक क्षेत्र के मानक से काफ़ी नीचे हो, और कोई विश्वसनीय परियोजना पाइपलाइन में न हो। हम ऐसा अंतर खोजते हैं जो खुला रह गया हो — क्योंकि जो अंतर खुला रह गया, उसे औरों ने देखा और छोड़ दिया।',
+    'Organised room supply well below the business-district benchmark, with no credible pipeline. We are looking for a gap that has stayed open - because a gap that stayed open is a gap others considered and declined.':
+      'संगठित कमरों की आपूर्ति व्यावसायिक क्षेत्र के मानक से काफ़ी नीचे हो, और कोई विश्वसनीय परियोजना पाइपलाइन में न हो। हम ऐसा अंतर खोजते हैं जो खुला रह गया हो - क्योंकि जो अंतर खुला रह गया, उसे औरों ने देखा और छोड़ दिया।',
 
     /* returns.html — how to read the model */
-    'A headline yield tells you nothing about <em>when</em> money arrives. The IRR here runs a full cashflow — capital out at year zero, each year\'s payout in sequence, and the sale of the holding at the end. Money received in year eight is discounted accordingly, because it is worth less than money received in year one.':
-      'सुर्खियों वाला प्रतिफल यह नहीं बताता कि पैसा <em>कब</em> आता है। यहाँ IRR पूरी नकदी-प्रवाह शृंखला पर चलता है — वर्ष शून्य में पूँजी बाहर, हर वर्ष का भुगतान क्रम से, और अंत में हिस्सेदारी की बिक्री। आठवें वर्ष मिला पैसा उसी अनुपात में छूट पाता है, क्योंकि वह पहले वर्ष मिले पैसे से कम मूल्यवान है।',
+    'A headline yield tells you nothing about <em>when</em> money arrives. The IRR here runs a full cashflow - capital out at year zero, each year\'s payout in sequence, and the sale of the holding at the end. Money received in year eight is discounted accordingly, because it is worth less than money received in year one.':
+      'सुर्खियों वाला प्रतिफल यह नहीं बताता कि पैसा <em>कब</em> आता है। यहाँ IRR पूरी नकदी-प्रवाह शृंखला पर चलता है - वर्ष शून्य में पूँजी बाहर, हर वर्ष का भुगतान क्रम से, और अंत में हिस्सेदारी की बिक्री। आठवें वर्ष मिला पैसा उसी अनुपात में छूट पाता है, क्योंकि वह पहले वर्ष मिले पैसे से कम मूल्यवान है।',
     'A property under construction pays nothing until it opens. One that has just opened runs below stabilised occupancy for a further nine to twelve months. Both are modelled. This is the single most common omission in Indian hospitality projections, and it is why returns disappoint.':
       'निर्माणाधीन संपत्ति खुलने तक कुछ नहीं देती। और जो अभी-अभी खुली है वह अगले नौ से बारह महीने स्थिर अधिभोग से नीचे चलती है। मॉडल दोनों लागू करता है। भारतीय आतिथ्य अनुमानों में यही सबसे आम चूक है, और इसी से प्रतिफल निराश करते हैं।',
-    'The downside scenario is not a footnote — it is a button, and it moves the same numbers the upside does. In a genuine downside the assured structure outperforms the revenue share. We would rather show you that than have you discover it in year four.':
-      'निचला परिदृश्य कोई फ़ुटनोट नहीं — वह एक बटन है, और वह उन्हीं आँकड़ों को हिलाता है जिन्हें ऊपरी परिदृश्य हिलाता है। सच्ची गिरावट में निश्चित प्रतिफल राजस्व हिस्सेदारी से बेहतर करता है। हम चाहेंगे कि आप यह अभी जान लें, चौथे वर्ष में नहीं।',
-    'Every output is arithmetic performed on assumptions you can see and change. It is not a forecast. Occupancy, rate, capital appreciation and operator performance are all uncertain, and the true outcome may fall outside every scenario shown here — including below the downside.':
-      'हर परिणाम उन मान्यताओं पर किया गया गणित है जिन्हें आप देख और बदल सकते हैं। यह पूर्वानुमान नहीं है। अधिभोग, दर, पूँजी वृद्धि और संचालक का प्रदर्शन — सब अनिश्चित हैं, और वास्तविक नतीजा यहाँ दिखाए हर परिदृश्य के बाहर भी जा सकता है, निचले परिदृश्य से भी नीचे।',
+    'The downside scenario is not a footnote - it is a button, and it moves the same numbers the upside does. In a genuine downside the assured structure outperforms the revenue share. We would rather show you that than have you discover it in year four.':
+      'निचला परिदृश्य कोई फ़ुटनोट नहीं - वह एक बटन है, और वह उन्हीं आँकड़ों को हिलाता है जिन्हें ऊपरी परिदृश्य हिलाता है। सच्ची गिरावट में निश्चित प्रतिफल राजस्व हिस्सेदारी से बेहतर करता है। हम चाहेंगे कि आप यह अभी जान लें, चौथे वर्ष में नहीं।',
+    'Every output is arithmetic performed on assumptions you can see and change. It is not a forecast. Occupancy, rate, capital appreciation and operator performance are all uncertain, and the true outcome may fall outside every scenario shown here - including below the downside.':
+      'हर परिणाम उन मान्यताओं पर किया गया गणित है जिन्हें आप देख और बदल सकते हैं। यह पूर्वानुमान नहीं है। अधिभोग, दर, पूँजी वृद्धि और संचालक का प्रदर्शन - सब अनिश्चित हैं, और वास्तविक नतीजा यहाँ दिखाए हर परिदृश्य के बाहर भी जा सकता है, निचले परिदृश्य से भी नीचे।',
 
     /* invest.html */
     '<strong>There is no best structure.</strong> In a strong decade the revenue share wins. In a weak one the assured return wins, and it wins decisively. The hybrid gives up some of both to reduce the range of outcomes, and the SPV trades single-asset upside for the smoothing effect of a portfolio.':
       '<strong>कोई एक सर्वश्रेष्ठ संरचना नहीं है।</strong> अच्छे दशक में राजस्व हिस्सेदारी जीतती है। कमज़ोर दशक में निश्चित प्रतिफल जीतता है, और निर्णायक रूप से। मिश्रित संरचना नतीजों का दायरा घटाने के लिए दोनों में से कुछ छोड़ती है, और SPV एक ही संपत्ति के अतिरिक्त लाभ के बदले पोर्टफोलियो का संतुलन देता है।',
-    'Anyone who tells you one of these dominates the others has not modelled the downside. <a href="returns.html" style="color:var(--accent-ink)">Run it yourself</a> — set occupancy to 40% and watch the ranking invert.':
-      'जो आपसे कहे कि इनमें से कोई एक बाक़ी सब पर भारी है, उसने गिरावट का आकलन नहीं किया। <a href="returns.html" style="color:var(--accent-ink)">स्वयं चलाकर देखिए</a> — अधिभोग 40% पर रखिए और क्रम को उलटते देखिए।',
+    'Anyone who tells you one of these dominates the others has not modelled the downside. <a href="returns.html" style="color:var(--accent-ink)">Run it yourself</a> - set occupancy to 40% and watch the ranking invert.':
+      'जो आपसे कहे कि इनमें से कोई एक बाक़ी सब पर भारी है, उसने गिरावट का आकलन नहीं किया। <a href="returns.html" style="color:var(--accent-ink)">स्वयं चलाकर देखिए</a> - अधिभोग 40% पर रखिए और क्रम को उलटते देखिए।',
     'Run it yourself': 'स्वयं चलाकर देखिए',
     'This site collects no identity documents and stores no personal files. KYC is handled entirely by a regulated compliance partner on their own infrastructure, and the link is issued to you directly after the first call.':
       'यह वेबसाइट कोई पहचान दस्तावेज़ नहीं लेती और कोई निजी फ़ाइल संग्रहित नहीं करती। KYC पूरी तरह एक विनियमित अनुपालन साझेदार द्वारा, उनके अपने बुनियादी ढाँचे पर किया जाता है, और उसका लिंक पहली बातचीत के बाद सीधे आपको भेजा जाता है।',

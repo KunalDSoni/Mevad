@@ -21,10 +21,10 @@ steadier RevPAR.
 
 ## Investment structures
 
-1. Ownership + revenue share — own a registered room, receive a share of its revenue.
-2. Ownership + assured return — own the room, fixed annual payment via lease-back.
-3. Hybrid — assured floor during stabilisation, revenue share thereafter.
-4. SPV units — units in the entity holding several hotels; portfolio exposure.
+1. Ownership + revenue share: own a registered room, receive a share of its revenue.
+2. Ownership + assured return: own the room, fixed annual payment via lease-back.
+3. Hybrid: assured floor during stabilisation, revenue share thereafter.
+4. SPV units: units in the entity holding several hotels; portfolio exposure.
 
 ## Important
 

@@ -116,9 +116,10 @@
 
   function renderStats(mount) {
     if (!mount) return;
-    mount.innerHTML = D().market.headline.map(function (s) {
+    mount.innerHTML = D().market.headline.map(function (s, i) {
       return '<div class="stat">' +
-        '<div class="stat__value"><span data-count="' + s.value + '" data-suffix="' + s.suffix + '">0</span></div>' +
+        '<div class="stat__value"><span data-count="' + s.value + '" data-suffix="' + s.suffix + '">0</span>' +
+          '<span data-source="market.headline.' + i + '.source"></span></div>' +
         '<div class="stat__label">' + s.label + '</div>' +
         '<div class="stat__note">' + s.note + '</div>' +
       '</div>';
@@ -218,16 +219,75 @@
   function renderDisclaimer(mount) {
     if (!mount) return;
     mount.innerHTML = '<div class="disclaimer">' +
-      '<span class="label">Important — please read</span>' +
+      '<span class="label">Important: please read</span>' +
       '<p>' + D().legal.disclaimer + '</p></div>';
+  }
+
+  /* --- Citations ----------------------------------------------------------
+     A figure in the data file carries an optional { label, url } source.
+     Markers are numbered here, after every region has rendered, by walking
+     [data-source] in document order — so the numbering always reads 1, 2,
+     3 down the page regardless of which renderer produced the marker.
+
+     A source with an empty label renders nothing at all. That is the point:
+     an unsourced figure must look unsourced, never carry a marker that
+     leads nowhere. */
+
+  function sourceAt(path) {
+    return path.split('.').reduce(function (o, k) {
+      return (o === null || o === undefined) ? o : o[k];
+    }, D());
+  }
+
+  function renderCitations() {
+    var used = [];
+    $$('[data-source]').forEach(function (el) {
+      var src = sourceAt(el.getAttribute('data-source'));
+      if (!src || !src.label) { el.innerHTML = ''; return; }
+
+      /* One number per distinct source, so a report cited three times is
+         listed once. */
+      var n = 0;
+      for (var i = 0; i < used.length; i++) {
+        if (used[i].label === src.label && used[i].url === src.url) { n = i + 1; break; }
+      }
+      if (!n) { used.push(src); n = used.length; }
+
+      el.innerHTML = '<a class="cite" href="#sources"' +
+        ' aria-label="' + D().words.source + ' ' + n + '">' + n + '</a>';
+    });
+    return used;
+  }
+
+  function renderSources(mount, used) {
+    if (!mount) return;
+    var section = mount.closest('section');
+    if (!used.length) {
+      if (section) section.hidden = true;
+      mount.innerHTML = '';
+      return;
+    }
+    if (section) section.hidden = false;
+    mount.innerHTML = '<ol class="sources__list">' + used.map(function (s) {
+      return '<li>' + (s.url
+        ? '<a href="' + s.url + '" target="_blank" rel="noopener noreferrer">' + s.label + '</a>'
+        : s.label) + '</li>';
+    }).join('') + '</ol>';
+  }
+
+  function renderContacts(mount) {
+    if (!mount) return;
+    var list = (D().brand && D().brand.contacts) || [];
+    mount.innerHTML = list.map(function (c) {
+      var link = c.email ? 'mailto:' + c.email : (c.phone ? 'tel:' + c.phone : '');
+      return '<li>' + (link
+        ? '<a href="' + link + '">' + c.name + '</a>'
+        : c.name) + '</li>';
+    }).join('');
   }
 
   function renderFooterMeta() {
     $$('[data-year]').forEach(function (e) { e.textContent = new Date().getFullYear(); });
-    $$('[data-brand-email]').forEach(function (e) {
-      e.textContent = D().brand.email;
-      if (e.tagName === 'A') e.href = 'mailto:' + D().brand.email;
-    });
     $$('[data-schedule-link]').forEach(function (e) { e.href = D().brand.schedulingUrl; });
   }
 
@@ -253,6 +313,7 @@
     renderJourney($('[data-render="journey"]'));
     renderFaq($('[data-render="faq"]'));
     renderDisclaimer($('[data-render="disclaimer"]'));
+    renderContacts($('[data-render="contacts"]'));
     renderFooterMeta();
 
     var propsMount = $('[data-render="properties"]');
@@ -275,6 +336,9 @@
     if (window.MevadCalculator) {
       window.MevadCalculator.init($('[data-calculator]'));
     }
+
+    /* Last, so every marker on the page exists before it is numbered. */
+    renderSources($('[data-render="sources"]'), renderCitations());
 
     counters();   /* renderFaq wires its own accordion listeners */
   }
