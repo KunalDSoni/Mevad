@@ -93,8 +93,9 @@ cream surface (`#8f6b12` x `#31699e`) because the dark steps fail contrast there
 ## Charts
 
 Hand-rolled SVG in `js/charts.js`, no library. The two-series palette
-(`#c98500` industrial × `#3987e5` leisure) was validated against the `#101114`
-surface: all-pairs CVD ΔE 27.4, normal-vision ΔE 30.7, both above threshold.
+(`#c98500` industrial × `#3987e5` leisure) was validated against the teal surface
+`#1B3A38`: all-pairs CVD ΔE 27.4, normal-vision ΔE 30.7, both above threshold.
+Light mode uses its own validated pair — see Colour above.
 Series are direct-labelled as well as coloured, and the occupancy chart has a
 table view, so identity is never colour-alone.
 
@@ -122,10 +123,6 @@ Run against the live server at `localhost:8080`, not just as files:
   nav, stat labels, FAQ, chips and chart series labels; theme flips the body to
   cream; switching back restores English fully. Zero JS errors.
 - No horizontal overflow on any page (`scrollWidth === clientWidth`).
-
-**Not verified:** rendering below 500px viewport width — headless Chrome clamps to
-a 500px minimum, so sub-500 was never visually inspected. Breakpoints exist at 880
-(nav collapses), 820, 620 and 460px. Worth a look on a real phone.
 
 **Not verified:** rendering below 500px viewport width — headless Chrome clamps to
 a 500px minimum, so sub-500 was never visually inspected. Breakpoints exist at 880
