@@ -60,6 +60,36 @@ assured return wins decisively. **If you change `ownerShare` or `assured` in
 `data/projects.js`, re-check that this still holds** — the site's copy on the
 returns and invest pages explicitly promises the inversion.
 
+## Language and theme
+
+Both toggle from the nav, persist in `localStorage`, and default to **English +
+dark**. The controls are injected by `js/prefs.js` rather than authored into four
+HTML files, so they can never drift between pages.
+
+Hindi lives entirely in `data/lang-hi.js`, in two parts:
+
+- `data` — mirrors the shape of `projects.js` and is deep-merged over it. Only
+  translated fields appear; **no number is ever repeated**, so `projects.js` stays
+  the single source of truth for every figure.
+- `ui` — maps normalised English page copy to Hindi, keyed by the source string
+  itself. That is why no HTML needed key annotations, and why a missing entry
+  falls back to English instead of rendering a raw key.
+
+`status` is deliberately **not** translated: the calculator compares it against
+`'Operational'` / `'Under construction'` to decide construction delay. Its display
+text is translated through the `ui` map instead. Translating that field would
+silently break the payout timing.
+
+## Colour
+
+Two-tone, from the brand deck: deep teal `#1B3A38` and cream `#FDFDF1`. Dark theme
+is cream-on-teal, light is teal-on-cream, and the accent flips with them —
+hierarchy comes from weight, scale and surface rather than a third hue.
+
+Light mode is *selected*, not inverted. Text-on-accent is pinned to `--on-accent`
+so it never follows the theme, and the chart palette was re-validated against the
+cream surface (`#8f6b12` x `#31699e`) because the dark steps fail contrast there.
+
 ## Charts
 
 Hand-rolled SVG in `js/charts.js`, no library. The two-series palette
@@ -88,6 +118,9 @@ Run against the live server at `localhost:8080`, not just as files:
   Chakan correctly shows first payout in Year 3. Zero JS errors throughout.
 - Calculator maths independently checked in Node across operational /
   under-construction / announced properties and 10- and 20-year horizons.
+- Language and theme switching driven in a live page: EN→HI translates headlines,
+  nav, stat labels, FAQ, chips and chart series labels; theme flips the body to
+  cream; switching back restores English fully. Zero JS errors.
 - No horizontal overflow on any page (`scrollWidth === clientWidth`).
 
 **Not verified:** rendering below 500px viewport width — headless Chrome clamps to
