@@ -70,7 +70,12 @@
 
   function isSvg(el) { return el.namespaceURI === 'http://www.w3.org/2000/svg'; }
 
-  function read(el)  { return isSvg(el) ? el.textContent : el.innerHTML; }
+  /* snapshot() stamps data-i18n-idx onto nested elements, which would otherwise
+     appear inside a parent's innerHTML and stop it matching its dictionary key
+     (this silently left the arrow buttons untranslated). Strip it for lookups. */
+  var IDX_ATTR = /\s*data-i18n-idx="\d+"/g;
+
+  function read(el)  { return isSvg(el) ? el.textContent : el.innerHTML.replace(IDX_ATTR, ''); }
   function write(el, v) { if (isSvg(el)) el.textContent = v; else el.innerHTML = v; }
 
   /* Capture English source for the static page copy exactly once. Anything

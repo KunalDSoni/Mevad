@@ -443,6 +443,39 @@ window.MEVAD_HI = {
     'Walk one before you fund one.': 'पैसा लगाने से पहले एक बार चलकर देखिए।',
     'Site visits happen before signature, never after. Meet the operating team and talk to the anchor tenants next door.':
       'स्थल का दौरा हस्ताक्षर से पहले होता है, बाद में कभी नहीं। संचालन टीम से मिलिए और पड़ोस के एंकर किरायेदारों से बात कीजिए।',
-    'Arrange a site visit <span class="btn__arrow">→</span>': 'स्थल दौरा तय करें <span class="btn__arrow">→</span>'
+    'Arrange a site visit <span class="btn__arrow">→</span>': 'स्थल दौरा तय करें <span class="btn__arrow">→</span>',
+
+    /* properties.html — the four site-selection tests */
+    'A minimum count of independent anchor employers within the catchment. Not one large plant — several, under separate ownership, so that a single closure is absorbed rather than fatal.':
+      'एक निश्चित दायरे के भीतर स्वतंत्र एंकर नियोक्ताओं की न्यूनतम संख्या। कोई एक बड़ा संयंत्र नहीं — बल्कि कई, अलग-अलग स्वामित्व वाले, ताकि किसी एक के बंद होने का असर झेला जा सके, घातक न हो।',
+    "More than one industry represented. Automotive, chemicals, electronics and pharma do not enter downturns on the same calendar, and a corridor that depends on one sector inherits that sector's cycle.":
+      'एक से अधिक उद्योग मौजूद हों। ऑटोमोटिव, रसायन, इलेक्ट्रॉनिक्स और फार्मा एक ही समय मंदी में नहीं जाते, और जो गलियारा एक ही क्षेत्र पर निर्भर है वह उसी क्षेत्र का चक्र ढोता है।',
+    'Under fifteen minutes to the anchor gate. Beyond that, a guest weighs the hotel against a longer commute from the nearest city, and the pricing power that makes the asset work disappears.':
+      'एंकर गेट तक पंद्रह मिनट से कम। उससे आगे मेहमान होटल की तुलना नज़दीकी शहर से लंबी यात्रा के साथ करने लगता है, और वह मूल्य-शक्ति ख़त्म हो जाती है जो इस संपत्ति को चलाती है।',
+    'Organised room supply well below the business-district benchmark, with no credible pipeline. We are looking for a gap that has stayed open — because a gap that stayed open is a gap others considered and declined.':
+      'संगठित कमरों की आपूर्ति व्यावसायिक क्षेत्र के मानक से काफ़ी नीचे हो, और कोई विश्वसनीय परियोजना पाइपलाइन में न हो। हम ऐसा अंतर खोजते हैं जो खुला रह गया हो — क्योंकि जो अंतर खुला रह गया, उसे औरों ने देखा और छोड़ दिया।',
+
+    /* returns.html — how to read the model */
+    'A headline yield tells you nothing about <em>when</em> money arrives. The IRR here runs a full cashflow — capital out at year zero, each year\'s payout in sequence, and the sale of the holding at the end. Money received in year eight is discounted accordingly, because it is worth less than money received in year one.':
+      'सुर्खियों वाला प्रतिफल यह नहीं बताता कि पैसा <em>कब</em> आता है। यहाँ IRR पूरी नकदी-प्रवाह शृंखला पर चलता है — वर्ष शून्य में पूँजी बाहर, हर वर्ष का भुगतान क्रम से, और अंत में हिस्सेदारी की बिक्री। आठवें वर्ष मिला पैसा उसी अनुपात में छूट पाता है, क्योंकि वह पहले वर्ष मिले पैसे से कम मूल्यवान है।',
+    'A property under construction pays nothing until it opens. One that has just opened runs below stabilised occupancy for a further nine to twelve months. Both are modelled. This is the single most common omission in Indian hospitality projections, and it is why returns disappoint.':
+      'निर्माणाधीन संपत्ति खुलने तक कुछ नहीं देती। और जो अभी-अभी खुली है वह अगले नौ से बारह महीने स्थिर अधिभोग से नीचे चलती है। मॉडल दोनों लागू करता है। भारतीय आतिथ्य अनुमानों में यही सबसे आम चूक है, और इसी से प्रतिफल निराश करते हैं।',
+    'The downside scenario is not a footnote — it is a button, and it moves the same numbers the upside does. In a genuine downside the assured structure outperforms the revenue share. We would rather show you that than have you discover it in year four.':
+      'निचला परिदृश्य कोई फ़ुटनोट नहीं — वह एक बटन है, और वह उन्हीं आँकड़ों को हिलाता है जिन्हें ऊपरी परिदृश्य हिलाता है। सच्ची गिरावट में निश्चित प्रतिफल राजस्व हिस्सेदारी से बेहतर करता है। हम चाहेंगे कि आप यह अभी जान लें, चौथे वर्ष में नहीं।',
+    'Every output is arithmetic performed on assumptions you can see and change. It is not a forecast. Occupancy, rate, capital appreciation and operator performance are all uncertain, and the true outcome may fall outside every scenario shown here — including below the downside.':
+      'हर परिणाम उन मान्यताओं पर किया गया गणित है जिन्हें आप देख और बदल सकते हैं। यह पूर्वानुमान नहीं है। अधिभोग, दर, पूँजी वृद्धि और संचालक का प्रदर्शन — सब अनिश्चित हैं, और वास्तविक नतीजा यहाँ दिखाए हर परिदृश्य के बाहर भी जा सकता है, निचले परिदृश्य से भी नीचे।',
+
+    /* invest.html */
+    '<strong>There is no best structure.</strong> In a strong decade the revenue share wins. In a weak one the assured return wins, and it wins decisively. The hybrid gives up some of both to reduce the range of outcomes, and the SPV trades single-asset upside for the smoothing effect of a portfolio.':
+      '<strong>कोई एक सर्वश्रेष्ठ संरचना नहीं है।</strong> अच्छे दशक में राजस्व हिस्सेदारी जीतती है। कमज़ोर दशक में निश्चित प्रतिफल जीतता है, और निर्णायक रूप से। मिश्रित संरचना नतीजों का दायरा घटाने के लिए दोनों में से कुछ छोड़ती है, और SPV एक ही संपत्ति के अतिरिक्त लाभ के बदले पोर्टफोलियो का संतुलन देता है।',
+    'Anyone who tells you one of these dominates the others has not modelled the downside. <a href="returns.html" style="color:var(--accent-ink)">Run it yourself</a> — set occupancy to 40% and watch the ranking invert.':
+      'जो आपसे कहे कि इनमें से कोई एक बाक़ी सब पर भारी है, उसने गिरावट का आकलन नहीं किया। <a href="returns.html" style="color:var(--accent-ink)">स्वयं चलाकर देखिए</a> — अधिभोग 40% पर रखिए और क्रम को उलटते देखिए।',
+    'Run it yourself': 'स्वयं चलाकर देखिए',
+    'This site collects no identity documents and stores no personal files. KYC is handled entirely by a regulated compliance partner on their own infrastructure, and the link is issued to you directly after the first call.':
+      'यह वेबसाइट कोई पहचान दस्तावेज़ नहीं लेती और कोई निजी फ़ाइल संग्रहित नहीं करती। KYC पूरी तरह एक विनियमित अनुपालन साझेदार द्वारा, उनके अपने बुनियादी ढाँचे पर किया जाता है, और उसका लिंक पहली बातचीत के बाद सीधे आपको भेजा जाता है।',
+    'Identity verification, address proof and source-of-funds declaration, as required for a property transaction in India. NRI investors have an additional set determined by residency and the funding route.':
+      'पहचान सत्यापन, पता प्रमाण और धन-स्रोत घोषणा, जैसा भारत में संपत्ति लेन-देन के लिए आवश्यक है। अनिवासी भारतीय निवेशकों के लिए निवास और भुगतान मार्ग के अनुसार कुछ अतिरिक्त दस्तावेज़ लगते हैं।',
+    'The agreement is executed through a recognised e-signature provider. Where the structure involves a registered unit, physical registration follows at the relevant sub-registrar office.':
+      'अनुबंध एक मान्यता प्राप्त ई-हस्ताक्षर सेवा के माध्यम से निष्पादित होता है। जहाँ संरचना में पंजीकृत इकाई शामिल है, वहाँ भौतिक पंजीकरण संबंधित उप-पंजीयक कार्यालय में होता है।'
   }
 };

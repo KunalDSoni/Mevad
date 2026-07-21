@@ -124,6 +124,13 @@ Run against the live server at `localhost:8080`, not just as files:
   cream; switching back restores English fully. Zero JS errors.
 - No horizontal overflow on any page (`scrollWidth === clientWidth`).
 
-**Not verified:** rendering below 500px viewport width — headless Chrome clamps to
-a 500px minimum, so sub-500 was never visually inspected. Breakpoints exist at 880
-(nav collapses), 820, 620 and 460px. Worth a look on a real phone.
+- **Mobile verified at a true 390x844** via CDP device emulation
+  (`Emulation.setDeviceMetricsOverride`), which is the only way past headless
+  Chrome's 500px minimum window width. `scrollWidth === clientWidth === 390` on
+  all four pages, no overflowing elements, nav collapsed to the hamburger.
+- **Translation coverage swept programmatically** across all four pages x both
+  languages: every text element checked for the wrong script. 8/8 clean — full
+  Hindi coverage, and English fully restored on switching back.
+
+**Caveat:** the site has only ever been rendered in Chrome (headless and
+emulated). Safari and Firefox are untested, as is any real physical device.
