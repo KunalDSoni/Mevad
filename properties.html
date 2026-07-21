@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Properties — Mevad</title>
+<meta name="description" content="Mevad's hotels across India's industrial corridors — Sanand, Dahej, Chakan, Sri City and Hosur.">
+<meta name="theme-color" content="#1B3A38">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="logo" href="index.html">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span>MEVAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="navlinks">MENU</button>
+    <nav class="nav__links" id="navlinks">
+      <a href="index.html#thesis">Thesis</a>
+      <a href="properties.html" aria-current="page">Properties</a>
+      <a href="returns.html">Returns</a>
+      <a href="invest.html">Invest</a>
+      <a class="btn btn--primary btn--sm" data-schedule-link href="#">Book a meeting</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding-block:clamp(3rem,7vw,5rem) 0">
+  <div class="gridlines" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <span class="label label--accent">The chain</span>
+    <h1 style="font-size:clamp(2.25rem,5.5vw,4rem);margin-top:1.25rem;max-width:20ch">
+      We build where the trucks are.
+    </h1>
+    <p class="hero__lede">
+      Every Mevad site is chosen the same way: count the anchor employers inside a
+      fixed radius, check the sector mix, measure the drive to the plant gate. If
+      the industrial base does not carry the hotel on its own, we do not build.
+    </p>
+  </div>
+</section>
+
+<section class="section section--flush" style="padding-top:clamp(2.5rem,5vw,4rem)">
+  <div class="wrap">
+    <div class="grid grid--3" data-render="properties"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="label">Site selection</span>
+      <h2>The four tests a location has to pass.</h2>
+    </div>
+
+    <div class="grid grid--2 reveal">
+      <div class="card">
+        <div class="card__meta"><span class="label label--accent">Test 01</span></div>
+        <h3>Anchor depth</h3>
+        <p>A minimum count of independent anchor employers within the catchment. Not
+        one large plant — several, under separate ownership, so that a single
+        closure is absorbed rather than fatal.</p>
+      </div>
+      <div class="card">
+        <div class="card__meta"><span class="label label--accent">Test 02</span></div>
+        <h3>Sector mix</h3>
+        <p>More than one industry represented. Automotive, chemicals, electronics
+        and pharma do not enter downturns on the same calendar, and a corridor that
+        depends on one sector inherits that sector's cycle.</p>
+      </div>
+      <div class="card">
+        <div class="card__meta"><span class="label label--accent">Test 03</span></div>
+        <h3>Gate distance</h3>
+        <p>Under fifteen minutes to the anchor gate. Beyond that, a guest weighs the
+        hotel against a longer commute from the nearest city, and the pricing power
+        that makes the asset work disappears.</p>
+      </div>
+      <div class="card">
+        <div class="card__meta"><span class="label label--accent">Test 04</span></div>
+        <h3>Existing supply</h3>
+        <p>Organised room supply well below the business-district benchmark, with no
+        credible pipeline. We are looking for a gap that has stayed open — because a
+        gap that stayed open is a gap others considered and declined.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="gridlines" aria-hidden="true"></div>
+  <div class="wrap" style="position:relative">
+    <h2>Walk one before you fund one.</h2>
+    <p class="lede">
+      Site visits happen before signature, never after. Meet the operating team and
+      talk to the anchor tenants next door.
+    </p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" data-schedule-link href="#">Arrange a site visit <span class="btn__arrow">→</span></a>
+      <a class="btn btn--ghost" href="returns.html">Model the returns</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__bottom" style="border-top:0;padding-top:0">
+      <span>© <span data-year></span> Mevad. All rights reserved.</span>
+      <span>Illustrative figures only — not an offer to invest.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data/projects.js"></script>
+<script src="data/lang-hi.js"></script>
+<script src="js/prefs.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

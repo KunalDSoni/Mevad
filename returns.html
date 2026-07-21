@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Returns Calculator — Mevad</title>
+<meta name="description" content="Model returns across all four Mevad investment structures. Every assumption exposed and adjustable, including the downside case.">
+<meta name="theme-color" content="#1B3A38">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="logo" href="index.html">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span>MEVAD</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="navlinks">MENU</button>
+    <nav class="nav__links" id="navlinks">
+      <a href="index.html#thesis">Thesis</a>
+      <a href="properties.html">Properties</a>
+      <a href="returns.html" aria-current="page">Returns</a>
+      <a href="invest.html">Invest</a>
+      <a class="btn btn--primary btn--sm" data-schedule-link href="#">Book a meeting</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding-block:clamp(3rem,7vw,5rem) 0">
+  <div class="gridlines" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <span class="label label--accent">Returns calculator</span>
+    <h1 style="font-size:clamp(2.25rem,5.5vw,4rem);margin-top:1.25rem;max-width:18ch">
+      Every assumption, exposed.
+    </h1>
+    <p class="hero__lede">
+      Most investment calculators are a marketing device with a slider attached.
+      This one lets you break it. Drag occupancy to 40%, cut the rate, extend the
+      hold — and see which structure survives.
+    </p>
+  </div>
+</section>
+
+<section class="section section--flush" style="padding-top:clamp(2.5rem,5vw,4rem)">
+  <div class="wrap">
+    <div class="calc" data-calculator></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="label">How to read it</span>
+      <h2>What the model does, and what it refuses to do.</h2>
+    </div>
+
+    <div class="grid grid--2 reveal">
+      <div class="card">
+        <h3>It uses IRR, not headline yield</h3>
+        <p>A headline yield tells you nothing about <em>when</em> money arrives. The
+        IRR here runs a full cashflow — capital out at year zero, each year's payout
+        in sequence, and the sale of the holding at the end. Money received in year
+        eight is discounted accordingly, because it is worth less than money
+        received in year one.</p>
+      </div>
+      <div class="card">
+        <h3>It applies construction and ramp-up</h3>
+        <p>A property under construction pays nothing until it opens. One that has
+        just opened runs below stabilised occupancy for a further nine to twelve
+        months. Both are modelled. This is the single most common omission in
+        Indian hospitality projections, and it is why returns disappoint.</p>
+      </div>
+      <div class="card">
+        <h3>It shows the downside first-class</h3>
+        <p>The downside scenario is not a footnote — it is a button, and it moves
+        the same numbers the upside does. In a genuine downside the assured
+        structure outperforms the revenue share. We would rather show you that than
+        have you discover it in year four.</p>
+      </div>
+      <div class="card">
+        <h3>It cannot predict the future</h3>
+        <p>Every output is arithmetic performed on assumptions you can see and
+        change. It is not a forecast. Occupancy, rate, capital appreciation and
+        operator performance are all uncertain, and the true outcome may fall
+        outside every scenario shown here — including below the downside.</p>
+      </div>
+    </div>
+
+    <div class="mt-3" data-render="disclaimer"></div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="gridlines" aria-hidden="true"></div>
+  <div class="wrap" style="position:relative">
+    <h2>Numbers look right? Come and stress-test them with us.</h2>
+    <p class="lede">
+      Bring your own assumptions. The investment team will run them against the
+      actual operating data of a live property.
+    </p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" data-schedule-link href="#">Book a 45-minute call <span class="btn__arrow">→</span></a>
+      <a class="btn btn--ghost" href="invest.html">See the structures</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__bottom" style="border-top:0;padding-top:0">
+      <span>© <span data-year></span> Mevad. All rights reserved.</span>
+      <span>Illustrative figures only — not an offer to invest.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data/projects.js"></script>
+<script src="data/lang-hi.js"></script>
+<script src="js/prefs.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
