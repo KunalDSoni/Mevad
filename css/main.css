@@ -1300,12 +1300,6 @@ input[type='range']::-moz-range-thumb {
 .chain-diagram__step h4 { font-size: 0.9375rem; margin-bottom: 0.35rem; }
 .chain-diagram__step p { font-size: 0.8125rem; color: var(--text-2); margin: 0; }
 
-/* Expansion mini-map (flat, illustrative SVG) */
-.map-svg { width: 100%; height: auto; }
-.map-svg__pin { opacity: 0; transition: opacity 500ms var(--ease); }
-.map-svg__pin.is-in { opacity: 1; }
-.map-svg__label { font-family: var(--font-mono); font-size: 3px; fill: var(--text-1); }
-
 /* Proof photo placeholder grid */
 .proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
 .proof-frame {

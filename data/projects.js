@@ -375,16 +375,6 @@ window.MEWAD = {
     { label: 'Future growth',               note: 'The same loop, applied to the next industrial corridor.' }
   ],
 
-  /* Flat, illustrative coordinates (not geographically precise) on a
-     0-100 x/y grid for the expansion mini-map SVG. */
-  expansionCities: [
-    { name: 'Hotel Mewad (Sanand)', x: 30, y: 55, status: 'Operating' },
-    { name: 'Halol',                x: 42, y: 48, status: 'Planned' },
-    { name: 'Dahej',                x: 38, y: 68, status: 'Planned' },
-    { name: 'Changodar',            x: 28, y: 60, status: 'Planned' },
-    { name: 'Pune',                 x: 60, y: 82, status: 'Planned' }
-  ],
-
   /* ---------------------------------------------------------------------
      INVESTOR JOURNEY
      --------------------------------------------------------------------- */
