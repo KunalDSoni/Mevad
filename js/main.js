@@ -97,6 +97,25 @@
     els.forEach(function (e) { io.observe(e); });
   }
 
+  /* --- Scroll progress ----------------------------------------------------
+     A fixed top bar showing how far through the page the reader has
+     scrolled - the pitch-deck "slide counter" affordance, done without a
+     paginated/snap-scroll rewrite. */
+
+  function progressBar() {
+    var fill = $('.progress-bar__fill');
+    if (!fill) return;
+    function update() {
+      var doc = document.documentElement;
+      var scrollable = doc.scrollHeight - doc.clientHeight;
+      var pct = scrollable > 0 ? (doc.scrollTop / scrollable) * 100 : 0;
+      fill.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
   /* --- Accordion --------------------------------------------------------- */
 
   function accordion(scope) {
@@ -137,6 +156,94 @@
     mount.innerHTML = D().asset.features.map(function (f) {
       return '<div class="card"><h4>' + f.title + '</h4><p>' + f.body + '</p></div>';
     }).join('');
+  }
+
+  function renderStory(mount) {
+    if (!mount) return;
+    mount.innerHTML = D().story.map(function (s) {
+      return '<div class="prose reveal"><h3 style="font-size:1.05rem;margin-bottom:.5rem">' + s.heading + '</h3><p>' + s.body + '</p></div>';
+    }).join('');
+  }
+
+  function renderPerformance(mount) {
+    if (!mount) return;
+    var p = D().performance;
+    mount.innerHTML =
+      '<div class="grid grid--2">' +
+        '<div class="stat-hero"><span class="stat-hero__value" data-count="' + Math.round(p.capitalDeployedTotal / 100000) + '" data-suffix=" L">0 L</span><span class="stat-hero__label">Capital deployed (historical)</span></div>' +
+        '<div class="stat-hero"><span class="stat-hero__value" data-count="' + Math.round(p.operatingProfitTotal / 100000) + '" data-suffix=" L">0 L</span><span class="stat-hero__label">Operating profit generated (historical)</span></div>' +
+      '</div>' +
+      '<div data-render="cap-chart"></div>' +
+      '<p class="lede mt-2">' + p.caption + '</p>';
+    renderCapChart($('[data-render="cap-chart"]', mount));
+  }
+
+  function renderCapChart(mount) {
+    if (!mount) return;
+    var rows = D().performance.capitalDeployedBreakdown;
+    mount.innerHTML = '<div class="cap-chart">' + rows.map(function (r) {
+      var known = typeof r.amount === 'number';
+      return '<div class="cap-chart__row">' +
+        '<span class="cap-chart__label">' + r.label + '</span>' +
+        '<div class="cap-chart__track">' +
+          '<div class="cap-chart__bar' + (known ? '' : ' cap-chart__bar--placeholder') + '" style="width:' + (known ? '100' : '100') + '%"></div>' +
+        '</div>' +
+        (known ? '' : '<span class="placeholder-tag">' + r.note + '</span>') +
+      '</div>';
+    }).join('') + '</div>';
+  }
+
+  function renderGrowthJourney(mount) {
+    if (!mount) return;
+    mount.innerHTML = D().growthJourney.map(function (g) {
+      return '<div class="tl-item">' +
+        '<span class="tl-item__n"></span>' +
+        '<div><h4>' + g.step + '</h4><p>' + g.body + '</p></div>' +
+      '</div>';
+    }).join('');
+  }
+
+  function chainDiagram(mount, steps) {
+    if (!mount) return;
+    mount.innerHTML = '<div class="chain-diagram">' + steps.map(function (s, i) {
+      var title = typeof s === 'string' ? s : s.label;
+      var body = typeof s === 'string' ? '' : ('<p>' + s.note + '</p>');
+      return '<div class="chain-diagram__step reveal" style="transition-delay:' + (i * 80) + 'ms"><h4>' + title + '</h4>' + body + '</div>';
+    }).join('') + '</div>';
+  }
+
+  function renderBusinessModel(mount) { chainDiagram(mount, D().businessModel); }
+  function renderCapitalAllocation(mount) { chainDiagram(mount, D().capitalAllocation); }
+
+  function renderProof(mount) {
+    if (!mount) return;
+    var pr = D().proof;
+    mount.innerHTML = '<div class="proof-grid">' +
+      pr.photos.map(function (p) { return '<div class="proof-frame">' + p.label + '<!-- REPLACE: photo --></div>'; }).join('') +
+    '</div>' +
+    '<p class="lede mt-2"><span class="placeholder-tag">' + pr.reviewsNote + '</span> &nbsp; <span class="placeholder-tag">' + pr.testimonialNote + '</span></p>';
+  }
+
+  function renderPhilosophy(mount) {
+    if (!mount) return;
+    mount.innerHTML = D().philosophy.map(function (item) {
+      return '<div class="card"><h4>' + item.title + '</h4><p>' + item.body + '</p></div>';
+    }).join('');
+  }
+
+  function renderWhyInvest(mount) {
+    if (!mount) return;
+    mount.innerHTML = '<ul class="versus__list">' + D().whyInvest.map(function (line) {
+      return '<li>' + line + '</li>';
+    }).join('') + '</ul>';
+  }
+
+  function renderFounder(mount) {
+    if (!mount) return;
+    var quoteEl = $('[data-render-founder-quote]', mount);
+    var bodyEl = $('[data-render-founder-body]', mount);
+    if (quoteEl) quoteEl.textContent = D().founder.quote;
+    if (bodyEl) bodyEl.textContent = D().founder.body;
   }
 
   function propertyCard(p) {
@@ -312,6 +419,15 @@
     if (bar) bar.textContent = D().words.placeholderNotice;
 
     renderDemand($('[data-render="demand"]'));
+    renderStory($('[data-render="story"]'));
+    renderPerformance($('[data-render="performance"]'));
+    renderGrowthJourney($('[data-render="growth-journey"]'));
+    renderBusinessModel($('[data-render="business-model"]'));
+    renderCapitalAllocation($('[data-render="capital-allocation"]'));
+    renderProof($('[data-render="proof"]'));
+    renderPhilosophy($('[data-render="philosophy"]'));
+    renderWhyInvest($('[data-render="why-invest"]'));
+    renderFounder($('[data-render="founder"]'));
     renderAssetSpecs($('[data-render="asset-specs"]'));
     renderAssetFeatures($('[data-render="asset-features"]'));
     renderStructures($('[data-render="structures"]'));
@@ -342,6 +458,7 @@
 
     placeholderBanner();
     nav();
+    progressBar();
     renderAll();
 
     /* Table-view toggles */
