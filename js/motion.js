@@ -107,17 +107,51 @@
     });
   }
 
+  /* Subtle magnetic pull toward the cursor on primary CTA buttons only
+     (.btn--primary) - a small, deliberate flourish on the highest-intent
+     click targets, not applied to every button on the site. Disabled
+     entirely on touch devices (no meaningful pointermove there) and under
+     reduced motion. Note: .btn--primary:hover already sets
+     transform: translateY(-1px) via CSS transition (css/main.css:478-482);
+     the JS transform set inline via Motion overrides the CSS transform
+     while hovering - an accepted, deliberate trade-off, since the CSS lift
+     and the JS pull are both small nudges in the same spirit, and both
+     still return to the resting state on mouseleave. */
+  function magneticButtons() {
+    if (prefersReducedMotion() || !window.Motion) return;
+    if (window.matchMedia && window.matchMedia('(hover: none)').matches) return;
+
+    var MAX_PULL = 6;
+
+    $$('.btn--primary').forEach(function (btn) {
+      btn.addEventListener('mousemove', function (e) {
+        var rect = btn.getBoundingClientRect();
+        var relX = (e.clientX - rect.left) / rect.width - 0.5;
+        var relY = (e.clientY - rect.top) / rect.height - 0.5;
+        window.Motion.animate(btn, {
+          transform: 'translate(' + (relX * MAX_PULL * 2) + 'px, ' + (relY * MAX_PULL * 2) + 'px)'
+        }, { duration: 0.3, easing: [0.22, 1, 0.36, 1] });
+      });
+
+      btn.addEventListener('mouseleave', function () {
+        window.Motion.animate(btn, { transform: 'translate(0px, 0px)' }, { duration: 0.4, easing: [0.22, 1, 0.36, 1] });
+      });
+    });
+  }
+
   window.MewadMotion = {
     prefersReducedMotion: prefersReducedMotion,
     staggerReveal: staggerReveal,
     heroEntrance: heroEntrance,
     gridStagger: gridStagger,
-    animateValueChange: animateValueChange
+    animateValueChange: animateValueChange,
+    magneticButtons: magneticButtons
   };
 
   function boot() {
     gridStagger();
     heroEntrance();
+    magneticButtons();
   }
 
   if (document.readyState === 'loading') {
