@@ -51,13 +51,6 @@ window.MEVAD_HI = {
     },
 
     market: {
-      occupancy: {
-        months: ['जन','फर','मार्च','अप्रै','मई','जून','जुल','अग','सित','अक्तू','नव','दिस'],
-        series: [
-          { label: 'औद्योगिक होटल', sublabel: 'मेवाड़ मॉडल' },
-          { label: 'अवकाश होटल', sublabel: 'समकक्ष श्रेणी' }
-        ]
-      },
       supplyGap: {
         unit: 'प्रति 1,000 औद्योगिक कर्मचारियों पर संगठित होटल कमरे',
         benchmark: { label: 'व्यावसायिक क्षेत्र मानक' },
@@ -311,20 +304,6 @@ window.MEVAD_HI = {
       '<strong>कम ADR। अधिक और अधिक स्थिर RevPAR।</strong> यही अदला-बदली पूरा प्रस्ताव है, और अधिकांश निवेशक इसे उल्टा समझते हैं। मेवाड़ का कमरा वह दर कभी नहीं पाएगा जो दिसंबर में समुद्रतट का सुइट पाता है। पर वह जुलाई में खाली भी कभी नहीं रहेगा।',
     'You are not buying the highest point on the curve. You are buying <strong>the shape of the curve</strong> - and over a ten-year hold, shape beats peak. The chart below is the whole argument in one picture.':
       'आप वक्र का सबसे ऊँचा बिंदु नहीं खरीद रहे। आप <strong>वक्र का आकार</strong> खरीद रहे हैं - और दस साल की अवधि में आकार शिखर से बड़ा पड़ता है। नीचे का चार्ट पूरा तर्क एक तस्वीर में है।',
-
-    /* Exhibit 1 */
-    'Exhibit 01: occupancy': 'प्रदर्श 01: अधिभोग',
-    'One of these is an investment. The other is a season.': 'इनमें से एक निवेश है। दूसरा एक मौसम।',
-    'Monthly occupancy: industrial vs leisure': 'मासिक अधिभोग: औद्योगिक बनाम अवकाश',
-    'Illustrative stabilised year. Hover for monthly values.': 'उदाहरणात्मक स्थिर वर्ष। मासिक आँकड़ों के लिए कर्सर ले जाएँ।',
-    'Industrial hotel - Mevad model': 'औद्योगिक होटल - मेवाड़ मॉडल',
-    'Leisure hotel - comparable tier': 'अवकाश होटल - समकक्ष श्रेणी',
-    'Show data table': 'डेटा तालिका देखें',
-    'Month': 'माह',
-    'The leisure line peaks higher. It also spends a third of the year below 50% - and a hotel at 40% occupancy is not earning a reduced return, it is losing money, because the cost base does not shrink when the guests leave.':
-      'अवकाश वाली रेखा ऊँचा शिखर छूती है। वह साल का एक तिहाई हिस्सा 50% से नीचे भी बिताती है - और 40% अधिभोग वाला होटल कम प्रतिफल नहीं कमा रहा होता, वह घाटे में होता है, क्योंकि मेहमानों के जाने से लागत घटती नहीं।',
-    'The industrial line never touches the leisure peak. It never touches the leisure trough either. <strong>Stability is the product</strong> - and it is what turns a hotel from a trade into an asset.':
-      'औद्योगिक रेखा अवकाश वाले शिखर को कभी नहीं छूती। वह उसकी गहराई को भी कभी नहीं छूती। <strong>स्थिरता ही उत्पाद है</strong> - और यही होटल को सौदे से संपत्ति बनाती है।',
 
     /* Exhibit 2 */
     'Exhibit 02: supply': 'प्रदर्श 02: आपूर्ति',

@@ -332,13 +332,6 @@
     }
 
     if (window.MevadCharts) {
-      var occ = $('[data-chart="occupancy"]');
-      if (occ) {
-        occ.innerHTML = '';
-        window.MevadCharts.occupancy(occ, D().market.occupancy);
-        var tbl = $('[data-chart="occupancy-table"]');
-        if (tbl) tbl.innerHTML = window.MevadCharts.table(D().market.occupancy);
-      }
       window.MevadCharts.supplyGap($('[data-chart="supply-gap"]'), D().market.supplyGap);
     }
 

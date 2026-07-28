@@ -71,29 +71,6 @@ window.MEVAD = {
        and the Sources section stays hidden, so the site never shows a
        reference it cannot honour. Never cite a source that does not state
        the number it is attached to. */
-    // Illustrative annual occupancy, Jan–Dec. The single most important
-    // chart on the site: stability vs seasonality.
-    occupancy: {
-      source: { label: '', url: '' },
-      months: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-      series: [
-        {
-          id: 'industrial',
-          label: 'Industrial hotel',
-          sublabel: 'Mevad model',
-          color: 'var(--series-industrial)',
-          values: [76, 78, 81, 79, 77, 74, 73, 75, 78, 82, 80, 77]
-        },
-        {
-          id: 'leisure',
-          label: 'Leisure hotel',
-          sublabel: 'Comparable tier',
-          color: 'var(--series-leisure)',
-          values: [88, 84, 66, 48, 41, 34, 31, 38, 52, 79, 91, 94]
-        }
-      ]
-    },
-
     // Organised hotel rooms per 1,000 industrial workers, by corridor.
     // The supply gap, made visible.
     supplyGap: {
