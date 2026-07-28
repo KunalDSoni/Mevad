@@ -55,13 +55,49 @@
     });
   }
 
+  /* Card-grid stagger: for every .grid that currently carries .reveal on the
+     *container* (audit finding #2), move reveal-behaviour onto the direct
+     children instead and stagger them, so cards fade in one-by-one rather
+     than all at once. Runs once at boot, before js/main.js's reveal()
+     IntersectionObserver starts observing - so it must run before that. */
+  function gridStagger() {
+    var grids = $$('.grid.reveal');
+    if (!grids.length) return;
+
+    var allChildren = [];
+    grids.forEach(function (grid) {
+      grid.classList.remove('reveal');
+      var children = Array.prototype.slice.call(grid.children);
+      staggerReveal(children, { delayStep: 80 });
+      allChildren = allChildren.concat(children);
+    });
+
+    if (!('IntersectionObserver' in window)) {
+      allChildren.forEach(function (el) { el.classList.add('is-in'); });
+      return;
+    }
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px' });
+
+    allChildren.forEach(function (el) { io.observe(el); });
+  }
+
   window.MewadMotion = {
     prefersReducedMotion: prefersReducedMotion,
     staggerReveal: staggerReveal,
-    heroEntrance: heroEntrance
+    heroEntrance: heroEntrance,
+    gridStagger: gridStagger
   };
 
   function boot() {
+    gridStagger();
     heroEntrance();
   }
 
