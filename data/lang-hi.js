@@ -341,7 +341,6 @@ window.MEWAD_HI = {
     'Structures': 'संरचनाएँ',
     'Process': 'प्रक्रिया',
     "India's first industrial hotel chain.": 'भारत की पहली औद्योगिक होटल श्रृंखला।',
-    'Illustrative figures only - not an offer to invest.': 'केवल उदाहरणात्मक आँकड़े - निवेश का प्रस्ताव नहीं।',
 
     /* Hero */
     "India's first industrial hotel chain": 'भारत की पहली औद्योगिक होटल श्रृंखला',
