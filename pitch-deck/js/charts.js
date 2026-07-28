@@ -58,14 +58,14 @@ window.MewadCharts = (function () {
 
   function trendBar(series) {
     var w = 1000, h = 260, barW = w / series.length;
-    var totals = series.map(function (r) { return r.mewad2 + r.mewad3 + r.extra; });
+    var totals = series.map(function (r) { return r.phase1 + r.phase2 + r.extra; });
     var max = Math.max.apply(null, totals.map(Math.abs));
     var zero = 190;
     var scale = 90 / max;
     var parts = ['<svg viewBox="0 0 ' + w + ' ' + h + '" class="chart chart-trend">'];
     parts.push('<line x1="0" y1="' + zero + '" x2="' + w + '" y2="' + zero + '" style="stroke:var(--line-2)"/>');
     series.forEach(function (r, i) {
-      var total = r.mewad2 + r.mewad3 + r.extra;
+      var total = r.phase1 + r.phase2 + r.extra;
       var barH = Math.abs(total) * scale;
       var y = total >= 0 ? zero - barH : zero;
       var fillVar = total >= 0 ? 'var(--series-b)' : 'var(--series-a)';
