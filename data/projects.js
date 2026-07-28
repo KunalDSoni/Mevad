@@ -382,7 +382,6 @@ window.MEWAD = {
     { step: 'Explore the thesis',      body: 'Understand why industrial hospitality behaves differently from every other hotel asset in India.', where: 'On this site' },
     { step: 'Model your returns',      body: 'Run your own numbers across both structures, including the downside case.',                          where: 'On this site' },
     { step: 'Choose your structure',   body: 'Pick the property, the amount and the return model that matches your risk appetite.',              where: 'On this site' },
-    { step: 'Book a meeting',          body: 'A 45-minute call with the investment team. No obligation, no documents required.',                 where: 'Scheduling' },
     { step: 'Complete KYC',            body: 'Identity and source-of-funds verification, handled entirely by our compliance partner.',           where: 'Compliance partner' },
     { step: 'Receive the investor kit',body: 'Property financials, legal structure, title documents and the full agreement, by email.',          where: 'Email' },
     { step: 'Visit the site',          body: 'Walk the property. Meet the operating team. Talk to the anchor tenants next door.',                where: 'On site' },
