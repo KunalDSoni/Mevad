@@ -39,7 +39,9 @@ window.MEVAD = {
     suits: 'Suits',
     bestBadge: 'Highest modelled IRR',
     source: 'Source',
-    placeholderNotice: 'Preview build · every figure on this page is placeholder data, not a real offer'
+    placeholderNotice: 'Preview build · every figure on this page is placeholder data, not a real offer',
+    chainLiveLabel: 'Operational now',
+    chainPipelineLabel: 'Pipeline · future corridors'
   },
 
   brand: {

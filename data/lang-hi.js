@@ -36,7 +36,9 @@ window.MEVAD_HI = {
       suits: 'किनके लिए',
       bestBadge: 'सर्वाधिक अनुमानित IRR',
       source: 'स्रोत',
-      placeholderNotice: 'पूर्वावलोकन संस्करण · इस पृष्ठ का हर आँकड़ा काल्पनिक है, वास्तविक प्रस्ताव नहीं'
+      placeholderNotice: 'पूर्वावलोकन संस्करण · इस पृष्ठ का हर आँकड़ा काल्पनिक है, वास्तविक प्रस्ताव नहीं',
+      chainLiveLabel: 'अभी परिचालन में',
+      chainPipelineLabel: 'भविष्य के गलियारे'
     },
 
     brand: {
