@@ -46,6 +46,7 @@ window.MEWAD = {
 
   brand: {
     name: 'Mewad',
+    parentName: 'Mewad Business Hotels',
     positioning: "India's First Industrial Hotel Chain",
     phone: '+91 00000 00000',
     /* Named contacts shown in the footer. Add `email` or `phone` to an entry
@@ -61,6 +62,24 @@ window.MEWAD = {
   },
 
   /* ---------------------------------------------------------------------
+     THE STORY — narrative beats, not paragraphs
+     --------------------------------------------------------------------- */
+  story: [
+    {
+      heading: 'One hotel, built for a guest nobody else was building for.',
+      body: 'Hotel Mewad opened in Sanand because the guest already existed: engineers and contractors sent by the plants going up around it, with nowhere built for a six-month stay.'
+    },
+    {
+      heading: 'Sanand, because the demand was already there.',
+      body: 'An automotive and components cluster with a purchase-order guest, twelve months a year - not a destination anyone visits by choice, which is exactly why the room stayed full.'
+    },
+    {
+      heading: 'The business grew the way a real business grows.',
+      body: 'Profit from the first hotel funded the next room, then the next property. Nothing here was funded by a pitch deck before it was funded by an occupied room.'
+    }
+  ],
+
+  /* ---------------------------------------------------------------------
      MARKET — the numbers behind the thesis
      --------------------------------------------------------------------- */
   market: {
@@ -71,6 +90,33 @@ window.MEWAD = {
        and the Sources section stays hidden, so the site never shows a
        reference it cannot honour. Never cite a source that does not state
        the number it is attached to. */
+  },
+
+  /* ---------------------------------------------------------------------
+     PERFORMANCE — historical operating figures, not projections.
+     Capital deployed and operating profit are real, director-reported
+     totals. monthlyTrend is placeholder until real monthly figures are
+     supplied - see the REPLACE comment.
+     --------------------------------------------------------------------- */
+  performance: {
+    capitalDeployedTotal: 14900000,   // ~₹1.49 Cr, historical, real
+    operatingProfitTotal: 5737000,    // ~₹57.37 L, historical, real
+    capitalDeployedBreakdown: [
+      { label: 'Hotel Mewad-2', amount: null, note: 'REPLACE: category amount' },
+      { label: 'Additional rooms', amount: null, note: 'REPLACE: category amount' },
+      { label: 'Hotel Mewad-3', amount: null, note: 'REPLACE: category amount' },
+      { label: 'Infrastructure improvements', amount: null, note: 'REPLACE: category amount' },
+      { label: 'Supporting business assets', amount: null, note: 'REPLACE: category amount' }
+    ],
+    // Twelve placeholder months. Replace every value with real monthly
+    // operating-profit figures before this chart is presented to investors.
+    monthlyTrend: [
+      { month: 'M1', value: null }, { month: 'M2', value: null }, { month: 'M3', value: null },
+      { month: 'M4', value: null }, { month: 'M5', value: null }, { month: 'M6', value: null },
+      { month: 'M7', value: null }, { month: 'M8', value: null }, { month: 'M9', value: null },
+      { month: 'M10', value: null }, { month: 'M11', value: null }, { month: 'M12', value: null }
+    ],
+    caption: 'Figures represent actual historical operating performance, not a projection.'
   },
 
   /* ---------------------------------------------------------------------
@@ -301,6 +347,35 @@ window.MEWAD = {
   },
 
   /* ---------------------------------------------------------------------
+     GROWTH JOURNEY — animated timeline
+     --------------------------------------------------------------------- */
+  growthJourney: [
+    { step: 'Hotel Mewad',        body: 'The first property opens in Sanand.' },
+    { step: 'Expansion',          body: 'Operating profit is reinvested rather than distributed.' },
+    { step: 'Additional rooms',   body: 'Inventory added at the original property to meet demand already on the books.' },
+    { step: 'Hotel Mewad-3',      body: 'A second property, funded by the first.' },
+    { step: 'Current operations', body: 'Multiple assets operating today under Mewad Business Hotels.' },
+    { step: 'Future growth',      body: 'The next corridor, funded the same way as the last one.' }
+  ],
+
+  /* ---------------------------------------------------------------------
+     BUSINESS MODEL — the repeatable loop
+     --------------------------------------------------------------------- */
+  businessModel: ['Capital', 'Build', 'Operate', 'Generate cash flow', 'Expand', 'Repeat'],
+
+  /* ---------------------------------------------------------------------
+     CAPITAL ALLOCATION — how profit became more assets
+     --------------------------------------------------------------------- */
+  capitalAllocation: [
+    { label: 'Capital invested',            note: '~₹1.49 Cr deployed across Hotel Mewad-2, additional rooms, Hotel Mewad-3, infrastructure and supporting assets.' },
+    { label: 'Assets created',              note: 'Additional rooms and a second operating property, not just a bigger bank balance.' },
+    { label: 'Operating profit generated',  note: '~₹57.37 L in historical operating profit.' },
+    { label: 'Expansion',                   note: 'Profit reinvested into the next phase rather than distributed.' },
+    { label: 'More assets',                 note: 'Each phase funds the next property.' },
+    { label: 'Future growth',               note: 'The same loop, applied to the next industrial corridor.' }
+  ],
+
+  /* ---------------------------------------------------------------------
      INVESTOR JOURNEY
      --------------------------------------------------------------------- */
   journey: [
@@ -347,6 +422,60 @@ window.MEWAD = {
       a: 'Mewad operates every property in the chain in-house. The brand, the standards and the corporate rate agreements are the asset; outsourcing operations would give away the thing that makes the demand contractual.'
     }
   ],
+
+  /* ---------------------------------------------------------------------
+     PROOF — evidence, not claims
+     --------------------------------------------------------------------- */
+  proof: {
+    photos: [
+      { label: 'Reception' },
+      { label: 'Rooms' },
+      { label: 'Restaurant' },
+      { label: 'Parking' },
+      { label: 'Lobby' }
+    ],
+    reviewsNote: 'REPLACE: Google Reviews widget or screenshot',
+    testimonialNote: 'REPLACE: guest testimonial'
+  },
+
+  /* ---------------------------------------------------------------------
+     INVESTMENT PHILOSOPHY
+     --------------------------------------------------------------------- */
+  philosophy: [
+    { title: 'Capital partners, not landlords', body: 'You hold a stake in an operating asset; you are not managing it.' },
+    { title: 'Professional management stays accountable for operations', body: 'Mewad Business Hotels operates every property in the chain, in-house.' },
+    { title: 'Transparent governance', body: 'The same figures shown here are the ones the business is run against.' },
+    { title: 'Long-term wealth creation', body: 'Built for a multi-year hold, not a quick exit.' }
+  ],
+
+  /* ---------------------------------------------------------------------
+     WHY INVEST
+     --------------------------------------------------------------------- */
+  whyInvest: [
+    'Real business - operating today, not on paper',
+    'Real assets - Hotel Mewad and Hotel Mewad-3',
+    'Real customers - corporate accounts, not walk-ins',
+    'Recurring cash flow - occupancy tied to industrial activity, not tourist seasons',
+    'Manufacturing growth - the demand base is expanding independently of Mewad',
+    'A scalable model - proven once, now being repeated'
+  ],
+
+  /* ---------------------------------------------------------------------
+     FOUNDER VISION
+     --------------------------------------------------------------------- */
+  founder: {
+    quote: 'Every great hospitality company started with one hotel.',
+    body: 'Ours is Hotel Mewad. The model it proved is what Mewad Business Hotels now intends to repeat across India\'s industrial corridors.'
+  },
+
+  /* ---------------------------------------------------------------------
+     CLOSING
+     --------------------------------------------------------------------- */
+  closing: {
+    eyebrow: 'Hotel Mewad, Sanand',
+    title: 'The first chapter of something much bigger.',
+    lines: ['Built in Sanand.', 'Designed for industrial India.', 'Built to scale.']
+  },
 
   legal: {
     disclaimer: 'All figures shown on this website, including every output of the returns calculator, are illustrative projections based on stated assumptions. They are not a forecast, a guarantee, or an offer or invitation to invest. Actual returns will differ, may be materially lower, and may be negative. Hotel investments are illiquid, are exposed to occupancy, rate, regulatory and operator risk, and are not capital-protected. Nothing on this site constitutes investment, legal or tax advice. Prospective investors must read the complete offer documentation and take independent professional advice before committing capital.'
