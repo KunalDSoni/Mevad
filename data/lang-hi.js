@@ -302,8 +302,8 @@ window.MEVAD_HI = {
     'Rate is modest - and it is the same every month': 'दर मामूली है - और हर महीने वही रहती है',
     '<strong>Lower ADR. Higher, steadier RevPAR.</strong> That trade is the entire proposition, and it is the one most investors get backwards. A Mevad room will never command what a beachfront suite commands in December. It will also never sit empty in July.':
       '<strong>कम ADR। अधिक और अधिक स्थिर RevPAR।</strong> यही अदला-बदली पूरा प्रस्ताव है, और अधिकांश निवेशक इसे उल्टा समझते हैं। मेवाड़ का कमरा वह दर कभी नहीं पाएगा जो दिसंबर में समुद्रतट का सुइट पाता है। पर वह जुलाई में खाली भी कभी नहीं रहेगा।',
-    'You are not buying the highest point on the curve. You are buying <strong>the shape of the curve</strong> - and over a ten-year hold, shape beats peak. The chart below is the whole argument in one picture.':
-      'आप वक्र का सबसे ऊँचा बिंदु नहीं खरीद रहे। आप <strong>वक्र का आकार</strong> खरीद रहे हैं - और दस साल की अवधि में आकार शिखर से बड़ा पड़ता है। नीचे का चार्ट पूरा तर्क एक तस्वीर में है।',
+    'You are not buying the highest point on the curve. You are buying <strong>the shape of the curve</strong> - and over a ten-year hold, shape beats peak.':
+      'आप वक्र का सबसे ऊँचा बिंदु नहीं खरीद रहे। आप <strong>वक्र का आकार</strong> खरीद रहे हैं - और दस साल की अवधि में आकार शिखर से बड़ा पड़ता है।',
 
     /* Exhibit 2 */
     'Exhibit 02: supply': 'प्रदर्श 02: आपूर्ति',
