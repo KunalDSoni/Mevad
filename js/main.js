@@ -179,7 +179,10 @@
     if (!mount) return;
     mount.innerHTML = D().structures.map(function (s) {
       return '<div class="card">' +
-        '<div class="card__meta"><span class="label label--accent">' + s.short + '</span></div>' +
+        '<div class="card__meta">' +
+          '<span class="label label--accent">' + s.short + '</span>' +
+          (s.roadmap ? '<span class="chip">Roadmap</span>' : '') +
+        '</div>' +
         '<h3>' + s.name + '</h3>' +
         '<p style="color:var(--text-0);margin-bottom:1rem">' + s.summary + '</p>' +
         '<p>' + s.detail + '</p>' +

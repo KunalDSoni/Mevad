@@ -1,7 +1,7 @@
 /* ==========================================================================
    MEVAD — RETURNS CALCULATOR
 
-   Models all four investment structures against the same property, amount
+   Models both investment structures against the same property, amount
    and assumptions, then reports IRR on a full cashflow — not a headline
    yield. Construction delay and stabilisation ramp are applied honestly:
    a property that has not opened does not pay in year one.
@@ -86,46 +86,57 @@
 
   function portfolioAverages() {
     var ps = D().properties;
-    var adr = 0, occ = 0, price = 0, app = 0;
-    ps.forEach(function (p) { adr += p.adr; occ += p.occupancy; price += p.unitPrice; app += p.appreciation; });
+    var adr = 0, occ = 0, price = 0, app = 0, margin = 0;
+    ps.forEach(function (p) {
+      adr += p.adr; occ += p.occupancy; price += p.unitPrice * p.keys;
+      app += p.appreciation; margin += p.profitMargin;
+    });
     return {
       adr: adr / ps.length,
       occupancy: occ / ps.length,
-      unitPrice: price / ps.length,
-      appreciation: app / ps.length
+      propertyPrice: price / ps.length,
+      appreciation: app / ps.length,
+      profitMargin: margin / ps.length
     };
   }
 
   /**
    * @param {Object} input  { property, amount, occupancy, adr, horizon }
    * @returns {Array} one result per structure
+   *
+   * Both structures are the same economics: gross room revenue, less Mevad's
+   * flat management fee, split by ownership percentage. "direct" is struck
+   * on the one selected property; "spv" is struck on the portfolio blend,
+   * because the parent company holds a stake across every hotel rather than
+   * one room.
    */
   function model(input) {
     var p = input.property;
     var A = input.amount;
     var N = input.horizon;
+    var feePct = D().managementFeePct;
 
     return D().structures.map(function (s) {
-      /* SPV holds the portfolio, so it is modelled on blended figures and
-         carries no single-asset construction delay. */
       var isSpv = s.id === 'spv';
       var avg = portfolioAverages();
 
       /* The SPV sits on portfolio averages rather than this one property — but it
          must still respond to the sliders, or the panel would show one card frozen
-         while the other three move. The user's assumptions are applied to the
+         while the other moves. The user's assumptions are applied to the
          portfolio as a proportional shift from the selected property's baseline. */
       var occRatio = p.occupancy ? input.occupancy / p.occupancy : 1;
       var adrRatio = p.adr ? input.adr / p.adr : 1;
 
       var adr = isSpv ? avg.adr * adrRatio : input.adr;
       var occ = isSpv ? Math.min(95, avg.occupancy * occRatio) : input.occupancy;
-      var unitPrice = isSpv ? avg.unitPrice : p.unitPrice;
+      var propertyPrice = isSpv ? avg.propertyPrice : p.unitPrice * p.keys;
+      var margin = isSpv ? avg.profitMargin : p.profitMargin;
       var growth = (isSpv ? avg.appreciation : p.appreciation) / 100;
       var timing = isSpv ? { delay: 1, ramp: [0.75] } : timingFor(p);
 
-      var units = A / unitPrice;
-      var stabilisedRevenue = units * adr * 365 * (occ / 100);
+      var ownershipPct = propertyPrice > 0 ? A / propertyPrice : 0;
+      var stabilisedRevenue = p.keys * adr * 365 * (occ / 100);
+      var stabilisedProfit = stabilisedRevenue * margin;
 
       var flows = [-A];
       var incomeTotal = 0;
@@ -133,20 +144,8 @@
 
       for (var yr = 1; yr <= N; yr++) {
         var f = performanceFactor(yr, timing);
-        var revenueShare = s.ownerShare ? stabilisedRevenue * f * s.ownerShare : 0;
-        var payout;
-
-        if (s.id === 'assured') {
-          /* Fixed on capital, but only once the property is open. */
-          payout = f > 0 ? A * s.assured : 0;
-        } else if (s.id === 'hybrid') {
-          var floor = f > 0 ? A * s.assured : 0;
-          payout = yr <= (s.floorYears + timing.delay)
-                 ? Math.max(floor, revenueShare)
-                 : revenueShare;
-        } else {
-          payout = revenueShare;
-        }
+        var profit = stabilisedProfit * f;
+        var payout = profit * (1 - feePct) * ownershipPct;
 
         incomeTotal += payout;
         if (!firstFullYear && f === 1) firstFullYear = payout;
@@ -163,6 +162,7 @@
 
       return {
         structure: s,
+        ownershipPct: ownershipPct * 100,
         irr: rate === null ? null : rate * 100,
         stabilisedAnnual: firstFullYear || 0,
         stabilisedMonthly: (firstFullYear || 0) / 12,
@@ -253,8 +253,8 @@
               '<span class="label">'+L.adr+'</span>' +
               '<span class="field__value" data-c="adrOut"></span>' +
             '</div>' +
-            '<input type="range" data-c="adr" min="1500" max="9000" step="50" aria-label="Average daily rate">' +
-            '<div class="field__scale"><span>₹1,500</span><span>₹9,000</span></div>' +
+            '<input type="range" data-c="adr" min="1200" max="3000" step="50" aria-label="Average daily rate">' +
+            '<div class="field__scale"><span>₹1,200</span><span>₹3,000</span></div>' +
           '</div>' +
 
         '</div>' +
@@ -290,7 +290,7 @@
       var p = currentProperty();
       var sc = C.scenarios.filter(function (s) { return s.id === state.scenario; })[0];
       var occ = Math.max(40, Math.min(95, Math.round(p.occupancy + sc.occupancyDelta)));
-      var adr = Math.max(1500, Math.min(9000, Math.round(p.adr * (1 + sc.adrDelta / 100) / 50) * 50));
+      var adr = Math.max(1200, Math.min(3000, Math.round(p.adr * (1 + sc.adrDelta / 100) / 50) * 50));
       ui.occ.value = occ;
       ui.adr.value = adr;
     }
@@ -339,6 +339,7 @@
             '<span class="result__irrlabel">'+W.irr+'</span>' +
           '</div>' +
           '<dl class="result__rows">' +
+            '<div class="result__row"><dt>'+L.ownershipPct+'</dt><dd>' + pct(r.ownershipPct, 2) + '</dd></div>' +
             '<div class="result__row"><dt>'+L.payoutYr+'</dt><dd>' + inrCompact(r.stabilisedAnnual) + '</dd></div>' +
             '<div class="result__row"><dt>'+L.perMonth+'</dt><dd>' + inrCompact(r.stabilisedMonthly) + '</dd></div>' +
             '<div class="result__row"><dt>'+L.yieldOnCost+'</dt><dd>' + pct(r.yieldOnCost) + '</dd></div>' +

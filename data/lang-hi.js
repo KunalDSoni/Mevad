@@ -164,36 +164,20 @@ window.MEVAD_HI = {
 
     structures: [
       {
-        name: 'स्वामित्व + राजस्व हिस्सेदारी', short: 'राजस्व हिस्सेदारी',
-        summary: 'आप एक विशिष्ट, पंजीकृत कमरे के मालिक होते हैं। उस कमरे की कमाई का एक हिस्सा आपको मिलता है।',
-        liquidity: 'पंजीकृत इकाई की पुनर्बिक्री',
-        risk: 'प्रतिफल अधिभोग के साथ बदलता है',
-        forWho: 'वे निवेशक जो अच्छे प्रदर्शन का लाभ चाहते हैं और उतार-चढ़ाव स्वीकार कर सकते हैं।',
-        detail: 'कमरे का राजस्व ADR × 365 × अधिभोग से निकाला जाता है। परिचालन लागत मेवाड़ वहन करता है; मालिक का हिस्सा शुद्ध कमरा राजस्व पर तय होकर तिमाही भुगतान होता है।'
+        name: 'सीधा संपत्ति स्वामित्व', short: 'एक होटल',
+        summary: 'आप सीधे एक होटल में निवेश करते हैं। आपकी हिस्सेदारी उतनी ही है जितना आपकी पूँजी संपत्ति के मूल्य में योगदान देती है - संपत्ति के मूल्य का 10% लगाएँ, उसका 10% मालिक बनें।',
+        liquidity: 'मेवाड़ या किसी नए निवेशक के साथ सहमति से अपनी हिस्सेदारी बेचना',
+        risk: 'प्रतिफल उस होटल के अधिभोग और दर के साथ बदलता है',
+        forWho: 'वे निवेशक जो एक तय संपत्ति में सीधा जोखिम चाहते हैं और एकल-संपत्ति उतार-चढ़ाव स्वीकार कर सकते हैं।',
+        detail: 'मेवाड़ होटल का संचालन करता है और वार्षिक लाभ में से 20% प्रबंधन शुल्क लेता है। शेष 80% मालिकों में उनकी उस होटल में हिस्सेदारी के अनुपात में बाँटा जाता है।'
       },
       {
-        name: 'स्वामित्व + निश्चित प्रतिफल', short: 'निश्चित प्रतिफल',
-        summary: 'कमरा आपका। मेवाड़ उसे तय वार्षिक दर पर पट्टे पर लेता है, अधिभोग चाहे जो हो।',
-        liquidity: 'पंजीकृत इकाई की पुनर्बिक्री',
-        risk: 'निश्चित भुगतान, मेवाड़ की साख पर निर्भर',
-        forWho: 'वे निवेशक जो अधिक लाभ की संभावना से ऊपर निश्चितता को महत्व देते हैं।',
-        detail: 'पट्टा/लाइसेंस अनुबंध वार्षिक भुगतान तय कर देता है। यह अधिभोग के साथ नहीं बदलता - अर्थात् संपत्ति के बेहतर प्रदर्शन पर भी नहीं बढ़ता।'
-      },
-      {
-        name: 'मिश्रित: पहले न्यूनतम, फिर हिस्सेदारी', short: 'मिश्रित',
-        summary: 'संपत्ति के स्थिर होने तक एक सुनिश्चित न्यूनतम, उसके बाद राजस्व हिस्सेदारी।',
-        liquidity: 'पंजीकृत इकाई की पुनर्बिक्री',
-        risk: 'शुरू में सुरक्षित, बाद में परिवर्तनशील',
-        forWho: 'वे निवेशक जो उद्घाटन-पूर्व संपत्ति में निवेश करते हुए शुरुआती अवधि में सुरक्षा चाहते हैं।',
-        detail: 'पहले तीन वर्ष मालिक को न्यूनतम राशि या राजस्व हिस्सेदारी, जो अधिक हो, मिलती है। चौथे वर्ष से केवल राजस्व हिस्सेदारी, थोड़े कम प्रतिशत पर - यही पहले मिली सुरक्षा की कीमत है।'
-      },
-      {
-        name: 'SPV इकाइयाँ', short: 'SPV इकाइयाँ',
-        summary: 'कई मेवाड़ होटलों को रखने वाली इकाई में हिस्सेदारी। कोई विशिष्ट कमरा नहीं; पूरे पोर्टफोलियो में भागीदारी।',
-        liquidity: 'इकाई हस्तांतरण, SPV अनुबंध के अधीन',
-        risk: 'कई संपत्तियों में विविधीकृत; किसी एक पर निर्भरता नहीं',
-        forWho: 'वे निवेशक जो एक होटल नहीं, पूरी श्रृंखला चाहते हैं, वह भी कम प्रवेश राशि पर।',
-        detail: 'प्रतिफल SPV की हर संपत्ति के मिश्रित प्रदर्शन पर तय होता है, जिससे किसी एक संपत्ति की शुरुआती अवधि का असर घट जाता है। पूरा कमरा नहीं खरीदा जाता, इसलिए प्रवेश राशि कम रहती है।'
+        name: 'SPV इकाइयाँ (मूल कंपनी)', short: 'मूल कंपनी',
+        summary: 'मेवाड़ की मूल कंपनी में हिस्सेदारी, जो हर संचालित होटल में भागीदार होती है। कोई विशिष्ट संपत्ति नहीं; पूरी श्रृंखला में भागीदारी।',
+        liquidity: 'इकाई हस्तांतरण, मूल कंपनी के संस्थापन दस्तावेज़ों के अधीन',
+        risk: 'श्रृंखला के हर होटल में विविधीकृत; किसी एक पर निर्भरता नहीं',
+        forWho: 'वे निवेशक जो एक होटल नहीं, मूल कंपनी के खुलने पर पूरी श्रृंखला चाहते हैं।',
+        detail: 'मूल कंपनी हर मेवाड़ होटल में हिस्सेदारी रखती है, जिसमें मेवाड़ साणंद भी शामिल है। हर होटल के 20% प्रबंधन शुल्क के बाद उसका अपना लाभ, मूल कंपनी के इकाई-धारकों में उनकी हिस्सेदारी के अनुपात में बाँटा जाता है। यह संरचना तब खुलती है जब मेवाड़ 4-5 होटल संचालित कर रहा हो; सीधा संपत्ति स्वामित्व आज से, मेवाड़ साणंद से शुरू, उपलब्ध है।'
       }
     ],
 
@@ -207,7 +191,8 @@ window.MEVAD_HI = {
         scenario: 'परिदृश्य',
         occupancy: 'अधिभोग',
         adr: 'औसत दैनिक दर',
-        heading: 'चारों संरचनाएँ, वही पूँजी',
+        heading: 'दोनों संरचनाएँ, वही पूँजी',
+        ownershipPct: 'आपकी स्वामित्व हिस्सेदारी',
         payoutYr: 'स्थिर वार्षिक भुगतान',
         perMonth: 'प्रति माह',
         yieldOnCost: 'लागत पर प्रतिफल',
@@ -215,13 +200,13 @@ window.MEVAD_HI = {
         income: 'आय',
         exitValue: 'निकास मूल्य',
         multiple: 'कुल / निवेशित',
-        footnote: 'IRR पूरी नकदी-प्रवाह शृंखला पर निकाला जाता है: वर्ष शून्य में पूँजी बाहर, हर वर्ष भुगतान, और अवधि के अंत में हिस्सेदारी की बिक्री। निर्माण और स्थिरीकरण भी लागू हैं - जो संपत्ति खुली ही नहीं, वह भुगतान नहीं करती।'
+        footnote: 'भुगतान संपत्ति के लाभ का 80% (मेवाड़ के 20% प्रबंधन शुल्क के बाद) है, जो स्वामित्व प्रतिशत के अनुसार बाँटा जाता है। IRR पूरी नकदी-प्रवाह शृंखला पर निकाला जाता है: वर्ष शून्य में पूँजी बाहर, हर वर्ष भुगतान, और अवधि के अंत में हिस्सेदारी की बिक्री। निर्माण और स्थिरीकरण भी लागू हैं - जो संपत्ति खुली ही नहीं, वह भुगतान नहीं करती।'
       }
     },
 
     journey: [
       { step: 'थीसिस समझें', body: 'समझें कि औद्योगिक आतिथ्य भारत की हर दूसरी होटल संपत्ति से अलग व्यवहार क्यों करता है।', where: 'इसी वेबसाइट पर' },
-      { step: 'अपना प्रतिफल आँकें', body: 'चारों संरचनाओं पर अपने आँकड़े चलाएँ, निचले परिदृश्य सहित।', where: 'इसी वेबसाइट पर' },
+      { step: 'अपना प्रतिफल आँकें', body: 'दोनों संरचनाओं पर अपने आँकड़े चलाएँ, निचले परिदृश्य सहित।', where: 'इसी वेबसाइट पर' },
       { step: 'अपनी संरचना चुनें', body: 'संपत्ति, राशि और वह प्रतिफल मॉडल चुनें जो आपकी जोखिम क्षमता से मेल खाए।', where: 'इसी वेबसाइट पर' },
       { step: 'मीटिंग बुक करें', body: 'निवेश टीम के साथ 45 मिनट की बातचीत। कोई बाध्यता नहीं, कोई दस्तावेज़ नहीं।', where: 'शेड्यूलिंग' },
       { step: 'KYC पूरा करें', body: 'पहचान और धन-स्रोत सत्यापन, पूरी तरह हमारे अनुपालन साझेदार द्वारा।', where: 'अनुपालन साझेदार' },
@@ -240,16 +225,20 @@ window.MEVAD_HI = {
         a: 'अकेले यह अच्छा नहीं है - संयोजन में अच्छा है। कम दर, कहीं अधिक और स्थिर अधिभोग, लगभग शून्य ग्राहक-अधिग्रहण लागत और मौसमी गिरावट का अभाव मिलकर ऐसा RevPAR बनाते हैं जो किसी एक शिखर महीने में कम प्रभावशाली, पर दशक भर में कहीं अधिक भरोसेमंद होता है। आप वक्र का आकार खरीद रहे हैं, उसका सबसे ऊँचा बिंदु नहीं।'
       },
       {
-        q: 'क्या निश्चित प्रतिफल की गारंटी है?',
-        a: 'यह संचालन इकाई का अनुबंधात्मक दायित्व है, नियामक अर्थ में गारंटी नहीं, और यह उतना ही मज़बूत है जितनी उसके पीछे की साख। इसीलिए इस साइट का कैलकुलेटर उसके साथ-साथ राजस्व हिस्सेदारी भी दिखाता है: निश्चित राशि लेने का निर्णय करने से पहले आपको पता होना चाहिए कि संपत्ति वास्तव में कितना कमाती है।'
+        q: '20% प्रबंधन शुल्क किसलिए है?',
+        a: 'मेवाड़ श्रृंखला की हर संपत्ति का संचालन करता है - स्टाफ़िंग, कॉर्पोरेट दर अनुबंध, F&B, रखरखाव, सब कुछ। शुल्क राजस्व पर नहीं, लाभ पर लिया जाता है, और पहले लिया जाता है: शेष राशि मालिकों में सख्ती से स्वामित्व प्रतिशत के अनुसार बाँटी जाती है, इसलिए मेवाड़ तभी अधिक कमाता है जब संपत्ति भी अधिक कमाती है।'
       },
       {
-        q: 'क्या मैं स्वयं उस कमरे में रुक सकता हूँ?',
-        a: 'मालिक के ठहरने के अधिकार अनुबंध में तय हैं और संरचना के अनुसार बदलते हैं। ये जानबूझकर सीमित हैं - जिस कमरे में मालिक रुकता है, वह कमरा उस समय कमाई नहीं कर रहा होता।'
+        q: 'मेरी स्वामित्व हिस्सेदारी ठीक-ठीक कितनी होगी?',
+        a: 'आपके निवेश की राशि, निवेश के समय उस संपत्ति के कुल मूल्य से भाग देने पर। किसी होटल के मूल्य का 10% लगाएँ, तो उसके 10% के मालिक बनते हैं - और जब तक हिस्सेदारी रखते हैं, उसके वितरण योग्य लाभ के 10% के भी।'
+      },
+      {
+        q: 'मैं एक होटल की जगह मूल कंपनी में कब निवेश कर सकता हूँ?',
+        a: 'अभी नहीं। एक तय, नामित होटल में सीधा स्वामित्व आज उपलब्ध है, मेवाड़ साणंद से शुरू। मूल कंपनी - जो हर संचालित होटल में हिस्सेदारी रखेगी - तब निवेश के लिए खुलेगी जब मेवाड़ 4-5 होटल चला रहा होगा, ताकि "श्रृंखला" एक वादा नहीं, वास्तविक पोर्टफोलियो हो।'
       },
       {
         q: 'मैं निवेश से बाहर कैसे निकलूँ?',
-        a: 'स्वामित्व संरचनाओं से निकास पंजीकृत इकाई बेचकर होता है; SPV इकाइयाँ SPV अनुबंध की शर्तों के अनुसार हस्तांतरित होती हैं। दोनों में से कोई भी सूचीबद्ध प्रतिभूति नहीं है, और न ही इन्हें तरल माना जाना चाहिए। पूरी अवधि की योजना बनाकर चलें।'
+        a: 'अपनी हिस्सेदारी बेचकर - किसी होटल में, या बाद में मूल कंपनी में - मेवाड़ या किसी नए निवेशक के साथ सहमति से। इनमें से कोई भी सूचीबद्ध प्रतिभूति नहीं है, और न ही इन्हें तरल माना जाना चाहिए। पूरी अवधि की योजना बनाकर चलें।'
       },
       {
         q: 'होटलों का संचालन कौन करता है?',
@@ -390,8 +379,8 @@ window.MEVAD_HI = {
     'Every assumption, exposed.': 'हर मान्यता, खुली हुई।',
     'Most investment calculators are a marketing device with a slider attached. This one lets you break it. Drag occupancy to 40%, cut the rate, extend the hold - and see which structure survives.':
       'ज़्यादातर निवेश कैलकुलेटर स्लाइडर लगा हुआ विज्ञापन भर होते हैं। यह आपको इसे तोड़ने देता है। अधिभोग 40% पर लाएँ, दर घटाएँ, अवधि बढ़ाएँ - और देखें कौन-सी संरचना टिकती है।',
-    '<strong>Why we show all four structures at once.</strong> An assured return looks best in a downside year and worst in a good decade. A revenue share is the reverse. Seeing them side by side against the same property is the only honest way to choose between them.':
-      '<strong>हम चारों संरचनाएँ एक साथ क्यों दिखाते हैं।</strong> निश्चित प्रतिफल बुरे वर्ष में सबसे अच्छा और अच्छे दशक में सबसे कमज़ोर दिखता है। राजस्व हिस्सेदारी में उल्टा होता है। एक ही संपत्ति पर उन्हें अगल-बगल देखना ही उनके बीच चुनाव का एकमात्र ईमानदार तरीका है।',
+    '<strong>Why ownership, not a fixed return.</strong> There is no assured or guaranteed leg here. You own a percentage of a real property - or, once it opens, of the parent company - and you are paid your share of what it actually earns, after a flat 20% management fee. That is the whole model.':
+      '<strong>स्वामित्व क्यों, निश्चित प्रतिफल नहीं।</strong> यहाँ कोई निश्चित या गारंटीशुदा हिस्सा नहीं है। आप किसी वास्तविक संपत्ति के - या, इसके खुलने पर, मूल कंपनी के - एक प्रतिशत के मालिक होते हैं, और आपको वह मिलता है जो वह वास्तव में कमाती है, 20% प्रबंधन शुल्क के बाद। यही पूरा मॉडल है।',
     '<strong>Why the first payout is not year one.</strong> A property under construction cannot pay a return, and one that just opened does not reach stabilised occupancy for a further nine to twelve months. The model applies both. Projections that skip this are the reason investors are disappointed.':
       '<strong>पहला भुगतान पहले वर्ष क्यों नहीं।</strong> निर्माणाधीन संपत्ति प्रतिफल नहीं दे सकती, और अभी-अभी खुली संपत्ति नौ से बारह महीने तक स्थिर अधिभोग तक नहीं पहुँचती। यह मॉडल दोनों लागू करता है। जो अनुमान इसे छोड़ देते हैं, वही निवेशकों की निराशा का कारण बनते हैं।',
     'How to read it': 'इसे कैसे पढ़ें',
@@ -402,14 +391,13 @@ window.MEVAD_HI = {
     'It cannot predict the future': 'यह भविष्य नहीं बता सकता',
 
     /* Structures / invest */
-    'Four ways in': 'भीतर आने के चार रास्ते',
-    'Own a room, own a floor of the return, or own the chain.':
-      'एक कमरा रखें, प्रतिफल की एक न्यूनतम सीमा रखें, या पूरी श्रृंखला रखें।',
-    'The same asset, four risk profiles. Pick the one that matches how you want to be exposed - not the one with the largest number on it.':
-      'वही संपत्ति, चार जोखिम प्रोफ़ाइल। वह चुनें जो आपकी जोखिम इच्छा से मेल खाए - वह नहीं जिस पर सबसे बड़ा आँकड़ा लिखा है।',
-    'Choose your exposure, not your number.': 'अपना जोखिम चुनें, अपना आँकड़ा नहीं।',
-    'The same hotel can be bought four ways. The difference between them is not how much you might make - it is what you are exposed to, and when you get paid.':
-      'वही होटल चार तरीकों से खरीदा जा सकता है। इनका फ़र्क़ यह नहीं कि आप कितना कमा सकते हैं - बल्कि यह कि आप किस जोखिम में हैं, और भुगतान कब मिलता है।',
+    'Two ways in': 'भीतर आने के दो रास्ते',
+    'Own a hotel, or own the chain.': 'एक होटल रखें, या पूरी श्रृंखला रखें।',
+    'Start by owning a percentage of one named property - Mevad Sanand today. As more hotels come online, own a slice of the parent company instead.':
+      'एक नामित संपत्ति के प्रतिशत के मालिक बनकर शुरू करें - आज मेवाड़ साणंद। जैसे-जैसे और होटल जुड़ते हैं, इसके बजाय मूल कंपनी का हिस्सा रखें।',
+    'Own the hotel, not a promise about it.': 'होटल के मालिक बनें, उसके बारे में किए वादे के नहीं।',
+    'You put in capital, you get a matching percentage of that property. No fixed return, no assured leg - just your share of what the hotel actually earns, after Mevad\'s 20% management fee.':
+      'आप पूँजी लगाते हैं, आपको उस संपत्ति का उतना ही प्रतिशत मिलता है। कोई निश्चित प्रतिफल नहीं, कोई गारंटीशुदा हिस्सा नहीं - बस वह हिस्सा जो होटल वास्तव में कमाता है, मेवाड़ के 20% प्रबंधन शुल्क के बाद।',
 
     /* Process */
     'The process': 'प्रक्रिया',
@@ -464,16 +452,16 @@ window.MEVAD_HI = {
       'सुर्खियों वाला प्रतिफल यह नहीं बताता कि पैसा <em>कब</em> आता है। यहाँ IRR पूरी नकदी-प्रवाह शृंखला पर चलता है - वर्ष शून्य में पूँजी बाहर, हर वर्ष का भुगतान क्रम से, और अंत में हिस्सेदारी की बिक्री। आठवें वर्ष मिला पैसा उसी अनुपात में छूट पाता है, क्योंकि वह पहले वर्ष मिले पैसे से कम मूल्यवान है।',
     'A property under construction pays nothing until it opens. One that has just opened runs below stabilised occupancy for a further nine to twelve months. Both are modelled. This is the single most common omission in Indian hospitality projections, and it is why returns disappoint.':
       'निर्माणाधीन संपत्ति खुलने तक कुछ नहीं देती। और जो अभी-अभी खुली है वह अगले नौ से बारह महीने स्थिर अधिभोग से नीचे चलती है। मॉडल दोनों लागू करता है। भारतीय आतिथ्य अनुमानों में यही सबसे आम चूक है, और इसी से प्रतिफल निराश करते हैं।',
-    'The downside scenario is not a footnote - it is a button, and it moves the same numbers the upside does. In a genuine downside the assured structure outperforms the revenue share. We would rather show you that than have you discover it in year four.':
-      'निचला परिदृश्य कोई फ़ुटनोट नहीं - वह एक बटन है, और वह उन्हीं आँकड़ों को हिलाता है जिन्हें ऊपरी परिदृश्य हिलाता है। सच्ची गिरावट में निश्चित प्रतिफल राजस्व हिस्सेदारी से बेहतर करता है। हम चाहेंगे कि आप यह अभी जान लें, चौथे वर्ष में नहीं।',
+    'The downside scenario is not a footnote - it is a button, and it moves the same numbers the upside does. Because both structures are pure profit share with no fixed floor, a weak year means a smaller payout for everyone holding a stake. We would rather show you that than have you discover it in year four.':
+      'निचला परिदृश्य कोई फ़ुटनोट नहीं - वह एक बटन है, और वह उन्हीं आँकड़ों को हिलाता है जिन्हें ऊपरी परिदृश्य हिलाता है। चूँकि दोनों संरचनाएँ शुद्ध लाभ-हिस्सेदारी हैं, कोई निश्चित न्यूनतम नहीं है, कमज़ोर वर्ष का मतलब है हर हिस्सेदार के लिए छोटा भुगतान। हम चाहेंगे कि आप यह अभी जान लें, चौथे वर्ष में नहीं।',
     'Every output is arithmetic performed on assumptions you can see and change. It is not a forecast. Occupancy, rate, capital appreciation and operator performance are all uncertain, and the true outcome may fall outside every scenario shown here - including below the downside.':
       'हर परिणाम उन मान्यताओं पर किया गया गणित है जिन्हें आप देख और बदल सकते हैं। यह पूर्वानुमान नहीं है। अधिभोग, दर, पूँजी वृद्धि और संचालक का प्रदर्शन - सब अनिश्चित हैं, और वास्तविक नतीजा यहाँ दिखाए हर परिदृश्य के बाहर भी जा सकता है, निचले परिदृश्य से भी नीचे।',
 
     /* invest.html */
-    '<strong>There is no best structure.</strong> In a strong decade the revenue share wins. In a weak one the assured return wins, and it wins decisively. The hybrid gives up some of both to reduce the range of outcomes, and the SPV trades single-asset upside for the smoothing effect of a portfolio.':
-      '<strong>कोई एक सर्वश्रेष्ठ संरचना नहीं है।</strong> अच्छे दशक में राजस्व हिस्सेदारी जीतती है। कमज़ोर दशक में निश्चित प्रतिफल जीतता है, और निर्णायक रूप से। मिश्रित संरचना नतीजों का दायरा घटाने के लिए दोनों में से कुछ छोड़ती है, और SPV एक ही संपत्ति के अतिरिक्त लाभ के बदले पोर्टफोलियो का संतुलन देता है।',
-    'Anyone who tells you one of these dominates the others has not modelled the downside. <a href="returns.html" style="color:var(--accent-ink)">Run it yourself</a> - set occupancy to 40% and watch the ranking invert.':
-      'जो आपसे कहे कि इनमें से कोई एक बाक़ी सब पर भारी है, उसने गिरावट का आकलन नहीं किया। <a href="returns.html" style="color:var(--accent-ink)">स्वयं चलाकर देखिए</a> - अधिभोग 40% पर रखिए और क्रम को उलटते देखिए।',
+    '<strong>Direct ownership is live today.</strong> Invest into a named property - starting with Mevad Sanand - and your stake is exactly the percentage of that hotel your capital represents. As Mevad opens more hotels, the same structure repeats for each one.':
+      '<strong>सीधा स्वामित्व आज उपलब्ध है।</strong> एक नामित संपत्ति में निवेश करें - मेवाड़ साणंद से शुरू - और आपकी हिस्सेदारी ठीक उतनी ही होगी जितना प्रतिशत आपकी पूँजी उस होटल में दर्शाती है। जैसे-जैसे मेवाड़ और होटल खोलता है, यही संरचना हर एक के लिए दोहराई जाती है।',
+    '<strong>The parent company is the next phase.</strong> Once Mevad is running 4-5 hotels, a parent company holding a stake across all of them opens for investment - for investors who want the chain rather than one property. <a href="returns.html" style="color:var(--accent-ink)">Model both</a> against the same assumptions.':
+      '<strong>मूल कंपनी अगला चरण है।</strong> जब मेवाड़ 4-5 होटल चला रहा होगा, तब सभी में हिस्सेदारी रखने वाली मूल कंपनी निवेश के लिए खुलेगी - उन निवेशकों के लिए जो एक संपत्ति नहीं, पूरी श्रृंखला चाहते हैं। <a href="returns.html" style="color:var(--accent-ink)">दोनों को आँकें</a> वही मान्यताओं पर।',
     'Run it yourself': 'स्वयं चलाकर देखिए',
     'This site collects no identity documents and stores no personal files. KYC is handled entirely by a regulated compliance partner on their own infrastructure, and the link is issued to you directly after the first call.':
       'यह वेबसाइट कोई पहचान दस्तावेज़ नहीं लेती और कोई निजी फ़ाइल संग्रहित नहीं करती। KYC पूरी तरह एक विनियमित अनुपालन साझेदार द्वारा, उनके अपने बुनियादी ढाँचे पर किया जाता है, और उसका लिंक पहली बातचीत के बाद सीधे आपको भेजा जाता है।',

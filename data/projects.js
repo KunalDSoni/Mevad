@@ -198,6 +198,7 @@ window.MEVAD = {
       adr: 4200,            // average daily rate, INR
       occupancy: 78,        // stabilised %, base case
       appreciation: 7,      // annual capital appreciation %, illustrative
+      profitMargin: 0.45,   // net operating profit as % of gross room revenue, illustrative
       blurb: 'Gujarat\'s most concentrated automotive cluster, with a serviced-hotel supply that never followed the factories in.'
     },
     {
@@ -205,14 +206,15 @@ window.MEVAD = {
       name: 'Mevad Dahej',
       state: 'Gujarat',
       corridor: 'Dahej PCPIR · Bharuch',
-      status: 'Operational',
+      status: 'Announced',
       keys: 84,
-      opened: '2025',
+      opened: '2027 (expected)',
       anchors: ['Petrochemicals', 'Speciality chemicals', 'Port logistics'],
       unitPrice: 4200000,
       adr: 4600,
       occupancy: 81,
       appreciation: 7,
+      profitMargin: 0.47,
       blurb: 'A petrochemical investment region running continuous shutdown-and-turnaround cycles, each one importing hundreds of contractors.'
     },
     {
@@ -228,6 +230,7 @@ window.MEVAD = {
       adr: 5100,
       occupancy: 76,
       appreciation: 8,
+      profitMargin: 0.42,
       blurb: 'India\'s densest auto-manufacturing belt, where visiting engineers currently commute ninety minutes each way from Pune city.'
     },
     {
@@ -243,6 +246,7 @@ window.MEVAD = {
       adr: 3800,
       occupancy: 74,
       appreciation: 8,
+      profitMargin: 0.43,
       blurb: 'A multi-sector SEZ with more than two hundred operating units and effectively no organised accommodation inside the gate.'
     },
     {
@@ -258,65 +262,45 @@ window.MEVAD = {
       adr: 4000,
       occupancy: 75,
       appreciation: 8,
+      profitMargin: 0.44,
       blurb: 'The centre of India\'s EV build-out, absorbing capital faster than it is absorbing infrastructure.'
     }
   ],
 
   /* ---------------------------------------------------------------------
      INVESTMENT STRUCTURES
-     The calculator models all four against the same property and amount.
+     Two structures. Both are profit-share, proportional-ownership models -
+     there is no fixed/assured leg. Mevad takes a flat management fee off
+     property profit before anything is distributed to owners.
      --------------------------------------------------------------------- */
+  managementFeePct: 0.20,   // Mevad's share of property profit, taken first, both structures
+
   structures: [
     {
-      id: 'revshare',
-      name: 'Ownership + Revenue Share',
-      short: 'Revenue share',
-      summary: 'You own a specific, registered room. You receive a share of what that room earns.',
-      ownerShare: 0.36,     // owner's share of GROSS room revenue, net of operating costs
+      id: 'direct',
+      name: 'Direct Property Ownership',
+      short: 'Single hotel',
+      summary: 'You invest directly into one hotel. Your stake is the share of the property your capital represents - invest 10% of the property\'s value, own 10% of it.',
+      ownerShare: null,     // computed per-investment: amount / property price
       assured: null,
-      liquidity: 'Resale of the registered unit',
-      risk: 'Return moves with occupancy',
-      forWho: 'Investors who want the upside of a performing asset and can accept variability.',
-      detail: 'Room revenue is calculated as ADR × 365 × occupancy. Operating costs are borne by Mevad; the owner\'s share is struck on net room revenue and paid quarterly.'
-    },
-    {
-      id: 'assured',
-      name: 'Ownership + Assured Return',
-      short: 'Assured return',
-      summary: 'You own the room. Mevad leases it back at a fixed annual rate, regardless of occupancy.',
-      ownerShare: null,
-      assured: 0.075,       // 7.5% of invested capital per year — below the base-case
-                            // revenue share, because certainty is paid for in upside
-      liquidity: 'Resale of the registered unit',
-      risk: 'Fixed payment, dependent on Mevad\'s covenant',
-      forWho: 'Investors who value predictability over participation in upside.',
-      detail: 'A lease/licence agreement fixes the annual payment. It does not vary with occupancy - which also means it does not rise when the property outperforms.'
-    },
-    {
-      id: 'hybrid',
-      name: 'Hybrid: Floor then Share',
-      short: 'Hybrid',
-      summary: 'A guaranteed floor while the property stabilises, then a revenue share once it does.',
-      ownerShare: 0.32,
-      assured: 0.07,
-      floorYears: 3,
-      liquidity: 'Resale of the registered unit',
-      risk: 'Protected early, variable later',
-      forWho: 'Investors backing a pre-opening property who want cover during ramp-up.',
-      detail: 'For the first three years the owner receives the higher of the floor or the revenue share. From year four it is revenue share only, at a slightly lower owner percentage in exchange for the earlier protection.'
+      liquidity: 'Sale of your stake, by agreement with Mevad or an incoming investor',
+      risk: 'Return moves with that hotel\'s occupancy and rate',
+      forWho: 'Investors who want direct exposure to one named property and can accept single-asset variability.',
+      detail: 'Mevad operates the hotel and takes a flat 20% management fee off annual profit. The remaining 80% is distributed to owners in proportion to their stake in that specific hotel.'
     },
     {
       id: 'spv',
-      name: 'SPV Units',
-      short: 'SPV units',
-      summary: 'Units in the entity that holds several Mevad hotels. No specific room; exposure to the portfolio.',
-      ownerShare: 0.34,
+      name: 'SPV Units (Parent Company)',
+      short: 'Parent company',
+      summary: 'Units in the Mevad parent entity, which holds a stake across every operating hotel. No single property; exposure to the whole chain.',
+      ownerShare: null,
       assured: null,
       portfolioDiversification: true,
-      liquidity: 'Unit transfer, subject to the SPV agreement',
-      risk: 'Diversified across properties; no single-asset concentration',
-      forWho: 'Investors who want the chain rather than one hotel, at a lower entry ticket.',
-      detail: 'Returns are struck on the blended performance of every property in the SPV, which smooths the ramp-up of any single asset. Entry tickets are smaller because no whole room is being purchased.'
+      roadmap: true,        // not live yet - opens once 4-5 hotels are operational
+      liquidity: 'Unit transfer, subject to the parent company\'s constitutional documents',
+      risk: 'Diversified across every hotel in the chain; no single-asset concentration',
+      forWho: 'Investors who want the chain rather than one hotel, once the parent company opens for investment.',
+      detail: 'The parent company holds an equity stake in every Mevad hotel, including Mevad Sanand. Its own profit - after each hotel\'s 20% management fee - is distributed to parent-company unit holders in proportion to their holding. This structure opens once Mevad is operating 4-5 hotels; direct property ownership is live today, starting with Mevad Sanand.'
     }
   ],
 
@@ -338,7 +322,8 @@ window.MEVAD = {
       scenario: 'Scenario',
       occupancy: 'Occupancy',
       adr: 'Average daily rate',
-      heading: 'All four structures, same money',
+      heading: 'Both structures, same money',
+      ownershipPct: 'Your ownership stake',
       payoutYr: 'Stabilised payout / yr',
       perMonth: 'Per month',
       yieldOnCost: 'Yield on cost',
@@ -346,7 +331,7 @@ window.MEVAD = {
       income: 'Income',
       exitValue: 'Exit value',
       multiple: 'Total / invested',
-      footnote: 'IRR is computed on the full cashflow: capital out at year zero, payouts each year, and sale of the holding at the end of the period. Construction and stabilisation are applied - a property that has not opened does not pay.'
+      footnote: 'Payouts are 80% of property profit (after Mevad\'s 20% management fee), split by ownership percentage. IRR is computed on the full cashflow: capital out at year zero, payouts each year, and sale of the holding at the end of the period. Construction and stabilisation are applied - a property that has not opened does not pay.'
     },
     // Sensitivity applied to the base occupancy for the two side cases.
     scenarios: [
@@ -361,7 +346,7 @@ window.MEVAD = {
      --------------------------------------------------------------------- */
   journey: [
     { step: 'Explore the thesis',      body: 'Understand why industrial hospitality behaves differently from every other hotel asset in India.', where: 'On this site' },
-    { step: 'Model your returns',      body: 'Run your own numbers across all four structures, including the downside case.',                     where: 'On this site' },
+    { step: 'Model your returns',      body: 'Run your own numbers across both structures, including the downside case.',                          where: 'On this site' },
     { step: 'Choose your structure',   body: 'Pick the property, the amount and the return model that matches your risk appetite.',              where: 'On this site' },
     { step: 'Book a meeting',          body: 'A 45-minute call with the investment team. No obligation, no documents required.',                 where: 'Scheduling' },
     { step: 'Complete KYC',            body: 'Identity and source-of-funds verification, handled entirely by our compliance partner.',           where: 'Compliance partner' },
@@ -383,16 +368,20 @@ window.MEVAD = {
       a: 'It is not good on its own - it is good in combination. Lower rate, far higher and steadier occupancy, near-zero acquisition cost and no seasonal trough produce a RevPAR that is less impressive in a peak month and considerably more reliable across a decade. You are buying the shape of the curve, not its highest point.'
     },
     {
-      q: 'Is the assured return guaranteed?',
-      a: 'It is a contractual obligation of the operating entity, not a guarantee in the regulatory sense, and it is only as strong as the covenant behind it. That is precisely why the calculator on this site shows you the revenue-share case alongside it: you should understand what the asset actually earns before choosing to be paid a fixed sum from it.'
+      q: 'What is the 20% management fee for?',
+      a: 'Mevad operates every property in the chain - staffing, corporate rate agreements, F&B, maintenance, everything. The fee is taken off profit, not revenue, and it is taken first: what remains is split among owners strictly by ownership percentage, so Mevad only earns more when the property does.'
     },
     {
-      q: 'Can I use the room myself?',
-      a: 'Owner stay entitlements are defined in the agreement and vary by structure. They are limited by design - an inventory that owners occupy is an inventory that is not earning.'
+      q: 'What is my ownership percentage, exactly?',
+      a: 'The amount you invest divided by that property\'s total value at the time you invest. Put in 10% of what a hotel is worth, and you hold 10% of it - and 10% of its distributable profit, for as long as you hold the stake.'
+    },
+    {
+      q: 'When can I invest in the parent company instead of one hotel?',
+      a: 'Not yet. Direct ownership in a single, named hotel is open today, starting with Mevad Sanand. The parent company - which will hold a stake across every operating hotel - opens for investment once Mevad has 4-5 hotels running, so that "the chain" is an actual portfolio rather than a promise.'
     },
     {
       q: 'How do I exit?',
-      a: 'Ownership structures are exited by selling the registered unit; SPV units are transferred under the terms of the SPV agreement. Neither is a listed instrument, and neither should be treated as liquid. Plan on the full horizon.'
+      a: 'By selling your stake - in a hotel, or later in the parent company - by agreement with Mevad or to an incoming investor. Neither is a listed instrument, and neither should be treated as liquid. Plan on the full horizon.'
     },
     {
       q: 'Who operates the hotels?',
