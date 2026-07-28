@@ -1248,6 +1248,81 @@ input[type='range']::-moz-range-thumb {
 }
 @media (max-width: 760px) { .tl-item__where { text-align: left; margin-top: 0.5rem; } }
 
+/* ==========================================================================
+   INVESTOR NARRATIVE — new components (Performance, Growth Journey,
+   Business Model, Capital Allocation, Expansion, Proof)
+   ========================================================================== */
+
+/* Sticky scroll-progress indicator */
+.progress-bar {
+  position: fixed; top: 0; left: 0; width: 100%; height: 3px;
+  background: transparent; z-index: 60; pointer-events: none;
+}
+.progress-bar__fill {
+  height: 100%; width: 0%; background: var(--accent-ink);
+  transition: width 0.1s linear;
+}
+
+/* Large count-up stats */
+.stat-hero { display: grid; gap: 0.4rem; }
+.stat-hero__value {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(2.25rem, 6vw, 4rem); color: var(--text-0); line-height: 1;
+}
+.stat-hero__label { color: var(--text-2); font-size: 0.875rem; }
+
+/* Capital-deployment breakdown chart */
+.cap-chart { display: grid; gap: 0.9rem; margin-top: 1.5rem; }
+.cap-chart__row { display: grid; grid-template-columns: 12rem 1fr; gap: 1rem; align-items: center; }
+@media (max-width: 700px) { .cap-chart__row { grid-template-columns: 1fr; gap: 0.35rem; } }
+.cap-chart__label { color: var(--text-1); font-size: 0.875rem; }
+.cap-chart__track { background: var(--ink-2); border-radius: var(--r-sm); height: 10px; overflow: hidden; }
+.cap-chart__bar {
+  height: 100%; background: var(--series-industrial); border-radius: var(--r-sm);
+  width: 0%; transition: width 900ms var(--ease);
+}
+.cap-chart__bar--placeholder {
+  background: repeating-linear-gradient(45deg, var(--line-2), var(--line-2) 6px, transparent 6px, transparent 12px);
+  width: 100%;
+}
+
+/* Business Model / Capital Allocation step-chain diagram */
+.chain-diagram {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0.75rem; align-items: stretch; margin-top: 1.5rem;
+}
+.chain-diagram__step {
+  background: var(--ink-1); border: 1px solid var(--line-1); border-radius: var(--r-md);
+  padding: 1.1rem; text-align: center; opacity: 0; transform: translateY(12px);
+  transition: opacity 600ms var(--ease), transform 600ms var(--ease);
+}
+.chain-diagram__step.is-in { opacity: 1; transform: none; }
+.chain-diagram__step h4 { font-size: 0.9375rem; margin-bottom: 0.35rem; }
+.chain-diagram__step p { font-size: 0.8125rem; color: var(--text-2); margin: 0; }
+
+/* Expansion mini-map (flat, illustrative SVG) */
+.map-svg { width: 100%; height: auto; }
+.map-svg__pin { opacity: 0; transform: scale(0.4); transform-origin: center; transition: opacity 500ms var(--ease), transform 500ms var(--ease); }
+.map-svg__pin.is-in { opacity: 1; transform: scale(1); }
+.map-svg__label { font-family: var(--font-mono); font-size: 10px; fill: var(--text-1); }
+
+/* Proof photo placeholder grid */
+.proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.proof-frame {
+  aspect-ratio: 4 / 3; border: 1px dashed var(--line-3); border-radius: var(--r-md);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-3); font-family: var(--font-mono); font-size: 0.75rem;
+  background: var(--ink-1);
+}
+
+/* Generic "figure pending" placeholder tag, used wherever a real number is
+   not yet available */
+.placeholder-tag {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.6875rem;
+  color: var(--text-3); border: 1px dashed var(--line-2); border-radius: var(--r-sm);
+  padding: 0.15rem 0.5rem;
+}
+
 /* --- Accordion ------------------------------------------------------------ */
 
 .acc { border-top: 1px solid var(--line-1); }
