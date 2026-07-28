@@ -224,7 +224,90 @@ window.MEWAD_HI = {
         q: 'होटलों का संचालन कौन करता है?',
         a: 'श्रृंखला की हर संपत्ति का संचालन मेवाड़ स्वयं करता है। ब्रांड, मानक और कॉर्पोरेट दर अनुबंध ही असली संपत्ति हैं; संचालन बाहर देने का अर्थ होगा वही चीज़ गँवा देना जो मांग को अनुबंधात्मक बनाती है।'
       }
-    ]
+    ],
+
+    /* index.html data-render mounts below — added because these sections
+       (story, performance, growthJourney, businessModel, capitalAllocation,
+       proof, philosophy, whyInvest, founder) had no Hindi override at all
+       and were silently staying in English. */
+    story: [
+      {
+        heading: 'एक होटल, ऐसे मेहमान के लिए बना जिसके लिए और कोई नहीं बना रहा था।',
+        body: 'होटल मेवाड़ साणंद में इसलिए खुला क्योंकि मेहमान पहले से मौजूद था: आसपास बन रहे संयंत्रों द्वारा भेजे गए इंजीनियर और ठेकेदार, जिनके छह महीने के ठहराव के लिए कुछ भी बना नहीं था।'
+      },
+      {
+        heading: 'साणंद, क्योंकि मांग पहले से वहाँ थी।',
+        body: 'एक ऑटोमोटिव और कंपोनेंट क्लस्टर, जहाँ साल के बारहों महीने खरीद-आदेश वाला मेहमान आता है - कोई ऐसा गंतव्य नहीं जिसे कोई शौक से चुने, और यही कारण है कि कमरा भरा रहा।'
+      },
+      {
+        heading: 'व्यवसाय वैसे ही बढ़ा जैसे असली व्यवसाय बढ़ता है।',
+        body: 'पहले होटल के लाभ ने अगला कमरा, फिर अगली संपत्ति फंड की। यहाँ कुछ भी किसी पिच डेक से पहले फंड नहीं हुआ - हर चीज़ भरे हुए कमरे से फंड हुई।'
+      }
+    ],
+
+    performance: {
+      capitalDeployedBreakdown: [
+        { label: 'होटल मेवाड़-2', note: 'बदलें: श्रेणी राशि' },
+        { label: 'अतिरिक्त कमरे', note: 'बदलें: श्रेणी राशि' },
+        { label: 'होटल मेवाड़-3', note: 'बदलें: श्रेणी राशि' },
+        { label: 'बुनियादी ढाँचे में सुधार', note: 'बदलें: श्रेणी राशि' },
+        { label: 'सहायक व्यावसायिक संपत्तियाँ', note: 'बदलें: श्रेणी राशि' }
+      ],
+      caption: 'आँकड़े वास्तविक ऐतिहासिक संचालन प्रदर्शन दर्शाते हैं, कोई अनुमान नहीं।'
+    },
+
+    growthJourney: [
+      { step: 'होटल मेवाड़', body: 'पहली संपत्ति साणंद में खुलती है।' },
+      { step: 'विस्तार', body: 'संचालन लाभ को बाँटने के बजाय पुनर्निवेशित किया जाता है।' },
+      { step: 'अतिरिक्त कमरे', body: 'पहले से दर्ज मांग को पूरा करने के लिए मूल संपत्ति में सूची जोड़ी गई।' },
+      { step: 'होटल मेवाड़-3', body: 'पहले होटल से वित्तपोषित दूसरी संपत्ति।' },
+      { step: 'वर्तमान संचालन', body: 'आज मेवाड़ बिज़नेस होटल्स के अंतर्गत कई संपत्तियाँ संचालित हैं।' },
+      { step: 'भविष्य की वृद्धि', body: 'अगला गलियारा, पिछले जैसे ही तरीके से वित्तपोषित।' }
+    ],
+
+    businessModel: ['पूँजी', 'निर्माण', 'संचालन', 'नकदी प्रवाह उत्पन्न करें', 'विस्तार', 'दोहराएँ'],
+
+    capitalAllocation: [
+      { label: 'निवेशित पूँजी', note: '~₹1.49 करोड़ होटल मेवाड़-2, अतिरिक्त कमरों, होटल मेवाड़-3, बुनियादी ढाँचे और सहायक संपत्तियों में लगाए गए।' },
+      { label: 'बनी संपत्तियाँ', note: 'अतिरिक्त कमरे और एक दूसरी संचालित संपत्ति, केवल बड़ा बैंक बैलेंस नहीं।' },
+      { label: 'उत्पन्न संचालन लाभ', note: '~₹57.37 लाख का ऐतिहासिक संचालन लाभ।' },
+      { label: 'विस्तार', note: 'लाभ को बाँटने के बजाय अगले चरण में पुनर्निवेशित किया गया।' },
+      { label: 'और संपत्तियाँ', note: 'हर चरण अगली संपत्ति को फंड करता है।' },
+      { label: 'भविष्य की वृद्धि', note: 'वही चक्र, अगले औद्योगिक गलियारे पर लागू।' }
+    ],
+
+    proof: {
+      photos: [
+        { label: 'रिसेप्शन' },
+        { label: 'कमरे' },
+        { label: 'रेस्तराँ' },
+        { label: 'पार्किंग' },
+        { label: 'लॉबी' }
+      ],
+      reviewsNote: 'बदलें: गूगल रिव्यूज़ विजेट या स्क्रीनशॉट',
+      testimonialNote: 'बदलें: मेहमान का प्रशस्ति-पत्र'
+    },
+
+    philosophy: [
+      { title: 'पूँजी भागीदार, मकान-मालिक नहीं', body: 'आप एक संचालित संपत्ति में हिस्सेदारी रखते हैं; आप उसे प्रबंधित नहीं कर रहे।' },
+      { title: 'पेशेवर प्रबंधन संचालन के लिए जवाबदेह रहता है', body: 'मेवाड़ बिज़नेस होटल्स श्रृंखला की हर संपत्ति का संचालन स्वयं करता है।' },
+      { title: 'पारदर्शी संचालन-व्यवस्था', body: 'यहाँ दिखाए गए वही आँकड़े हैं जिन पर व्यवसाय चलाया जाता है।' },
+      { title: 'दीर्घकालिक संपत्ति-निर्माण', body: 'बहु-वर्षीय ठहराव के लिए बनाया गया, त्वरित निकास के लिए नहीं।' }
+    ],
+
+    whyInvest: [
+      'वास्तविक व्यवसाय - आज संचालित, कागज़ पर नहीं',
+      'वास्तविक संपत्तियाँ - होटल मेवाड़ और होटल मेवाड़-3',
+      'वास्तविक ग्राहक - कॉर्पोरेट खाते, वॉक-इन नहीं',
+      'नियमित नकदी प्रवाह - अधिभोग औद्योगिक गतिविधि से जुड़ा, पर्यटन के मौसम से नहीं',
+      'विनिर्माण वृद्धि - मांग आधार मेवाड़ से स्वतंत्र रूप से बढ़ रहा है',
+      'एक विस्तार-योग्य मॉडल - एक बार सिद्ध, अब दोहराया जा रहा'
+    ],
+
+    founder: {
+      quote: 'हर बड़ी आतिथ्य कंपनी एक होटल से शुरू हुई।',
+      body: 'हमारी शुरुआत होटल मेवाड़ से हुई। जिस मॉडल को इसने सिद्ध किया, मेवाड़ बिज़नेस होटल्स अब उसे भारत के औद्योगिक गलियारों में दोहराने का इरादा रखता है।'
+    }
   },
 
   /* ----------------------------------------------------------------------
@@ -418,6 +501,160 @@ window.MEWAD_HI = {
     'Identity verification, address proof and source-of-funds declaration, as required for a property transaction in India. NRI investors have an additional set determined by residency and the funding route.':
       'पहचान सत्यापन, पता प्रमाण और धन-स्रोत घोषणा, जैसा भारत में संपत्ति लेन-देन के लिए आवश्यक है। अनिवासी भारतीय निवेशकों के लिए निवास और भुगतान मार्ग के अनुसार कुछ अतिरिक्त दस्तावेज़ लगते हैं।',
     'The agreement is executed through a recognised e-signature provider. Where the structure involves a registered unit, physical registration follows at the relevant sub-registrar office.':
-      'अनुबंध एक मान्यता प्राप्त ई-हस्ताक्षर सेवा के माध्यम से निष्पादित होता है। जहाँ संरचना में पंजीकृत इकाई शामिल है, वहाँ भौतिक पंजीकरण संबंधित उप-पंजीयक कार्यालय में होता है।'
+      'अनुबंध एक मान्यता प्राप्त ई-हस्ताक्षर सेवा के माध्यम से निष्पादित होता है। जहाँ संरचना में पंजीकृत इकाई शामिल है, वहाँ भौतिक पंजीकरण संबंधित उप-पंजीयक कार्यालय में होता है।',
+
+    /* ------------------------------------------------------------------
+       Added: the site was restructured (new index.html layout - Story,
+       Performance, Growth journey, Business model, Capital allocation,
+       Philosophy, Why invest, Founder vision sections) after this file was
+       last updated, and several headings across all four pages are split
+       across multiple <span> elements rather than one sentence, so each
+       fragment needs its own key. Everything below is new as of this pass.
+       ------------------------------------------------------------------ */
+
+    /* Nav (all four pages) */
+    'MENU': 'मेन्यू',
+    'Story': 'कहानी',
+    'Performance': 'प्रदर्शन',
+    'Expansion': 'विस्तार',
+    'Explore': 'अन्वेषण',
+    'Expansion vision': 'विस्तार दृष्टि',
+    'The company behind Hotel Mewad, Sanand - India\'s first industrial hotel chain.':
+      'होटल मेवाड़, साणंद के पीछे की कंपनी - भारत की पहली औद्योगिक होटल श्रृंखला।',
+
+    /* index.html — hero */
+    'Hotel Mewad': 'होटल मेवाड़',
+    'India\'s first Industrial Hotel. The flagship property of Mewad Business Hotels, building the hospitality infrastructure behind India\'s manufacturing revolution.':
+      'भारत का पहला औद्योगिक होटल। मेवाड़ बिज़नेस होटल्स की प्रमुख संपत्ति, जो भारत की विनिर्माण क्रांति के पीछे आतिथ्य अवसंरचना का निर्माण कर रही है।',
+    'View performance <span class="btn__arrow">→</span>': 'प्रदर्शन देखें <span class="btn__arrow">→</span>',
+    'Our story': 'हमारी कहानी',
+    'Become a capital partner': 'पूँजी भागीदार बनें',
+    'Become a capital partner <span class="btn__arrow">→</span>': 'पूँजी भागीदार बनें <span class="btn__arrow">→</span>',
+
+    /* index.html — story */
+    'Who we are': 'हम कौन हैं',
+    'One hotel.': 'एक होटल।',
+    'A proven model.': 'एक सिद्ध मॉडल।',
+    'A company being built to repeat it.': 'इसे दोहराने के लिए बन रही कंपनी।',
+    'Mewad Business Hotels is the company. Hotel Mewad, Sanand is its first proven, operating asset - not the whole business.':
+      'मेवाड़ बिज़नेस होटल्स कंपनी है। होटल मेवाड़, साणंद इसकी पहली सिद्ध, संचालित संपत्ति है - पूरा व्यवसाय नहीं।',
+
+    /* index.html — the opportunity */
+    'The opportunity': 'अवसर',
+    'Industrial India is growing.': 'औद्योगिक भारत बढ़ रहा है।',
+    'Its hotel supply isn\'t.': 'उसकी होटल आपूर्ति नहीं।',
+    'Every factory that opens creates continuous business travel - engineers, consultants, auditors, contractors, corporate visitors. Existing hotels were never built for them.':
+      'हर नया कारखाना निरंतर व्यावसायिक यात्रा पैदा करता है - इंजीनियर, सलाहकार, ऑडिटर, ठेकेदार, कॉर्पोरेट आगंतुक। मौजूदा होटल कभी उनके लिए बने ही नहीं।',
+    'Six paying reasons. <span style="color:var(--accent-ink)">Zero of them are on vacation.</span>':
+      'भुगतान करने वाले छह कारण। <span style="color:var(--accent-ink)">इनमें से कोई भी छुट्टी पर नहीं है।</span>',
+
+    /* index.html — why Mewad wins */
+    'Why Hotel Mewad wins': 'होटल मेवाड़ क्यों जीतता है',
+    'Built for the guest': 'उस मेहमान के लिए बना',
+    'who arrives at 2am.': 'जो रात 2 बजे पहुँचता है।',
+    'Corporate customers, repeat business, a location chosen for the plants next door, and a cost base built to match. None of it photographs well. All of it is why the anchor plant signs an annual rate agreement instead of putting people in a lodge.':
+      'कॉर्पोरेट ग्राहक, दोहराया जाने वाला व्यवसाय, पड़ोस के संयंत्रों के लिए चुना गया स्थान, और उसी के अनुरूप लागत आधार। इनमें से कुछ भी तस्वीर में अच्छा नहीं लगता। इसी सबके कारण एंकर संयंत्र लोगों को लॉज में ठहराने के बजाय वार्षिक दर अनुबंध करता है।',
+    'A city hotel treats a long-stay guest as an anomaly. A Mewad hotel is built for them: forty per cent of keys are long-stay inventory, the kitchen runs to shift timings, and the laundry is sized for a guest who packed three shirts for a six-month posting.':
+      'शहर का होटल लंबे ठहराव वाले मेहमान को अपवाद मानता है। मेवाड़ होटल उसी के लिए बना है: चालीस प्रतिशत कमरे दीर्घ-ठहराव के हैं, रसोई शिफ़्ट के समय पर चलती है, और लॉन्ड्री उस मेहमान के हिसाब से है जो छह महीने की तैनाती पर तीन कमीज़ लेकर आया है।',
+
+    /* index.html — proof */
+    'Proof': 'प्रमाण',
+    'Not "trust us."': '"हम पर भरोसा करें" नहीं।',
+    'Evidence.': 'सबूत।',
+    'Reception, rooms, restaurant, parking, lobby - and what guests actually say.':
+      'रिसेप्शन, कमरे, रेस्तराँ, पार्किंग, लॉबी - और मेहमान वास्तव में क्या कहते हैं।',
+
+    /* index.html — performance */
+    'Historical operating performance,': 'ऐतिहासिक संचालन प्रदर्शन,',
+    'not a forecast.': 'पूर्वानुमान नहीं।',
+    'Capital deployed, and what it has generated - to date.': 'लगाई गई पूँजी, और अब तक उसने क्या उत्पन्न किया।',
+    'Capital deployed (historical)': 'लगाई गई पूँजी (ऐतिहासिक)',
+    'Operating profit generated (historical)': 'उत्पन्न संचालन लाभ (ऐतिहासिक)',
+
+    /* index.html — growth journey */
+    'Growth journey': 'विकास यात्रा',
+    'How one hotel': 'कैसे एक होटल',
+    'became a company.': 'कंपनी बन गया।',
+
+    /* index.html — business model */
+    'Business model': 'व्यवसाय मॉडल',
+    'A simple loop,': 'एक सरल चक्र,',
+    'run on repeat.': 'बार-बार दोहराया जाता है।',
+
+    /* index.html — capital allocation */
+    'Capital allocation': 'पूँजी आवंटन',
+    'Profit became assets,': 'लाभ संपत्तियों में बदला,',
+    'not a bigger bank balance.': 'बड़ा बैंक बैलेंस नहीं।',
+
+    /* index.html — expansion vision */
+    'One hotel open.': 'एक होटल परिचालन में।',
+    'An industrial hospitality platform underway.': 'एक औद्योगिक आतिथ्य मंच निर्माणाधीन।',
+
+    /* index.html — calculator */
+    'Run your own numbers': 'अपने आँकड़े चलाएँ',
+
+    /* index.html — structures */
+    'Own a hotel,': 'एक होटल रखें,',
+    'or own the chain.': 'या पूरी श्रृंखला रखें।',
+
+    /* index.html — investment philosophy */
+    'Investment philosophy': 'निवेश दर्शन',
+    'We are not selling hotel rooms.': 'हम होटल के कमरे नहीं बेच रहे।',
+    'We are building hospitality assets.': 'हम आतिथ्य संपत्तियाँ बना रहे हैं।',
+
+    /* index.html — why invest */
+    'Why invest': 'क्यों निवेश करें',
+    'An operating business,': 'एक संचालित व्यवसाय,',
+    'not an idea.': 'कोई विचार मात्र नहीं।',
+
+    /* index.html / invest.html — process, split headline */
+    'From this page': 'इस पृष्ठ से',
+    'to a signed agreement.': 'हस्ताक्षरित अनुबंध तक।',
+    'Eight steps.': 'आठ चरण।',
+    'Nothing asked of you until step five.': 'पाँचवें चरण तक आपसे कुछ नहीं माँगा जाता।',
+
+    /* index.html / invest.html — FAQ, split headline */
+    'The hard ones,': 'कठिन सवाल,',
+    'answered plainly.': 'सीधे जवाब।',
+
+    /* index.html — founder vision */
+    'Founder vision': 'संस्थापक दृष्टि',
+
+    /* index.html — sources, split headline */
+    'Where these figures': 'ये आँकड़े',
+    'come from.': 'कहाँ से आते हैं।',
+
+    /* index.html — closing CTA band */
+    'Hotel Mewad, Sanand': 'होटल मेवाड़, साणंद',
+    'The first chapter': 'पहला अध्याय',
+    'of something much bigger.': 'कहीं बड़ी चीज़ का।',
+    'Built in Sanand. Designed for industrial India. Built to scale.':
+      'साणंद में बना। औद्योगिक भारत के लिए डिज़ाइन किया गया। बड़े पैमाने के लिए बना।',
+    'Schedule a meeting': 'मीटिंग शेड्यूल करें',
+    'Download investment memorandum': 'निवेश ज्ञापन डाउनलोड करें',
+
+    /* invest.html — documents & compliance, split headline */
+    'Where your documents': 'आपके दस्तावेज़',
+    'actually go.': 'असल में कहाँ जाते हैं।',
+
+    /* invest.html — CTA, split headline */
+    'Come see a hotel': 'ऐसा होटल देखिए',
+    'with no view.': 'जिसमें कोई नज़ारा नहीं।',
+
+    /* properties.html — site selection, split headline */
+    'The four tests': 'वे चार कसौटियाँ',
+    'a location has to pass.': 'जिन पर स्थल को खरा उतरना है।',
+
+    /* properties.html — CTA, split headline */
+    'Walk one': 'एक बार चलकर देखिए',
+    'before you fund one.': 'पैसा लगाने से पहले।',
+
+    /* returns.html — how to read it, split headline */
+    'What the model does,': 'यह मॉडल क्या करता है,',
+    'and what it refuses to do.': 'और क्या करने से इनकार करता है।',
+
+    /* returns.html — CTA, split headline */
+    'Numbers look right?': 'आँकड़े ठीक लगे?',
+    'Come and stress-test them with us.': 'आइए, हमारे साथ इन्हें कसकर परखें।'
   }
 };
