@@ -223,7 +223,7 @@
       var title = typeof s === 'string' ? s : s.label;
       var body = typeof s === 'string' ? '' : ('<p>' + s.note + '</p>');
       var icon = (icons && icons[i]) ? '<span class="chain-diagram__icon">' + icons[i] + '</span>' : '';
-      return '<div class="chain-diagram__step reveal" style="transition-delay:' + (i * 80) + 'ms">' + icon + '<h4>' + title + '</h4>' + body + '</div>';
+      return '<div class="chain-diagram__step reveal" style="transition-delay:' + (i * 80) + 'ms"><h4>' + icon + title + '</h4>' + body + '</div>';
     }).join('') + '</div>';
   }
 
@@ -264,7 +264,7 @@
     return '<div class="card">' +
       '<div class="card__meta">' +
         '<span class="label">' + p.state + '</span>' +
-        '<span class="chip' + (live ? ' chip--accent' : '') + '">' + p.status + '</span>' +
+        (live ? '<span class="chip chip--accent">' + p.status + '</span>' : '') +
       '</div>' +
       '<h3>' + p.name + '</h3>' +
       '<p style="color:var(--text-2);font-family:var(--font-mono);font-size:.75rem;margin-bottom:.9rem">' +
