@@ -1397,25 +1397,6 @@ input[type='range']::-moz-range-thumb {
 .cta-band .lede { margin: 1.75rem auto 0; max-width: 52ch; }
 .cta-band .hero__cta { justify-content: center; }
 
-/* --- Disclaimer ----------------------------------------------------------- */
-
-.disclaimer {
-  border: 1px solid var(--line-1);
-  border-left: 2px solid var(--accent-bg);
-  border-radius: var(--r-sm);
-  background: var(--ink-2);
-  padding: 1.5rem;
-}
-
-.disclaimer p {
-  font-size: 0.8125rem;
-  line-height: 1.6;
-  color: var(--text-2);
-  max-width: none;
-}
-
-.disclaimer .label { display: block; margin-bottom: 0.85rem; }
-
 /* --- Footer --------------------------------------------------------------- */
 
 .footer {

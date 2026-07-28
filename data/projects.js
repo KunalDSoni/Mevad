@@ -474,9 +474,5 @@ window.MEWAD = {
     eyebrow: 'Hotel Mewad, Sanand',
     title: 'The first chapter of something much bigger.',
     lines: ['Built in Sanand.', 'Designed for industrial India.', 'Built to scale.']
-  },
-
-  legal: {
-    disclaimer: 'All figures shown on this website, including every output of the returns calculator, are illustrative projections based on stated assumptions. They are not a forecast, a guarantee, or an offer or invitation to invest. Actual returns will differ, may be materially lower, and may be negative. Hotel investments are illiquid, are exposed to occupancy, rate, regulatory and operator risk, and are not capital-protected. Nothing on this site constitutes investment, legal or tax advice. Prospective investors must read the complete offer documentation and take independent professional advice before committing capital.'
   }
 };

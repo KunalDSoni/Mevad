@@ -161,7 +161,7 @@
   function renderStory(mount) {
     if (!mount) return;
     mount.innerHTML = D().story.map(function (s) {
-      return '<div class="prose reveal"><h3 style="font-size:1.05rem;margin-bottom:.5rem">' + s.heading + '</h3><p>' + s.body + '</p></div>';
+      return '<div class="card reveal prose"><h3 style="font-size:1.05rem;margin-bottom:.5rem">' + s.heading + '</h3><p>' + s.body + '</p></div>';
     }).join('');
   }
 
@@ -329,13 +329,6 @@
     accordion(mount);
   }
 
-  function renderDisclaimer(mount) {
-    if (!mount) return;
-    mount.innerHTML = '<div class="disclaimer">' +
-      '<span class="label">Important: please read</span>' +
-      '<p>' + D().legal.disclaimer + '</p></div>';
-  }
-
   /* --- Citations ----------------------------------------------------------
      A figure in the data file carries an optional { label, url } source.
      Markers are numbered here, after every region has rendered, by walking
@@ -433,7 +426,6 @@
     renderStructures($('[data-render="structures"]'));
     renderJourney($('[data-render="journey"]'));
     renderFaq($('[data-render="faq"]'));
-    renderDisclaimer($('[data-render="disclaimer"]'));
     renderContacts($('[data-render="contacts"]'));
     renderFooterMeta();
 
