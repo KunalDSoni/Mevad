@@ -89,11 +89,30 @@
     allChildren.forEach(function (el) { io.observe(el); });
   }
 
+  /* Cross-fades a text-content swap on an element - used when the
+     calculator's result numbers change from a slider drag, so the update
+     reads as a transition rather than an instant jump. Falls back to an
+     instant swap under reduced motion or if Motion failed to load. */
+  function animateValueChange(el, newText) {
+    if (!el || el.textContent === newText) return;
+
+    if (!window.Motion || prefersReducedMotion()) {
+      el.textContent = newText;
+      return;
+    }
+
+    window.Motion.animate(el, { opacity: [1, 0] }, { duration: 0.12 }).finished.then(function () {
+      el.textContent = newText;
+      window.Motion.animate(el, { opacity: [0, 1] }, { duration: 0.18 });
+    });
+  }
+
   window.MewadMotion = {
     prefersReducedMotion: prefersReducedMotion,
     staggerReveal: staggerReveal,
     heroEntrance: heroEntrance,
-    gridStagger: gridStagger
+    gridStagger: gridStagger,
+    animateValueChange: animateValueChange
   };
 
   function boot() {
