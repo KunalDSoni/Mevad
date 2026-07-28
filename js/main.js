@@ -199,8 +199,8 @@
         '<span class="cap-chart__label">' + r.label + '</span>' +
         '<div class="cap-chart__track">' +
           '<div class="cap-chart__bar' + (known ? '' : ' cap-chart__bar--placeholder') + '" style="width:' + pct + '%"></div>' +
+          (known ? '' : '<span class="placeholder-tag cap-chart__tag">' + r.note + '</span>') +
         '</div>' +
-        (known ? '' : '<span class="placeholder-tag">' + r.note + '</span>') +
       '</div>';
     }).join('') + '</div>';
   }
