@@ -432,9 +432,7 @@ window.MEWAD = {
       { label: 'Restaurant' },
       { label: 'Parking' },
       { label: 'Lobby' }
-    ],
-    reviewsNote: 'REPLACE: Google Reviews widget or screenshot',
-    testimonialNote: 'REPLACE: guest testimonial'
+    ]
   },
 
   /* ---------------------------------------------------------------------

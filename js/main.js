@@ -221,8 +221,7 @@
     var pr = D().proof;
     mount.innerHTML = '<div class="proof-grid">' +
       pr.photos.map(function (p) { return '<div class="proof-frame">' + p.label + '<!-- REPLACE: photo --></div>'; }).join('') +
-    '</div>' +
-    '<p class="lede mt-2"><span class="placeholder-tag">' + pr.reviewsNote + '</span> &nbsp; <span class="placeholder-tag">' + pr.testimonialNote + '</span></p>';
+    '</div>';
   }
 
   function renderPhilosophy(mount) {

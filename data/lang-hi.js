@@ -283,9 +283,7 @@ window.MEWAD_HI = {
         { label: 'रेस्तराँ' },
         { label: 'पार्किंग' },
         { label: 'लॉबी' }
-      ],
-      reviewsNote: 'बदलें: गूगल रिव्यूज़ विजेट या स्क्रीनशॉट',
-      testimonialNote: 'बदलें: मेहमान का प्रशस्ति-पत्र'
+      ]
     },
 
     philosophy: [
