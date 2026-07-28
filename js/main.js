@@ -225,6 +225,18 @@
     '<p class="lede mt-2"><span class="placeholder-tag">' + pr.reviewsNote + '</span> &nbsp; <span class="placeholder-tag">' + pr.testimonialNote + '</span></p>';
   }
 
+  function renderExpansionMap(mount) {
+    if (!mount) return;
+    var cities = D().expansionCities;
+    var pins = cities.map(function (c, i) {
+      return '<g class="map-svg__pin reveal" style="transition-delay:' + (i * 120) + 'ms" transform="translate(' + c.x + ',' + c.y + ')">' +
+        '<circle r="1.6" fill="' + (c.status === 'Operating' ? 'var(--accent-ink)' : 'var(--text-3)') + '"/>' +
+        '<text class="map-svg__label" x="2.4" y="0.6">' + c.name + '</text>' +
+      '</g>';
+    }).join('');
+    mount.innerHTML = '<svg class="map-svg" viewBox="0 0 100 100" role="img" aria-label="Expansion corridor map">' + pins + '</svg>';
+  }
+
   function renderPhilosophy(mount) {
     if (!mount) return;
     mount.innerHTML = D().philosophy.map(function (item) {
@@ -425,6 +437,7 @@
     renderBusinessModel($('[data-render="business-model"]'));
     renderCapitalAllocation($('[data-render="capital-allocation"]'));
     renderProof($('[data-render="proof"]'));
+    renderExpansionMap($('[data-render="expansion-map"]'));
     renderPhilosophy($('[data-render="philosophy"]'));
     renderWhyInvest($('[data-render="why-invest"]'));
     renderFounder();
