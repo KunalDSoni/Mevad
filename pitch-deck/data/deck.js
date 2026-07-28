@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MEWAD INVESTOR PITCH DECK — DATA
+   MEWAD INVESTOR PITCH DECK: DATA
    Every number and label on every slide lives here. No figure is hardcoded
    into index.html or js/*.js.
    ========================================================================== */
@@ -19,7 +19,7 @@ window.MEWAD_DECK = {
       id: 2, type: 'statement',
       kicker: 'THE PROBLEM',
       title: 'Industrial India has nowhere good to sleep',
-      body: 'Thousands of industrial estates run on visiting professionals — engineers, auditors, contractors, project teams — who need accommodation every single week of the year. The hotel supply around those estates was never built for them.'
+      body: 'Thousands of industrial estates run on visiting professionals - engineers, auditors, contractors, project teams - who need accommodation every single week of the year. The hotel supply around those estates was never built for them.'
     },
     {
       id: 3, type: 'iconGrid',
@@ -37,7 +37,7 @@ window.MEWAD_DECK = {
       id: 5, type: 'statement',
       kicker: 'OUR SOLUTION',
       title: 'Premium Business Hotels for Industrial India',
-      body: 'Not a luxury hotel. Not a budget lodge. A category built specifically for the industrial business traveller — consistent, corporate-ready, and priced for a segment that stays days to months, not one night.'
+      body: 'Not a luxury hotel. Not a budget lodge. A category built specifically for the industrial business traveller - consistent, corporate-ready, and priced for a segment that stays days to months, not one night.'
     },
     {
       id: 6, type: 'iconGrid',
@@ -55,7 +55,7 @@ window.MEWAD_DECK = {
     {
       id: 8, type: 'stat',
       kicker: 'PROOF POINT',
-      title: 'Hotel Mewad Palace, Sanand — operating today',
+      title: 'Hotel Mewad Palace, Sanand - operating today',
       stats: [
         { k: 'Rooms', v: '21' },
         { k: 'Average room rate', v: '₹1,200 / night' },
@@ -80,7 +80,7 @@ window.MEWAD_DECK = {
     {
       id: 11, type: 'timeline',
       kicker: 'PHASE 1',
-      title: 'From 21 rooms to 47 — then beyond',
+      title: 'From 21 rooms to 47 - then beyond',
       steps: [
         { label: 'Current hotel', value: '21 rooms' },
         { label: 'Phase-2 expansion', value: '+26 rooms' },
@@ -100,14 +100,14 @@ window.MEWAD_DECK = {
       id: 13, type: 'dotMap',
       kicker: 'EXPANSION ROADMAP',
       title: 'After Sanand stabilises, the next corridors',
-      cities: ['Changodar', 'Becharaji', 'Halol', 'Dahej', 'Vithalapur', 'Pune', 'Hosur', 'Sriperumbudur'],
+      cities: ['Changodar', 'Becharaji', 'Halol', 'Dahej'],
       footer: 'The objective is to build India\'s largest Industrial Hospitality Brand.'
     },
     {
       id: 14, type: 'statement',
       kicker: 'VISION',
       title: 'India\'s leading Industrial Business Hotel chain',
-      body: 'Not one hotel. A repeatable, scalable platform — the same product, the same standards, dropped into every industrial corridor in the country that currently has none of it.'
+      body: 'Not one hotel. A repeatable, scalable platform - the same product, the same standards, dropped into every industrial corridor in the country that currently has none of it.'
     },
     {
       id: 15, type: 'stat',
@@ -128,7 +128,7 @@ window.MEWAD_DECK = {
     {
       id: 17, type: 'governance',
       kicker: 'GOVERNANCE',
-      title: 'Investors are financial partners — what they receive',
+      title: 'Investors are financial partners - what they receive',
       receive: ['Quarterly Reports', 'Audited Financial Statements', 'Annual Profit Distribution', 'Annual Investor Meeting']
     },
     {
@@ -136,7 +136,7 @@ window.MEWAD_DECK = {
       kicker: 'GOVERNANCE',
       title: 'Management operates; investors don\'t',
       cannot: ['Interfere in operations', 'Hire staff', 'Negotiate vendor contracts', 'Decide pricing', 'Control management'],
-      requiresApproval: 'Major decisions — sale of the property, merger or liquidation — require investor approval.'
+      requiresApproval: 'Major decisions - sale of the property, merger or liquidation - require investor approval.'
     },
     {
       id: 19, type: 'waterfall',
@@ -152,7 +152,7 @@ window.MEWAD_DECK = {
     {
       id: 20, type: 'financials',
       kicker: 'FINANCIALS',
-      title: 'Mewad Sanand Hotel — current hotel + Phase-2, combined',
+      title: 'Mewad Sanand Hotel - current hotel + Phase-2, combined',
       footnote: true,
       rows: [
         { label: 'Phase 1 (current hotel)', investment: 15187270, netProfit: 11255860, outstanding: 3931410 },
@@ -162,7 +162,7 @@ window.MEWAD_DECK = {
       assumptions: [
         'Phase 1 figures scaled ×5 from a director\'s reported 20% ownership share.',
         'Phase 2 figures scaled ×3.33 from a director\'s reported 30% ownership share.',
-        'Scrap Business entity excluded — unrelated to hotel operations.',
+        'Scrap Business entity excluded - unrelated to hotel operations.',
         'EBITDA and ROI targets below are management projections, not audited figures.'
       ],
       targets: [
@@ -173,7 +173,7 @@ window.MEWAD_DECK = {
     {
       id: 21, type: 'trendChart',
       kicker: 'FINANCIAL TREND',
-      title: 'Monthly profit, reported — one director\'s share',
+      title: 'Monthly profit, reported - one director\'s share',
       note: 'Unscaled. Shown to illustrate trajectory, not a claimed total.',
       series: [
         { m: 'Nov\'23–Dec\'23', phase1: 70032.80, phase2: 0, extra: 0 },

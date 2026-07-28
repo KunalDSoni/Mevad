@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MEWAD PITCH DECK — chart builders
+   MEWAD PITCH DECK: chart builders
    Pure functions: (data) -> SVG markup string. No DOM access, so these are
    testable directly from Node.
    ========================================================================== */
@@ -24,11 +24,12 @@ window.MewadCharts = (function () {
   }
 
   function dotMap(cities) {
-    var w = 800, h = 200, cols = 4;
+    var w = 800, h = 200, cols = 2, colGap = 180;
+    var startX = w / 2 - ((cols - 1) * colGap) / 2;
     var parts = ['<svg viewBox="0 0 ' + w + ' ' + h + '" class="chart chart-dotmap">'];
     cities.forEach(function (city, i) {
       var col = i % cols, row = Math.floor(i / cols);
-      var cx = 100 + col * 180, cy = 60 + row * 90;
+      var cx = startX + col * colGap, cy = 60 + row * 90;
       parts.push('<circle cx="' + cx + '" cy="' + cy + '" r="6" style="fill:var(--series-b)"/>');
       parts.push('<text x="' + cx + '" y="' + (cy + 24) + '" text-anchor="middle" style="fill:var(--text-0);font-family:var(--font-mono)" font-size="13">' + esc(city) + '</text>');
     });

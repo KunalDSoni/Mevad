@@ -1,10 +1,10 @@
 /* ==========================================================================
-   MEWAD — HINDI
+   MEWAD: HINDI
 
    Two sections:
 
      data : mirrors the shape of window.MEWAD. Deep-merged over it, so only
-            translated fields need to appear. NUMBERS ARE NEVER REPEATED HERE —
+            translated fields need to appear. NUMBERS ARE NEVER REPEATED HERE  - 
             they live in projects.js alone, which stays the single source of
             truth for every figure on the site.
 
@@ -43,7 +43,7 @@ window.MEWAD_HI = {
 
     brand: {
       positioning: 'भारत की पहली औद्योगिक होटल श्रृंखला',
-      /* Transliterations — please confirm the spelling of both names. */
+      /* Transliterations - please confirm the spelling of both names. */
       contacts: [
         { name: 'हेमेंद्र सिंह सोलंकी' },
         { name: 'भेरू सिंह राजपूत' }
@@ -93,7 +93,7 @@ window.MEWAD_HI = {
       intro: 'ऐसे मेहमान के लिए बनाया गया जो रात 2 बजे पहुँचता है, 12 घंटे की शिफ़्ट करता है और महीनों रुकता है। हनीमून के लिए नहीं।',
       guestSide: [
         'रात 2 बजे शिफ़्ट बदलने के बाद पहुँचता है, फ़्लाइट से नहीं।',
-        'रसोई रात 3 बजे और दोपहर 3 बजे गरम भोजन परोसती है — जब शिफ़्ट बदलती है, ब्रंच के समय नहीं।',
+        'रसोई रात 3 बजे और दोपहर 3 बजे गरम भोजन परोसती है - जब शिफ़्ट बदलती है, ब्रंच के समय नहीं।',
         'छह महीने के प्रवास के लिए तीन कमीज़ें लाया; लॉन्ड्री औद्योगिक स्तर की, उसी दिन, शुल्क में शामिल।',
         'दिन में सोता है: ब्लैकआउट पर्दे, ध्वनिरोधन, नज़ारे की जगह मेज़ और वायर्ड इंटरनेट।'
       ],
@@ -235,7 +235,7 @@ window.MEWAD_HI = {
       }
     ],
 
-    /* index.html data-render mounts below — added because these sections
+    /* index.html data-render mounts below - added because these sections
        (story, performance, growthJourney, businessModel, capitalAllocation,
        proof, philosophy, whyInvest, founder) had no Hindi override at all
        and were silently staying in English. */
@@ -318,7 +318,7 @@ window.MEWAD_HI = {
   },
 
   /* ----------------------------------------------------------------------
-     PAGE COPY — keyed by the normalised English source string
+     PAGE COPY - keyed by the normalised English source string
      ---------------------------------------------------------------------- */
   ui: {
     /* Nav + chrome */
@@ -476,7 +476,7 @@ window.MEWAD_HI = {
     'Site visits happen before signature, never after. Meet the operating team and talk to the anchor tenants next door.':
       'स्थल का दौरा हस्ताक्षर से पहले होता है, बाद में कभी नहीं। संचालन टीम से मिलिए और पड़ोस के एंकर किरायेदारों से बात कीजिए।',
 
-    /* properties.html — the four site-selection tests */
+    /* properties.html: the four site-selection tests */
     'A minimum count of independent anchor employers within the catchment. Not one large plant - several, under separate ownership, so that a single closure is absorbed rather than fatal.':
       'एक निश्चित दायरे के भीतर स्वतंत्र एंकर नियोक्ताओं की न्यूनतम संख्या। कोई एक बड़ा संयंत्र नहीं - बल्कि कई, अलग-अलग स्वामित्व वाले, ताकि किसी एक के बंद होने का असर झेला जा सके, घातक न हो।',
     "More than one industry represented. Automotive, chemicals, electronics and pharma do not enter downturns on the same calendar, and a corridor that depends on one sector inherits that sector's cycle.":
@@ -486,7 +486,7 @@ window.MEWAD_HI = {
     'Organised room supply well below the business-district benchmark, with no credible pipeline. We are looking for a gap that has stayed open - because a gap that stayed open is a gap others considered and declined.':
       'संगठित कमरों की आपूर्ति व्यावसायिक क्षेत्र के मानक से काफ़ी नीचे हो, और कोई विश्वसनीय परियोजना पाइपलाइन में न हो। हम ऐसा अंतर खोजते हैं जो खुला रह गया हो - क्योंकि जो अंतर खुला रह गया, उसे औरों ने देखा और छोड़ दिया।',
 
-    /* returns.html — how to read the model */
+    /* returns.html: how to read the model */
     'A headline yield tells you nothing about <em>when</em> money arrives. The IRR here runs a full cashflow - capital out at year zero, each year\'s payout in sequence, and the sale of the holding at the end. Money received in year eight is discounted accordingly, because it is worth less than money received in year one.':
       'सुर्खियों वाला प्रतिफल यह नहीं बताता कि पैसा <em>कब</em> आता है। यहाँ IRR पूरी नकदी-प्रवाह शृंखला पर चलता है - वर्ष शून्य में पूँजी बाहर, हर वर्ष का भुगतान क्रम से, और अंत में हिस्सेदारी की बिक्री। आठवें वर्ष मिला पैसा उसी अनुपात में छूट पाता है, क्योंकि वह पहले वर्ष मिले पैसे से कम मूल्यवान है।',
     'A property under construction pays nothing until it opens. One that has just opened runs below stabilised occupancy for a further nine to twelve months. Both are modelled. This is the single most common omission in Indian hospitality projections, and it is why returns disappoint.':
@@ -528,7 +528,7 @@ window.MEWAD_HI = {
     'The company behind Hotel Mewad, Sanand - India\'s first industrial hotel chain.':
       'होटल मेवाड़, साणंद के पीछे की कंपनी - भारत की पहली औद्योगिक होटल श्रृंखला।',
 
-    /* index.html — hero */
+    /* index.html: hero */
     'Hotel Mewad': 'होटल मेवाड़',
     'India\'s first Industrial Hotel. The flagship property of Mewad Business Hotels, building the hospitality infrastructure behind India\'s manufacturing revolution.':
       'भारत का पहला औद्योगिक होटल। मेवाड़ बिज़नेस होटल्स की प्रमुख संपत्ति, जो भारत की विनिर्माण क्रांति के पीछे आतिथ्य अवसंरचना का निर्माण कर रही है।',
@@ -537,7 +537,7 @@ window.MEWAD_HI = {
     'Become a capital partner': 'पूँजी भागीदार बनें',
     'Become a capital partner <span class="btn__arrow">→</span>': 'पूँजी भागीदार बनें <span class="btn__arrow">→</span>',
 
-    /* index.html — story */
+    /* index.html: story */
     'Who we are': 'हम कौन हैं',
     'One hotel.': 'एक होटल।',
     'A proven model.': 'एक सिद्ध मॉडल।',
@@ -545,7 +545,7 @@ window.MEWAD_HI = {
     'Mewad Business Hotels is the company. Hotel Mewad, Sanand is its first proven, operating asset - not the whole business.':
       'मेवाड़ बिज़नेस होटल्स कंपनी है। होटल मेवाड़, साणंद इसकी पहली सिद्ध, संचालित संपत्ति है - पूरा व्यवसाय नहीं।',
 
-    /* index.html — the opportunity */
+    /* index.html: the opportunity */
     'The opportunity': 'अवसर',
     'Industrial India is growing.': 'औद्योगिक भारत बढ़ रहा है।',
     'Its hotel supply isn\'t.': 'उसकी होटल आपूर्ति नहीं।',
@@ -554,7 +554,7 @@ window.MEWAD_HI = {
     'Six paying reasons. <span style="color:var(--accent-ink)">Zero of them are on vacation.</span>':
       'भुगतान करने वाले छह कारण। <span style="color:var(--accent-ink)">इनमें से कोई भी छुट्टी पर नहीं है।</span>',
 
-    /* index.html — why Mewad wins */
+    /* index.html: why Mewad wins */
     'Why Hotel Mewad wins': 'होटल मेवाड़ क्यों जीतता है',
     'Built for the guest': 'उस मेहमान के लिए बना',
     'who arrives anytime.': 'जो कभी भी पहुँचता है।',
@@ -563,74 +563,74 @@ window.MEWAD_HI = {
     'A city hotel treats a long-stay guest as an anomaly. A Mewad hotel is built for them: forty per cent of keys are long-stay inventory, the kitchen runs to shift timings, and the laundry is sized for a guest who packed three shirts for a six-month posting.':
       'शहर का होटल लंबे ठहराव वाले मेहमान को अपवाद मानता है। मेवाड़ होटल उसी के लिए बना है: चालीस प्रतिशत कमरे दीर्घ-ठहराव के हैं, रसोई शिफ़्ट के समय पर चलती है, और लॉन्ड्री उस मेहमान के हिसाब से है जो छह महीने की तैनाती पर तीन कमीज़ लेकर आया है।',
 
-    /* index.html — proof */
+    /* index.html: proof */
     'Proof': 'प्रमाण',
     'Not "trust us."': '"हम पर भरोसा करें" नहीं।',
     'Evidence.': 'सबूत।',
     'Reception, rooms, restaurant, parking, lobby - and what guests actually say.':
       'रिसेप्शन, कमरे, रेस्तराँ, पार्किंग, लॉबी - और मेहमान वास्तव में क्या कहते हैं।',
 
-    /* index.html — performance */
+    /* index.html: performance */
     'Historical operating performance,': 'ऐतिहासिक संचालन प्रदर्शन,',
     'not a forecast.': 'पूर्वानुमान नहीं।',
     'Capital deployed, and what it has generated - to date.': 'लगाई गई पूँजी, और अब तक उसने क्या उत्पन्न किया।',
     'Capital deployed (historical)': 'लगाई गई पूँजी (ऐतिहासिक)',
     'Operating profit generated (historical)': 'उत्पन्न संचालन लाभ (ऐतिहासिक)',
 
-    /* index.html — growth journey */
+    /* index.html: growth journey */
     'Growth journey': 'विकास यात्रा',
     'How one hotel': 'कैसे एक होटल',
     'became a company.': 'कंपनी बन गया।',
 
-    /* index.html — business model */
+    /* index.html: business model */
     'Business model': 'व्यवसाय मॉडल',
     'A simple loop,': 'एक सरल चक्र,',
     'run on repeat.': 'बार-बार दोहराया जाता है।',
 
-    /* index.html — capital allocation */
+    /* index.html: capital allocation */
     'Capital allocation': 'पूँजी आवंटन',
     'Profit became assets,': 'लाभ संपत्तियों में बदला,',
     'not a bigger bank balance.': 'बड़ा बैंक बैलेंस नहीं।',
 
-    /* index.html — expansion vision */
+    /* index.html: expansion vision */
     'One hotel open.': 'एक होटल परिचालन में।',
     'An industrial hospitality platform underway.': 'एक औद्योगिक आतिथ्य मंच निर्माणाधीन।',
 
-    /* index.html — calculator */
+    /* index.html: calculator */
     'Run your own numbers': 'अपने आँकड़े चलाएँ',
 
-    /* index.html — structures */
+    /* index.html: structures */
     'Own a hotel,': 'एक होटल रखें,',
     'or own the chain.': 'या पूरी श्रृंखला रखें।',
 
-    /* index.html — investment philosophy */
+    /* index.html: investment philosophy */
     'Investment philosophy': 'निवेश दर्शन',
     'We are not selling hotel rooms.': 'हम होटल के कमरे नहीं बेच रहे।',
     'We are building hospitality assets.': 'हम आतिथ्य संपत्तियाँ बना रहे हैं।',
 
-    /* index.html — why invest */
+    /* index.html: why invest */
     'Why invest': 'क्यों निवेश करें',
     'An operating business,': 'एक संचालित व्यवसाय,',
     'not an idea.': 'कोई विचार मात्र नहीं।',
 
-    /* index.html / invest.html — process, split headline */
+    /* index.html / invest.html: process, split headline */
     'From this page': 'इस पृष्ठ से',
     'to a signed agreement.': 'हस्ताक्षरित अनुबंध तक।',
     'Eight steps.': 'आठ चरण।',
     'Nothing asked of you until step five.': 'पाँचवें चरण तक आपसे कुछ नहीं माँगा जाता।',
 
-    /* index.html / invest.html — FAQ, split headline */
+    /* index.html / invest.html: FAQ, split headline */
     'The hard ones,': 'कठिन सवाल,',
     'answered plainly.': 'सीधे जवाब।',
 
-    /* index.html — founder vision */
+    /* index.html: founder vision */
     'Founder vision': 'संस्थापक दृष्टि',
 
-    /* index.html — sources, split headline */
+    /* index.html: sources, split headline */
     'Where these figures': 'ये आँकड़े',
     'come from.': 'कहाँ से आते हैं।',
 
-    /* index.html — closing CTA band */
+    /* index.html: closing CTA band */
     'Hotel Mewad, Sanand': 'होटल मेवाड़, साणंद',
     'The first chapter': 'पहला अध्याय',
     'of something much bigger.': 'कहीं बड़ी चीज़ का।',
@@ -639,27 +639,27 @@ window.MEWAD_HI = {
     'Schedule a meeting': 'मीटिंग शेड्यूल करें',
     'Download investment memorandum': 'निवेश ज्ञापन डाउनलोड करें',
 
-    /* invest.html — documents & compliance, split headline */
+    /* invest.html: documents & compliance, split headline */
     'Where your documents': 'आपके दस्तावेज़',
     'actually go.': 'असल में कहाँ जाते हैं।',
 
-    /* invest.html — CTA, split headline */
+    /* invest.html: CTA, split headline */
     'Come see a hotel': 'ऐसा होटल देखिए',
     'with no view.': 'जिसमें कोई नज़ारा नहीं।',
 
-    /* properties.html — site selection, split headline */
+    /* properties.html: site selection, split headline */
     'The four tests': 'वे चार कसौटियाँ',
     'a location has to pass.': 'जिन पर स्थल को खरा उतरना है।',
 
-    /* properties.html — CTA, split headline */
+    /* properties.html: CTA, split headline */
     'Walk one': 'एक बार चलकर देखिए',
     'before you fund one.': 'पैसा लगाने से पहले।',
 
-    /* returns.html — how to read it, split headline */
+    /* returns.html: how to read it, split headline */
     'What the model does,': 'यह मॉडल क्या करता है,',
     'and what it refuses to do.': 'और क्या करने से इनकार करता है।',
 
-    /* returns.html — CTA, split headline */
+    /* returns.html: CTA, split headline */
     'Numbers look right?': 'आँकड़े ठीक लगे?',
     'Come and stress-test them with us.': 'आइए, हमारे साथ इन्हें कसकर परखें।'
   }

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MEWAD — DESIGN SYSTEM
+   MEWAD: DESIGN SYSTEM
    Industrial precision carrying hospitality warmth.
    Engineering drawing, not hotel brochure.
    ========================================================================== */
@@ -7,14 +7,14 @@
 /* --- Tokens --------------------------------------------------------------- */
 
 :root {
-  /* Surfaces — deep teal */
+  /* Surfaces - deep teal */
   --ink-0:  #122A29;
-  --ink-1:  #1B3A38;   /* page surface — chart palette validated against this */
+  --ink-1:  #1B3A38;   /* page surface - chart palette validated against this */
   --ink-2:  #224442;
   --ink-3:  #2B514E;
   --ink-4:  #365F5B;
 
-  /* Ink — cream */
+  /* Ink - cream */
   --text-0: #FDFDF1;
   --text-1: #B4C4C1;
   --text-2: #8AA09C;
@@ -25,7 +25,7 @@
   --line-2: rgba(253, 253, 241, 0.17);
   --line-3: rgba(253, 253, 241, 0.28);
 
-  /* Accent — the system is two-tone: cream carries emphasis on teal.
+  /* Accent - the system is two-tone: cream carries emphasis on teal.
      Hierarchy comes from weight, scale and surface, not from a third hue. */
   --accent:      #FDFDF1;
   --accent-bg:   #FDFDF1;
@@ -35,7 +35,7 @@
   --accent-wash: rgba(253, 253, 241, 0.09);
   --accent-line: rgba(253, 253, 241, 0.34);
 
-  /* Chart series — validated on --ink-1: all-pairs CVD ΔE 27.4, normal 30.7 */
+  /* Chart series - validated on --ink-1: all-pairs CVD ΔE 27.4, normal 30.7 */
   --series-industrial: #c98500;
   --series-leisure:    #3987e5;
 
@@ -97,7 +97,7 @@
   --accent-line: rgba(18, 42, 41, 0.28);
 
   /* Re-validated for the cream surface, not flipped from the dark steps:
-     #8f6b12 x #31699e — all checks pass at contrast ≥ 3:1. */
+     #8f6b12 x #31699e - all checks pass at contrast ≥ 3:1. */
   --series-industrial: #8f6b12;
   --series-leisure:    #31699e;
 
@@ -181,7 +181,7 @@ p:last-child { margin-bottom: 0; }
 .prose { max-width: 62ch; color: var(--text-1); }
 .prose strong { color: var(--text-0); font-weight: 600; }
 
-/* Monospace label — the engineering annotation voice */
+/* Monospace label - the engineering annotation voice */
 .label {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
@@ -1266,7 +1266,7 @@ input[type='range']::-moz-range-thumb {
 @media (max-width: 760px) { .tl-item__where { text-align: left; margin-top: 0.5rem; } }
 
 /* ==========================================================================
-   INVESTOR NARRATIVE — new components (Performance, Growth Journey,
+   INVESTOR NARRATIVE - new components (Performance, Growth Journey,
    Business Model, Capital Allocation, Expansion, Proof)
    ========================================================================== */
 

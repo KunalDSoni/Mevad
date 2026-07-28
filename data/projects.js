@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MEWAD — SINGLE SOURCE OF TRUTH
+   MEWAD: SINGLE SOURCE OF TRUTH
    ==========================================================================
 
    EVERY NUMBER ON THIS WEBSITE COMES FROM THIS FILE.
@@ -55,14 +55,14 @@ window.MEWAD = {
       { name: 'Hemendra Sinh Solanki' },
       { name: 'Bheru Singh Rajput' }
     ],
-    // Third-party services — swap in real links before launch.
+    // Third-party services - swap in real links before launch.
     schedulingUrl: '#',   // Calendly / Zoho Bookings
     kycUrl: '#',          // compliant KYC form provider
     esignUrl: '#'         // Zoho Sign / DocuSign
   },
 
   /* ---------------------------------------------------------------------
-     THE STORY — narrative beats, not paragraphs
+     THE STORY - narrative beats, not paragraphs
      --------------------------------------------------------------------- */
   story: [
     {
@@ -80,7 +80,7 @@ window.MEWAD = {
   ],
 
   /* ---------------------------------------------------------------------
-     MARKET — the numbers behind the thesis
+     MARKET - the numbers behind the thesis
      --------------------------------------------------------------------- */
   market: {
     /* Each figure carries a `source`. Fill BOTH fields only when a real,
@@ -93,7 +93,7 @@ window.MEWAD = {
   },
 
   /* ---------------------------------------------------------------------
-     PERFORMANCE — historical operating figures, not projections.
+     PERFORMANCE - historical operating figures, not projections.
      Capital deployed and operating profit are real, director-reported
      totals. monthlyTrend is placeholder until real monthly figures are
      supplied - see the REPLACE comment.
@@ -162,13 +162,13 @@ window.MEWAD = {
   ],
 
   /* ---------------------------------------------------------------------
-     THE ASSET — what one Mewad hotel is
+     THE ASSET - what one Mewad hotel is
      --------------------------------------------------------------------- */
   asset: {
     intro: 'Engineered for a guest who arrives anytime, works a 12-hour shift, and stays for months. Not for a honeymoon.',
     guestSide: [
       'Checks in anytime after a shift change, not a flight.',
-      'Kitchen serves hot meals 24x7 — when shifts turn over, not brunch hours.',
+      'Kitchen serves hot meals 24x7 - when shifts turn over, not brunch hours.',
       'Packed three shirts for a six-month posting; laundry is industrial-grade, same-day, included.',
       'Sleeps through daylight: blackout curtains, sound isolation, a desk and wired ethernet instead of a view.'
     ],
@@ -356,7 +356,7 @@ window.MEWAD = {
   },
 
   /* ---------------------------------------------------------------------
-     GROWTH JOURNEY — animated timeline
+     GROWTH JOURNEY - animated timeline
      --------------------------------------------------------------------- */
   growthJourney: [
     { step: 'Hotel Mewad',        body: 'The first property opens in Sanand.' },
@@ -368,12 +368,12 @@ window.MEWAD = {
   ],
 
   /* ---------------------------------------------------------------------
-     BUSINESS MODEL — the repeatable loop
+     BUSINESS MODEL - the repeatable loop
      --------------------------------------------------------------------- */
   businessModel: ['Capital', 'Build', 'Operate', 'Generate cash flow', 'Expand', 'Repeat'],
 
   /* ---------------------------------------------------------------------
-     CAPITAL ALLOCATION — how profit became more assets
+     CAPITAL ALLOCATION - how profit became more assets
      --------------------------------------------------------------------- */
   capitalAllocation: [
     { label: 'Capital invested',            note: '~₹1.49 Cr deployed across Hotel Mewad-2, additional rooms, Hotel Mewad-3, infrastructure and supporting assets.' },
@@ -432,7 +432,7 @@ window.MEWAD = {
   ],
 
   /* ---------------------------------------------------------------------
-     PROOF — evidence, not claims
+     PROOF - evidence, not claims
      --------------------------------------------------------------------- */
   proof: {
     photos: [

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MEWAD PITCH DECK — renderer + navigation
+   MEWAD PITCH DECK: renderer + navigation
    renderSlide/renderAll are pure (data) -> string functions, testable from
    Node without a DOM. mount() is the only part that touches document/window
    chrome, and only runs in a browser.

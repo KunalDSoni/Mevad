@@ -1,8 +1,8 @@
 /* ==========================================================================
-   MEWAD — RETURNS CALCULATOR
+   MEWAD: RETURNS CALCULATOR
 
    Models both investment structures against the same property, amount
-   and assumptions, then reports IRR on a full cashflow — not a headline
+   and assumptions, then reports IRR on a full cashflow - not a headline
    yield. Construction delay and stabilisation ramp are applied honestly:
    a property that has not opened does not pay in year one.
 
@@ -12,7 +12,7 @@
 (function () {
   'use strict';
 
-  /* Language-aware dataset — Hindi overrides merged in by prefs.js. Numbers
+  /* Language-aware dataset - Hindi overrides merged in by prefs.js. Numbers
      always come from projects.js; only labels differ between languages. */
   function D() { return window.MewadPrefs ? window.MewadPrefs.data() : window.MEWAD; }
   if (!D()) return;
@@ -120,7 +120,7 @@
       var isSpv = s.id === 'spv';
       var avg = portfolioAverages();
 
-      /* The SPV sits on portfolio averages rather than this one property — but it
+      /* The SPV sits on portfolio averages rather than this one property - but it
          must still respond to the sliders, or the panel would show one card frozen
          while the other moves. The user's assumptions are applied to the
          portfolio as a proportional shift from the selected property's baseline. */
@@ -199,16 +199,6 @@
         '<div class="calc__controls">' +
 
           '<div class="field">' +
-            '<div class="field__head"><span class="label">'+L.property+'</span></div>' +
-            '<select data-c="property" aria-label="Property">' +
-              D().properties.map(function (p) {
-                return '<option value="' + p.id + '">' + p.name + ' · ' + p.state + '</option>';
-              }).join('') +
-            '</select>' +
-            '<p class="field__scale" data-c="propstatus" style="margin-top:.55rem"></p>' +
-          '</div>' +
-
-          '<div class="field">' +
             '<div class="field__head">' +
               '<span class="label">'+L.investment+'</span>' +
               '<span class="field__value" data-c="amountOut"></span>' +
@@ -253,8 +243,8 @@
               '<span class="label">'+L.adr+'</span>' +
               '<span class="field__value" data-c="adrOut"></span>' +
             '</div>' +
-            '<input type="range" data-c="adr" min="1200" max="3000" step="50" aria-label="Average daily rate">' +
-            '<div class="field__scale"><span>₹1,200</span><span>₹3,000</span></div>' +
+            '<input type="range" data-c="adr" min="1200" max="1800" step="50" aria-label="Average daily rate">' +
+            '<div class="field__scale"><span>₹1,200</span><span>₹1,800</span></div>' +
           '</div>' +
 
         '</div>' +
@@ -273,7 +263,6 @@
     var q = function (sel) { return root.querySelector('[data-c="' + sel + '"]'); };
 
     var ui = {
-      property: q('property'), propstatus: q('propstatus'),
       amount: q('amount'), amountOut: q('amountOut'),
       horizon: q('horizon'), horizonOut: q('horizonOut'),
       occ: q('occ'), occOut: q('occOut'),
@@ -290,9 +279,8 @@
       var p = currentProperty();
       var sc = C.scenarios.filter(function (s) { return s.id === state.scenario; })[0];
       var occ = Math.max(40, Math.min(95, Math.round(p.occupancy + sc.occupancyDelta)));
-      var adr = Math.max(1200, Math.min(3000, Math.round(p.adr * (1 + sc.adrDelta / 100) / 50) * 50));
       ui.occ.value = occ;
-      ui.adr.value = adr;
+      ui.adr.value = 1200;
     }
 
     function render() {
@@ -308,8 +296,6 @@
       ui.horizonOut.textContent = state.horizon + ' ' + W.years;
       ui.occOut.textContent     = occ + '%';
       ui.adrOut.textContent     = inrGroup(adr);
-
-      ui.propstatus.textContent = p.status + ' · ' + p.keys + ' ' + W.keys + ' · ' + p.corridor;
 
       var results = model({
         property: p, amount: state.amount, horizon: state.horizon,
@@ -355,12 +341,6 @@
     }
 
     /* Events */
-    ui.property.addEventListener('change', function () {
-      state.propertyId = this.value;
-      applyScenarioBaseline();
-      render();
-    });
-
     ['amount', 'horizon', 'occ', 'adr'].forEach(function (k) {
       ui[k].addEventListener('input', render);
     });

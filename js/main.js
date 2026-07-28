@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MEWAD — SITE BEHAVIOUR
+   MEWAD: SITE BEHAVIOUR
    Renders every data-driven region from data/projects.js, then wires
    navigation, reveal, counters and the accordion.
    ========================================================================== */
@@ -7,7 +7,7 @@
 (function () {
   'use strict';
 
-  /* Language-aware dataset — Hindi overrides are merged in by prefs.js. */
+  /* Language-aware dataset - Hindi overrides are merged in by prefs.js. */
   function D() { return window.MewadPrefs ? window.MewadPrefs.data() : window.MEWAD; }
 
   var $  = function (s, c) { return (c || document).querySelector(s); };
@@ -342,7 +342,7 @@
   /* --- Citations ----------------------------------------------------------
      A figure in the data file carries an optional { label, url } source.
      Markers are numbered here, after every region has rendered, by walking
-     [data-source] in document order — so the numbering always reads 1, 2,
+     [data-source] in document order - so the numbering always reads 1, 2,
      3 down the page regardless of which renderer produced the marker.
 
      A source with an empty label renders nothing at all. That is the point:

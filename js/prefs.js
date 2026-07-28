@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MEWAD — PREFERENCES: THEME + LANGUAGE
+   MEWAD: PREFERENCES: THEME + LANGUAGE
 
    Loaded before every other script. Owns two pieces of state:
 
@@ -13,7 +13,7 @@
      1. DATA strings (property names, FAQ, structures) come from
         data/projects.js. `MEWAD_HI.data` mirrors that shape and is deep-merged
         over it, so renderers just ask for `MewadPrefs.data()` and get the right
-        language. Numbers are never touched — they live only in projects.js.
+        language. Numbers are never touched - they live only in projects.js.
 
      2. PAGE COPY is authored directly in the HTML. `MEWAD_HI.ui` maps the
         normalised English source text to Hindi, so no markup had to be
