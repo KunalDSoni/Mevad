@@ -175,6 +175,28 @@
     io.observe(target);
   }
 
+  /* Draws in any .chart__line path present in the DOM, using the
+     stroke-dasharray trick (no chart currently renders one - see
+     docs/superpowers/plans/2026-07-29-motion-layer-implementation.md
+     Task 10 - this is a no-op today and activates automatically the day a
+     line/area chart is added to returns.html). GSAP-owned per
+     docs/design-system.md. */
+  function chartDrawIn() {
+    var paths = $$('.chart__line');
+    if (!paths.length || !window.gsap || prefersReducedMotion()) return;
+
+    paths.forEach(function (path) {
+      var length = path.getTotalLength();
+      window.gsap.set(path, { strokeDasharray: length, strokeDashoffset: length });
+      window.gsap.to(path, {
+        strokeDashoffset: 0,
+        duration: 1.2,
+        ease: 'power2.out',
+        scrollTrigger: { trigger: path, start: 'top 80%', once: true }
+      });
+    });
+  }
+
   window.MewadMotion = {
     prefersReducedMotion: prefersReducedMotion,
     staggerReveal: staggerReveal,
@@ -182,7 +204,8 @@
     gridStagger: gridStagger,
     animateValueChange: animateValueChange,
     magneticButtons: magneticButtons,
-    emphasisMarks: emphasisMarks
+    emphasisMarks: emphasisMarks,
+    chartDrawIn: chartDrawIn
   };
 
   function boot() {
@@ -190,6 +213,7 @@
     heroEntrance();
     magneticButtons();
     emphasisMarks();
+    if (window.gsap) chartDrawIn();
   }
 
   if (document.readyState === 'loading') {
