@@ -166,6 +166,18 @@ window.MEWAD = {
      --------------------------------------------------------------------- */
   asset: {
     intro: 'Engineered for a guest who arrives at 2am, works a 12-hour shift, and stays for months. Not for a honeymoon.',
+    guestSide: [
+      'Checks in at 2am after a shift change, not a flight.',
+      'Kitchen serves hot meals at 3am and 3pm — when shifts turn over, not brunch hours.',
+      'Packed three shirts for a six-month posting; laundry is industrial-grade, same-day, included.',
+      'Sleeps through daylight: blackout curtains, sound isolation, a desk and wired ethernet instead of a view.'
+    ],
+    plantSide: [
+      'An annual rate agreement instead of a per-night booking.',
+      'Single-PO billing and GST-clean invoicing a procurement team can actually process.',
+      'Occupancy tied to shift rosters and contractor cycles, not seasons or holidays.',
+      'A location chosen for the plant gate, under 15 minutes away, not the view.'
+    ],
     specs: [
       { k: 'Keys per property',      v: '60 – 90' },
       { k: 'Land footprint',         v: '1.5 – 3.0 acres' },
@@ -178,10 +190,7 @@ window.MEWAD = {
     ],
     features: [
       { title: 'Shift-aligned kitchens', body: 'Hot meals at 3am and 3pm, because that is when shifts change. Vegetarian, Jain and regional menus as standard.' },
-      { title: 'Laundry at scale',       body: 'Industrial-grade, same-day, included. A guest here has three shirts and a six-month stay.' },
-      { title: 'Rooms built for work',   body: 'Desk, wired ethernet, blackout for day-sleepers, and sound isolation rated for 24-hour occupancy.' },
       { title: 'Transport desk',         body: 'Scheduled shuttles to anchor plant gates, timed to shift changes and airport arrivals.' },
-      { title: 'Meeting infrastructure', body: 'Rooms that hold a 20-person vendor review, because the alternative is a two-hour drive to a city hotel.' },
       { title: 'Corporate contracting',  body: 'Annual rate agreements, GST-clean invoicing and single-PO billing that a procurement team can actually process.' }
     ]
   },

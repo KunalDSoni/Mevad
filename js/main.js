@@ -141,14 +141,25 @@
     }).join('');
   }
 
-  function renderAssetSpecs(mount) {
+  function renderAssetContrast(mount) {
     if (!mount) return;
-    mount.innerHTML = '<div class="table-scroll"><table class="table--compact"><tbody>' +
-      D().asset.specs.map(function (s) {
+    var a = D().asset;
+    var specsHtml = '<div class="table-scroll"><table class="table--compact"><tbody>' +
+      a.specs.map(function (s) {
         return '<tr><td style="color:var(--text-2)">' + s.k + '</td>' +
                '<td class="num" style="color:var(--text-0)">' + s.v + '</td></tr>';
       }).join('') +
       '</tbody></table></div>';
+    mount.innerHTML =
+      '<div class="versus__col">' +
+        '<div class="versus__head"><span class="versus__swatch" style="background:var(--text-3)"></span><span>What a guest sees</span></div>' +
+        '<ul class="versus__list">' + a.guestSide.map(function (line) { return '<li>' + line + '</li>'; }).join('') + '</ul>' +
+      '</div>' +
+      '<div class="versus__col versus__col--mewad">' +
+        '<div class="versus__head"><span class="versus__swatch" style="background:var(--accent)"></span><span>What a plant signs</span></div>' +
+        '<ul class="versus__list">' + a.plantSide.map(function (line) { return '<li>' + line + '</li>'; }).join('') + '</ul>' +
+        specsHtml +
+      '</div>';
   }
 
   function renderAssetFeatures(mount) {
@@ -420,7 +431,7 @@
     renderPhilosophy($('[data-render="philosophy"]'));
     renderWhyInvest($('[data-render="why-invest"]'));
     renderFounder();
-    renderAssetSpecs($('[data-render="asset-specs"]'));
+    renderAssetContrast($('[data-render="asset-contrast"]'));
     renderAssetFeatures($('[data-render="asset-features"]'));
     renderStructures($('[data-render="structures"]'));
     renderJourney($('[data-render="journey"]'));
