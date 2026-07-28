@@ -760,6 +760,16 @@ section { position: relative; }
   border-color: var(--accent-line);
   background: var(--accent-wash);
   color: var(--accent);
+  animation: chip-pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes chip-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--accent-wash); }
+  50% { box-shadow: 0 0 0 4px var(--accent-wash); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chip--accent { animation: none; }
 }
 
 /* --- Demand table ---------------------------------------------------------- */
@@ -1314,6 +1324,7 @@ input[type='range']::-moz-range-thumb {
   transition: opacity 600ms var(--ease), transform 600ms var(--ease);
 }
 .chain-diagram__step.is-in { opacity: 1; transform: none; }
+.chain-diagram__icon { display: block; font-size: 1.35rem; line-height: 1; margin-bottom: 0.5rem; }
 .chain-diagram__step h4 { font-size: 0.9375rem; margin-bottom: 0.35rem; }
 .chain-diagram__step p { font-size: 0.8125rem; color: var(--text-2); margin: 0; }
 

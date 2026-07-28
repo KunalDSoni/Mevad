@@ -215,16 +215,19 @@
     }).join('');
   }
 
-  function chainDiagram(mount, steps) {
+  var BUSINESS_MODEL_ICONS = ['&#128176;', '&#127959;&#65039;', '&#9881;&#65039;', '&#128200;', '&#8599;&#65039;', '&#128260;'];
+
+  function chainDiagram(mount, steps, icons) {
     if (!mount) return;
     mount.innerHTML = '<div class="chain-diagram">' + steps.map(function (s, i) {
       var title = typeof s === 'string' ? s : s.label;
       var body = typeof s === 'string' ? '' : ('<p>' + s.note + '</p>');
-      return '<div class="chain-diagram__step reveal" style="transition-delay:' + (i * 80) + 'ms"><h4>' + title + '</h4>' + body + '</div>';
+      var icon = (icons && icons[i]) ? '<span class="chain-diagram__icon">' + icons[i] + '</span>' : '';
+      return '<div class="chain-diagram__step reveal" style="transition-delay:' + (i * 80) + 'ms">' + icon + '<h4>' + title + '</h4>' + body + '</div>';
     }).join('') + '</div>';
   }
 
-  function renderBusinessModel(mount) { chainDiagram(mount, D().businessModel); }
+  function renderBusinessModel(mount) { chainDiagram(mount, D().businessModel, BUSINESS_MODEL_ICONS); }
   function renderCapitalAllocation(mount) { chainDiagram(mount, D().capitalAllocation); }
 
   function renderProof(mount) {
@@ -289,7 +292,7 @@
     if (pipeline.length) {
       html += '<div class="chain-group">' +
         '<span class="label chain-group__label">' + D().words.chainPipelineLabel + '</span>' +
-        '<div class="grid grid--3">' + pipeline.map(propertyCard).join('') + '</div>' +
+        '<div class="grid grid--2">' + pipeline.map(propertyCard).join('') + '</div>' +
       '</div>';
     }
     mount.innerHTML = html;
