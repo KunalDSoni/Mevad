@@ -1,4 +1,4 @@
-# Mevad — India's First Industrial Hotel Chain
+# Mewad — India's First Industrial Hotel Chain
 
 Investor-facing site. Static HTML/CSS/JS, no build step, no dependencies.
 

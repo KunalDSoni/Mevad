@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MEVAD — DESIGN SYSTEM
+   MEWAD — DESIGN SYSTEM
    Industrial precision carrying hospitality warmth.
    Engineering drawing, not hotel brochure.
    ========================================================================== */
@@ -655,7 +655,7 @@ section { position: relative; }
 @media (max-width: 700px) { .versus { grid-template-columns: 1fr; } }
 
 .versus__col { background: var(--ink-1); padding: clamp(1.5rem, 3vw, 2.25rem); }
-.versus__col--mevad { background: var(--ink-2); }
+.versus__col--mewad { background: var(--ink-2); }
 
 .versus__head {
   display: flex;
@@ -682,7 +682,7 @@ section { position: relative; }
   font-family: var(--font-mono);
   color: var(--text-3);
 }
-.versus__col--mevad .versus__list li::before { content: '+'; color: var(--accent); }
+.versus__col--mewad .versus__list li::before { content: '+'; color: var(--accent); }
 
 /* --- Cards ---------------------------------------------------------------- */
 

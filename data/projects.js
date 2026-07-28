@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MEVAD — SINGLE SOURCE OF TRUTH
+   MEWAD — SINGLE SOURCE OF TRUTH
    ==========================================================================
 
    EVERY NUMBER ON THIS WEBSITE COMES FROM THIS FILE.
@@ -17,7 +17,7 @@
      3. Nothing else. Do not edit the HTML.
    ========================================================================== */
 
-window.MEVAD = {
+window.MEWAD = {
 
   PLACEHOLDER_MODE: true,
 
@@ -45,7 +45,7 @@ window.MEVAD = {
   },
 
   brand: {
-    name: 'Mevad',
+    name: 'Mewad',
     positioning: "India's First Industrial Hotel Chain",
     phone: '+91 00000 00000',
     /* Named contacts shown in the footer. Add `email` or `phone` to an entry
@@ -74,7 +74,7 @@ window.MEVAD = {
   },
 
   /* ---------------------------------------------------------------------
-     WHO SLEEPS IN A MEVAD HOTEL
+     WHO SLEEPS IN A MEWAD HOTEL
      --------------------------------------------------------------------- */
   demand: [
     {
@@ -116,7 +116,7 @@ window.MEVAD = {
   ],
 
   /* ---------------------------------------------------------------------
-     THE ASSET — what one Mevad hotel is
+     THE ASSET — what one Mewad hotel is
      --------------------------------------------------------------------- */
   asset: {
     intro: 'Engineered for a guest who arrives at 2am, works a 12-hour shift, and stays for months. Not for a honeymoon.',
@@ -128,7 +128,7 @@ window.MEVAD = {
       { k: 'Long-stay inventory',    v: '40% of keys' },
       { k: 'Build-to-open',          v: '14 – 18 months' },
       { k: 'Stabilisation',          v: '9 – 12 months' },
-      { k: 'Operator',               v: 'Mevad, in-house' }
+      { k: 'Operator',               v: 'Mewad, in-house' }
     ],
     features: [
       { title: 'Shift-aligned kitchens', body: 'Hot meals at 3am and 3pm, because that is when shifts change. Vegetarian, Jain and regional menus as standard.' },
@@ -146,7 +146,7 @@ window.MEVAD = {
   properties: [
     {
       id: 'sanand',
-      name: 'Mevad Sanand',
+      name: 'Mewad Sanand',
       state: 'Gujarat',
       corridor: 'Sanand GIDC · Ahmedabad',
       status: 'Operational',
@@ -162,7 +162,7 @@ window.MEVAD = {
     },
     {
       id: 'dahej',
-      name: 'Mevad Dahej',
+      name: 'Mewad Dahej',
       state: 'Gujarat',
       corridor: 'Dahej PCPIR · Bharuch',
       status: 'Announced',
@@ -178,7 +178,7 @@ window.MEVAD = {
     },
     {
       id: 'chakan',
-      name: 'Mevad Chakan',
+      name: 'Mewad Chakan',
       state: 'Maharashtra',
       corridor: 'Chakan MIDC · Pune',
       status: 'Under construction',
@@ -194,7 +194,7 @@ window.MEVAD = {
     },
     {
       id: 'sricity',
-      name: 'Mevad Sri City',
+      name: 'Mewad Sri City',
       state: 'Andhra Pradesh',
       corridor: 'Sri City SEZ · Tirupati',
       status: 'Announced',
@@ -210,7 +210,7 @@ window.MEVAD = {
     },
     {
       id: 'hosur',
-      name: 'Mevad Hosur',
+      name: 'Mewad Hosur',
       state: 'Tamil Nadu',
       corridor: 'Hosur · Krishnagiri',
       status: 'Announced',
@@ -229,10 +229,10 @@ window.MEVAD = {
   /* ---------------------------------------------------------------------
      INVESTMENT STRUCTURES
      Two structures. Both are profit-share, proportional-ownership models -
-     there is no fixed/assured leg. Mevad takes a flat management fee off
+     there is no fixed/assured leg. Mewad takes a flat management fee off
      property profit before anything is distributed to owners.
      --------------------------------------------------------------------- */
-  managementFeePct: 0.20,   // Mevad's share of property profit, taken first, both structures
+  managementFeePct: 0.20,   // Mewad's share of property profit, taken first, both structures
 
   structures: [
     {
@@ -242,16 +242,16 @@ window.MEVAD = {
       summary: 'You invest directly into one hotel. Your stake is the share of the property your capital represents - invest 10% of the property\'s value, own 10% of it.',
       ownerShare: null,     // computed per-investment: amount / property price
       assured: null,
-      liquidity: 'Sale of your stake, by agreement with Mevad or an incoming investor',
+      liquidity: 'Sale of your stake, by agreement with Mewad or an incoming investor',
       risk: 'Return moves with that hotel\'s occupancy and rate',
       forWho: 'Investors who want direct exposure to one named property and can accept single-asset variability.',
-      detail: 'Mevad operates the hotel and takes a flat 20% management fee off annual profit. The remaining 80% is distributed to owners in proportion to their stake in that specific hotel.'
+      detail: 'Mewad operates the hotel and takes a flat 20% management fee off annual profit. The remaining 80% is distributed to owners in proportion to their stake in that specific hotel.'
     },
     {
       id: 'spv',
       name: 'SPV Units (Parent Company)',
       short: 'Parent company',
-      summary: 'Units in the Mevad parent entity, which holds a stake across every operating hotel. No single property; exposure to the whole chain.',
+      summary: 'Units in the Mewad parent entity, which holds a stake across every operating hotel. No single property; exposure to the whole chain.',
       ownerShare: null,
       assured: null,
       portfolioDiversification: true,
@@ -259,7 +259,7 @@ window.MEVAD = {
       liquidity: 'Unit transfer, subject to the parent company\'s constitutional documents',
       risk: 'Diversified across every hotel in the chain; no single-asset concentration',
       forWho: 'Investors who want the chain rather than one hotel, once the parent company opens for investment.',
-      detail: 'The parent company holds an equity stake in every Mevad hotel, including Mevad Sanand. Its own profit - after each hotel\'s 20% management fee - is distributed to parent-company unit holders in proportion to their holding. This structure opens once Mevad is operating 4-5 hotels; direct property ownership is live today, starting with Mevad Sanand.'
+      detail: 'The parent company holds an equity stake in every Mewad hotel, including Mewad Sanand. Its own profit - after each hotel\'s 20% management fee - is distributed to parent-company unit holders in proportion to their holding. This structure opens once Mewad is operating 4-5 hotels; direct property ownership is live today, starting with Mewad Sanand.'
     }
   ],
 
@@ -290,7 +290,7 @@ window.MEVAD = {
       income: 'Income',
       exitValue: 'Exit value',
       multiple: 'Total / invested',
-      footnote: 'Payouts are 80% of property profit (after Mevad\'s 20% management fee), split by ownership percentage. IRR is computed on the full cashflow: capital out at year zero, payouts each year, and sale of the holding at the end of the period. Construction and stabilisation are applied - a property that has not opened does not pay.'
+      footnote: 'Payouts are 80% of property profit (after Mewad\'s 20% management fee), split by ownership percentage. IRR is computed on the full cashflow: capital out at year zero, payouts each year, and sale of the holding at the end of the period. Construction and stabilisation are applied - a property that has not opened does not pay.'
     },
     // Sensitivity applied to the base occupancy for the two side cases.
     scenarios: [
@@ -320,7 +320,7 @@ window.MEVAD = {
   faq: [
     {
       q: 'What happens if a single anchor factory shuts down?',
-      a: 'No Mevad site depends on one tenant. Each property is underwritten against a minimum count of independent anchor employers within a fixed radius, across more than one sector, so that the closure of any single plant is absorbed rather than fatal.'
+      a: 'No Mewad site depends on one tenant. Each property is underwritten against a minimum count of independent anchor employers within a fixed radius, across more than one sector, so that the closure of any single plant is absorbed rather than fatal.'
     },
     {
       q: 'Industrial ADR is lower than city hotels. Why is that good?',
@@ -328,7 +328,7 @@ window.MEVAD = {
     },
     {
       q: 'What is the 20% management fee for?',
-      a: 'Mevad operates every property in the chain - staffing, corporate rate agreements, F&B, maintenance, everything. The fee is taken off profit, not revenue, and it is taken first: what remains is split among owners strictly by ownership percentage, so Mevad only earns more when the property does.'
+      a: 'Mewad operates every property in the chain - staffing, corporate rate agreements, F&B, maintenance, everything. The fee is taken off profit, not revenue, and it is taken first: what remains is split among owners strictly by ownership percentage, so Mewad only earns more when the property does.'
     },
     {
       q: 'What is my ownership percentage, exactly?',
@@ -336,15 +336,15 @@ window.MEVAD = {
     },
     {
       q: 'When can I invest in the parent company instead of one hotel?',
-      a: 'Not yet. Direct ownership in a single, named hotel is open today, starting with Mevad Sanand. The parent company - which will hold a stake across every operating hotel - opens for investment once Mevad has 4-5 hotels running, so that "the chain" is an actual portfolio rather than a promise.'
+      a: 'Not yet. Direct ownership in a single, named hotel is open today, starting with Mewad Sanand. The parent company - which will hold a stake across every operating hotel - opens for investment once Mewad has 4-5 hotels running, so that "the chain" is an actual portfolio rather than a promise.'
     },
     {
       q: 'How do I exit?',
-      a: 'By selling your stake - in a hotel, or later in the parent company - by agreement with Mevad or to an incoming investor. Neither is a listed instrument, and neither should be treated as liquid. Plan on the full horizon.'
+      a: 'By selling your stake - in a hotel, or later in the parent company - by agreement with Mewad or to an incoming investor. Neither is a listed instrument, and neither should be treated as liquid. Plan on the full horizon.'
     },
     {
       q: 'Who operates the hotels?',
-      a: 'Mevad operates every property in the chain in-house. The brand, the standards and the corporate rate agreements are the asset; outsourcing operations would give away the thing that makes the demand contractual.'
+      a: 'Mewad operates every property in the chain in-house. The brand, the standards and the corporate rate agreements are the asset; outsourcing operations would give away the thing that makes the demand contractual.'
     }
   ],
 

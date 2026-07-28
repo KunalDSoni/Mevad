@@ -1,9 +1,9 @@
 /* ==========================================================================
-   MEVAD — HINDI
+   MEWAD — HINDI
 
    Two sections:
 
-     data : mirrors the shape of window.MEVAD. Deep-merged over it, so only
+     data : mirrors the shape of window.MEWAD. Deep-merged over it, so only
             translated fields need to appear. NUMBERS ARE NEVER REPEATED HERE —
             they live in projects.js alone, which stays the single source of
             truth for every figure on the site.
@@ -17,7 +17,7 @@
             falls back to English rather than breaking.
    ========================================================================== */
 
-window.MEVAD_HI = {
+window.MEWAD_HI = {
 
   data: {
     words: {
@@ -242,7 +242,7 @@ window.MEVAD_HI = {
     'Returns': 'प्रतिफल',
     'Invest': 'निवेश',
     'Book a meeting': 'मीटिंग बुक करें',
-    'MEVAD': 'मेवाड़',
+    'MEWAD': 'मेवाड़',
     'Operational': 'संचालनरत',
     'Under construction': 'निर्माणाधीन',
     'Announced': 'घोषित',
@@ -260,7 +260,7 @@ window.MEVAD_HI = {
     /* Hero */
     "India's first industrial hotel chain": 'भारत की पहली औद्योगिक होटल श्रृंखला',
     "Tourists cancel.<br><em>Factories don't.</em>": 'पर्यटक रद्द करते हैं।<br><em>कारखाने नहीं।</em>',
-    "Mevad builds hotels inside India's industrial corridors - where a commissioning team of forty needs beds for eight months, and the nearest decent room is ninety minutes away. Demand here arrives on a purchase order, not a whim.":
+    "Mewad builds hotels inside India's industrial corridors - where a commissioning team of forty needs beds for eight months, and the nearest decent room is ninety minutes away. Demand here arrives on a purchase order, not a whim.":
       'मेवाड़ भारत के औद्योगिक गलियारों के भीतर होटल बनाता है - जहाँ चालीस लोगों की कमीशनिंग टीम को आठ महीने तक कमरे चाहिए, और निकटतम ढंग का कमरा नब्बे मिनट दूर है। यहाँ मांग किसी सनक से नहीं, खरीद आदेश से आती है।',
     'Model your returns <span class="btn__arrow">→</span>': 'अपना प्रतिफल आँकें <span class="btn__arrow">→</span>',
     'Read the thesis': 'थीसिस पढ़ें',
@@ -272,7 +272,7 @@ window.MEVAD_HI = {
     'Leisure hospitality competes for a guest who might not come. Industrial hospitality serves a guest whose employer has already signed the contract that puts them there.':
       'अवकाश आतिथ्य ऐसे मेहमान के लिए होड़ करता है जो शायद आए ही नहीं। औद्योगिक आतिथ्य ऐसे मेहमान की सेवा करता है जिसके नियोक्ता ने वह अनुबंध पहले ही कर रखा है जो उसे वहाँ भेजता है।',
     'The leisure hotel': 'अवकाश होटल',
-    'The Mevad hotel': 'मेवाड़ होटल',
+    'The Mewad hotel': 'मेवाड़ होटल',
     'Guests choose to come, and can choose not to': 'मेहमान आना चुनते हैं, और न आना भी चुन सकते हैं',
     'Occupancy collapses for four months a year': 'साल में चार महीने अधिभोग ढह जाता है',
     '18–22% of every booking goes to an OTA': 'हर बुकिंग का 18–22% OTA को चला जाता है',
@@ -285,7 +285,7 @@ window.MEVAD_HI = {
     'Competes with a ninety-minute drive and an unbranded lodge': 'प्रतिस्पर्धा नब्बे मिनट की यात्रा और एक बेनाम लॉज से है',
     'Weekday-weighted, shift-driven, weather-indifferent': 'कार्यदिवसों पर केंद्रित, शिफ़्ट से संचालित, मौसम से निरपेक्ष',
     'Rate is modest - and it is the same every month': 'दर मामूली है - और हर महीने वही रहती है',
-    '<strong>Lower ADR. Higher, steadier RevPAR.</strong> That trade is the entire proposition, and it is the one most investors get backwards. A Mevad room will never command what a beachfront suite commands in December. It will also never sit empty in July.':
+    '<strong>Lower ADR. Higher, steadier RevPAR.</strong> That trade is the entire proposition, and it is the one most investors get backwards. A Mewad room will never command what a beachfront suite commands in December. It will also never sit empty in July.':
       '<strong>कम ADR। अधिक और अधिक स्थिर RevPAR।</strong> यही अदला-बदली पूरा प्रस्ताव है, और अधिकांश निवेशक इसे उल्टा समझते हैं। मेवाड़ का कमरा वह दर कभी नहीं पाएगा जो दिसंबर में समुद्रतट का सुइट पाता है। पर वह जुलाई में खाली भी कभी नहीं रहेगा।',
     'You are not buying the highest point on the curve. You are buying <strong>the shape of the curve</strong> - and over a ten-year hold, shape beats peak.':
       'आप वक्र का सबसे ऊँचा बिंदु नहीं खरीद रहे। आप <strong>वक्र का आकार</strong> खरीद रहे हैं - और दस साल की अवधि में आकार शिखर से बड़ा पड़ता है।',
@@ -303,7 +303,7 @@ window.MEVAD_HI = {
       'ऐसे व्यक्ति को ध्यान में रखकर बनाया गया जो बारह घंटे की शिफ़्ट करता है और महीनों रुकता है। हर डिज़ाइन निर्णय इसी से निकला है, किसी विज्ञापन पुस्तिका से नहीं।',
     'Property specification': 'संपत्ति विशिष्टियाँ',
     'Standard across the chain.': 'पूरी श्रृंखला में एक समान।',
-    'A city hotel treats a long-stay guest as an anomaly. A Mevad hotel is built for them: forty per cent of keys are long-stay inventory, the kitchen runs to shift timings rather than restaurant timings, and the laundry is sized for a guest who packed three shirts for a six-month posting.':
+    'A city hotel treats a long-stay guest as an anomaly. A Mewad hotel is built for them: forty per cent of keys are long-stay inventory, the kitchen runs to shift timings rather than restaurant timings, and the laundry is sized for a guest who packed three shirts for a six-month posting.':
       'शहर का होटल लंबे ठहराव वाले मेहमान को अपवाद मानता है। मेवाड़ होटल उसी के लिए बना है: चालीस प्रतिशत कमरे दीर्घ-ठहराव के हैं, रसोई रेस्तराँ के नहीं बल्कि शिफ़्ट के समय पर चलती है, और लॉन्ड्री उस मेहमान के हिसाब से है जो छह महीने की तैनाती पर तीन कमीज़ लेकर आया है।',
     'None of it photographs well. All of it is why the anchor plant next door signs an annual rate agreement instead of putting people in a lodge.':
       'इसमें से कुछ भी तस्वीर में अच्छा नहीं लगता। इसी सबके कारण पड़ोस का एंकर संयंत्र लोगों को लॉज में ठहराने के बजाय वार्षिक दर अनुबंध करता है।',
@@ -314,7 +314,7 @@ window.MEVAD_HI = {
     'Each property is underwritten against the industrial base around it - the count of anchor employers, the sector mix, and the distance to the gate.':
       'हर संपत्ति अपने आसपास के औद्योगिक आधार पर आँकी जाती है - एंकर नियोक्ताओं की संख्या, क्षेत्रों का मिश्रण, और गेट तक की दूरी।',
     'We build where the trucks are.': 'हम वहाँ बनाते हैं जहाँ ट्रक हैं।',
-    'Every Mevad site is chosen the same way: count the anchor employers inside a fixed radius, check the sector mix, measure the drive to the plant gate. If the industrial base does not carry the hotel on its own, we do not build.':
+    'Every Mewad site is chosen the same way: count the anchor employers inside a fixed radius, check the sector mix, measure the drive to the plant gate. If the industrial base does not carry the hotel on its own, we do not build.':
       'हर मेवाड़ स्थल एक ही तरीके से चुना जाता है: तय दायरे के भीतर एंकर नियोक्ता गिनें, क्षेत्रों का मिश्रण जाँचें, संयंत्र के गेट तक की दूरी नापें। यदि औद्योगिक आधार अकेले होटल को न सँभाल सके, तो हम नहीं बनाते।',
     'Site selection': 'स्थल चयन',
     'The four tests a location has to pass.': 'वे चार कसौटियाँ जिन पर स्थल को खरा उतरना है।',
@@ -347,10 +347,10 @@ window.MEVAD_HI = {
     /* Structures / invest */
     'Two ways in': 'भीतर आने के दो रास्ते',
     'Own a hotel, or own the chain.': 'एक होटल रखें, या पूरी श्रृंखला रखें।',
-    'Start by owning a percentage of one named property - Mevad Sanand today. As more hotels come online, own a slice of the parent company instead.':
+    'Start by owning a percentage of one named property - Mewad Sanand today. As more hotels come online, own a slice of the parent company instead.':
       'एक नामित संपत्ति के प्रतिशत के मालिक बनकर शुरू करें - आज मेवाड़ साणंद। जैसे-जैसे और होटल जुड़ते हैं, इसके बजाय मूल कंपनी का हिस्सा रखें।',
     'Own the hotel, not a promise about it.': 'होटल के मालिक बनें, उसके बारे में किए वादे के नहीं।',
-    'You put in capital, you get a matching percentage of that property. No fixed return, no assured leg - just your share of what the hotel actually earns, after Mevad\'s 20% management fee.':
+    'You put in capital, you get a matching percentage of that property. No fixed return, no assured leg - just your share of what the hotel actually earns, after Mewad\'s 20% management fee.':
       'आप पूँजी लगाते हैं, आपको उस संपत्ति का उतना ही प्रतिशत मिलता है। कोई निश्चित प्रतिफल नहीं, कोई गारंटीशुदा हिस्सा नहीं - बस वह हिस्सा जो होटल वास्तव में कमाता है, मेवाड़ के 20% प्रबंधन शुल्क के बाद।',
 
     /* Process */
@@ -412,9 +412,9 @@ window.MEVAD_HI = {
       'हर परिणाम उन मान्यताओं पर किया गया गणित है जिन्हें आप देख और बदल सकते हैं। यह पूर्वानुमान नहीं है। अधिभोग, दर, पूँजी वृद्धि और संचालक का प्रदर्शन - सब अनिश्चित हैं, और वास्तविक नतीजा यहाँ दिखाए हर परिदृश्य के बाहर भी जा सकता है, निचले परिदृश्य से भी नीचे।',
 
     /* invest.html */
-    '<strong>Direct ownership is live today.</strong> Invest into a named property - starting with Mevad Sanand - and your stake is exactly the percentage of that hotel your capital represents. As Mevad opens more hotels, the same structure repeats for each one.':
+    '<strong>Direct ownership is live today.</strong> Invest into a named property - starting with Mewad Sanand - and your stake is exactly the percentage of that hotel your capital represents. As Mewad opens more hotels, the same structure repeats for each one.':
       '<strong>सीधा स्वामित्व आज उपलब्ध है।</strong> एक नामित संपत्ति में निवेश करें - मेवाड़ साणंद से शुरू - और आपकी हिस्सेदारी ठीक उतनी ही होगी जितना प्रतिशत आपकी पूँजी उस होटल में दर्शाती है। जैसे-जैसे मेवाड़ और होटल खोलता है, यही संरचना हर एक के लिए दोहराई जाती है।',
-    '<strong>The parent company is the next phase.</strong> Once Mevad is running 4-5 hotels, a parent company holding a stake across all of them opens for investment - for investors who want the chain rather than one property. <a href="returns.html" style="color:var(--accent-ink)">Model both</a> against the same assumptions.':
+    '<strong>The parent company is the next phase.</strong> Once Mewad is running 4-5 hotels, a parent company holding a stake across all of them opens for investment - for investors who want the chain rather than one property. <a href="returns.html" style="color:var(--accent-ink)">Model both</a> against the same assumptions.':
       '<strong>मूल कंपनी अगला चरण है।</strong> जब मेवाड़ 4-5 होटल चला रहा होगा, तब सभी में हिस्सेदारी रखने वाली मूल कंपनी निवेश के लिए खुलेगी - उन निवेशकों के लिए जो एक संपत्ति नहीं, पूरी श्रृंखला चाहते हैं। <a href="returns.html" style="color:var(--accent-ink)">दोनों को आँकें</a> वही मान्यताओं पर।',
     'Run it yourself': 'स्वयं चलाकर देखिए',
     'This site collects no identity documents and stores no personal files. KYC is handled entirely by a regulated compliance partner on their own infrastructure, and the link is issued to you directly after the first call.':

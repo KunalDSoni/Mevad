@@ -1,4 +1,4 @@
-# Mevad Investor Pitch Deck
+# Mewad Investor Pitch Deck
 
 Standalone, self-contained HTML slide deck. Separate from the main marketing
 site — real business figures, not placeholders.

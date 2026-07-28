@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MEVAD — PREFERENCES: THEME + LANGUAGE
+   MEWAD — PREFERENCES: THEME + LANGUAGE
 
    Loaded before every other script. Owns two pieces of state:
 
@@ -11,11 +11,11 @@
    Translation works on two levels, because the site has two kinds of text:
 
      1. DATA strings (property names, FAQ, structures) come from
-        data/projects.js. `MEVAD_HI.data` mirrors that shape and is deep-merged
-        over it, so renderers just ask for `MevadPrefs.data()` and get the right
+        data/projects.js. `MEWAD_HI.data` mirrors that shape and is deep-merged
+        over it, so renderers just ask for `MewadPrefs.data()` and get the right
         language. Numbers are never touched — they live only in projects.js.
 
-     2. PAGE COPY is authored directly in the HTML. `MEVAD_HI.ui` maps the
+     2. PAGE COPY is authored directly in the HTML. `MEWAD_HI.ui` maps the
         normalised English source text to Hindi, so no markup had to be
         annotated with keys. English is the fallback: a missing entry simply
         stays English rather than rendering a raw key.
@@ -24,8 +24,8 @@
 (function () {
   'use strict';
 
-  var STORE_THEME = 'mevad-theme';
-  var STORE_LANG  = 'mevad-lang';
+  var STORE_THEME = 'mewad-theme';
+  var STORE_LANG  = 'mewad-lang';
 
   var theme = 'dark';
   var lang  = 'en';
@@ -53,8 +53,8 @@
   var merged = null;
 
   function data() {
-    if (lang === 'en' || !window.MEVAD_HI || !window.MEVAD_HI.data) return window.MEVAD;
-    if (!merged) merged = merge(window.MEVAD, window.MEVAD_HI.data);
+    if (lang === 'en' || !window.MEWAD_HI || !window.MEWAD_HI.data) return window.MEWAD;
+    if (!merged) merged = merge(window.MEWAD, window.MEWAD_HI.data);
     return merged;
   }
 
@@ -103,8 +103,8 @@
    * descendants are skipped, so inline markup is never double-processed.
    */
   function translate(root) {
-    if (lang !== 'hi' || !window.MEVAD_HI || !window.MEVAD_HI.ui) return;
-    var dict = window.MEVAD_HI.ui;
+    if (lang !== 'hi' || !window.MEWAD_HI || !window.MEWAD_HI.ui) return;
+    var dict = window.MEWAD_HI.ui;
     var done = [];
 
     var els = (root || document).querySelectorAll(SEL);
@@ -165,10 +165,10 @@
     /* Data-driven regions are rebuilt from the merged dataset; static page
        copy is restored to English first so Hindi is never applied twice. */
     restoreStatic();
-    if (window.MevadRender) window.MevadRender.all();
+    if (window.MewadRender) window.MewadRender.all();
     translate(document);
 
-    document.dispatchEvent(new CustomEvent('mevad:langchange', { detail: { lang: lang } }));
+    document.dispatchEvent(new CustomEvent('mewad:langchange', { detail: { lang: lang } }));
   }
 
   /* --- Nav controls ------------------------------------------------------
@@ -230,7 +230,7 @@
     boot();
   }
 
-  window.MevadPrefs = {
+  window.MewadPrefs = {
     data: data,
     translate: translate,
     lang: function () { return lang; },

@@ -1,11 +1,11 @@
 /* ==========================================================================
-   MEVAD PITCH DECK — renderer + navigation
+   MEWAD PITCH DECK — renderer + navigation
    renderSlide/renderAll are pure (data) -> string functions, testable from
    Node without a DOM. mount() is the only part that touches document/window
    chrome, and only runs in a browser.
    ========================================================================== */
 
-window.MevadDeck = (function () {
+window.MewadDeck = (function () {
   'use strict';
 
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
@@ -17,7 +17,7 @@ window.MevadDeck = (function () {
 
   function footnote(slide) {
     if (!slide.footnote) return '';
-    var text = (typeof window !== 'undefined' && window.MEVAD_DECK) ? window.MEVAD_DECK.footnoteEstimate : '';
+    var text = (typeof window !== 'undefined' && window.MEWAD_DECK) ? window.MEWAD_DECK.footnoteEstimate : '';
     return '<p class="footnote">' + esc(text) + '</p>';
   }
 
@@ -50,16 +50,16 @@ window.MevadDeck = (function () {
       return header(s) + cur + fut;
     },
     timeline: function (s) {
-      var svg = window.MevadCharts ? window.MevadCharts.timeline(s.steps) : '';
+      var svg = window.MewadCharts ? window.MewadCharts.timeline(s.steps) : '';
       return header(s) + svg;
     },
     dotMap: function (s) {
-      var svg = window.MevadCharts ? window.MevadCharts.dotMap(s.cities) : '';
+      var svg = window.MewadCharts ? window.MewadCharts.dotMap(s.cities) : '';
       var footer = s.footer ? '<p class="slide-body">' + esc(s.footer) + '</p>' : '';
       return header(s) + svg + footer;
     },
     waterfall: function (s) {
-      var svg = window.MevadCharts ? window.MevadCharts.waterfall(s.example) : '';
+      var svg = window.MewadCharts ? window.MewadCharts.waterfall(s.example) : '';
       return header(s) + svg;
     },
     financials: function (s) {
@@ -77,7 +77,7 @@ window.MevadDeck = (function () {
       return header(s) + rows + targets + assumptions + footnote(s);
     },
     trendChart: function (s) {
-      var svg = window.MevadCharts ? window.MevadCharts.trendBar(s.series) : '';
+      var svg = window.MewadCharts ? window.MewadCharts.trendBar(s.series) : '';
       return header(s) + svg + '<p class="slide-body">' + esc(s.note) + '</p>';
     },
     governance: function (s) {
@@ -104,7 +104,7 @@ window.MevadDeck = (function () {
   }
 
   function mount() {
-    var slides = window.MEVAD_DECK.slides;
+    var slides = window.MEWAD_DECK.slides;
     var deck = document.getElementById('deck');
     deck.innerHTML = renderAll(slides).join('');
 
@@ -132,6 +132,6 @@ window.MevadDeck = (function () {
 })();
 
 if (typeof document !== 'undefined') {
-  document.addEventListener('DOMContentLoaded', window.MevadDeck.mount);
+  document.addEventListener('DOMContentLoaded', window.MewadDeck.mount);
 }
-if (typeof module !== 'undefined') { module.exports = window.MevadDeck; }
+if (typeof module !== 'undefined') { module.exports = window.MewadDeck; }

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MEVAD — RETURNS CALCULATOR
+   MEWAD — RETURNS CALCULATOR
 
    Models both investment structures against the same property, amount
    and assumptions, then reports IRR on a full cashflow — not a headline
@@ -14,7 +14,7 @@
 
   /* Language-aware dataset — Hindi overrides merged in by prefs.js. Numbers
      always come from projects.js; only labels differ between languages. */
-  function D() { return window.MevadPrefs ? window.MevadPrefs.data() : window.MEVAD; }
+  function D() { return window.MewadPrefs ? window.MewadPrefs.data() : window.MEWAD; }
   if (!D()) return;
 
   /* --- Formatting ------------------------------------------------------- */
@@ -104,7 +104,7 @@
    * @param {Object} input  { property, amount, occupancy, adr, horizon }
    * @returns {Array} one result per structure
    *
-   * Both structures are the same economics: gross room revenue, less Mevad's
+   * Both structures are the same economics: gross room revenue, less Mewad's
    * flat management fee, split by ownership percentage. "direct" is struck
    * on the one selected property; "spv" is struck on the portfolio blend,
    * because the parent company holds a stake across every hotel rather than
@@ -351,7 +351,7 @@
         '</div>';
       }).join('');
 
-      if (window.MevadPrefs) window.MevadPrefs.translate(ui.results);
+      if (window.MewadPrefs) window.MewadPrefs.translate(ui.results);
     }
 
     /* Events */
@@ -380,5 +380,5 @@
     render();
   }
 
-  window.MevadCalculator = { init: init, model: model, format: { inrGroup: inrGroup, inrCompact: inrCompact } };
+  window.MewadCalculator = { init: init, model: model, format: { inrGroup: inrGroup, inrCompact: inrCompact } };
 })();

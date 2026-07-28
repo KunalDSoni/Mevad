@@ -1,10 +1,10 @@
 /* ==========================================================================
-   MEVAD PITCH DECK — chart builders
+   MEWAD PITCH DECK — chart builders
    Pure functions: (data) -> SVG markup string. No DOM access, so these are
    testable directly from Node.
    ========================================================================== */
 
-window.MevadCharts = (function () {
+window.MewadCharts = (function () {
   'use strict';
 
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
@@ -83,4 +83,4 @@ window.MevadCharts = (function () {
   return { timeline: timeline, dotMap: dotMap, waterfall: waterfall, trendBar: trendBar };
 })();
 
-if (typeof module !== 'undefined') { module.exports = window.MevadCharts; }
+if (typeof module !== 'undefined') { module.exports = window.MewadCharts; }

@@ -1,17 +1,17 @@
 /* ==========================================================================
-   MEVAD INVESTOR PITCH DECK — DATA
+   MEWAD INVESTOR PITCH DECK — DATA
    Every number and label on every slide lives here. No figure is hardcoded
    into index.html or js/*.js.
    ========================================================================== */
 
-window.MEVAD_DECK = {
+window.MEWAD_DECK = {
   footnoteEstimate: 'Estimated at 100% based on director\'s reported ownership share (20% / 30%); pending audited confirmation.',
 
   slides: [
     {
       id: 1, type: 'cover',
       kicker: 'INVESTOR PRESENTATION',
-      title: 'Mevad',
+      title: 'Mewad',
       subtitle: 'India\'s first scalable Industrial Business Hotel chain',
       closing: 'Building the Hospitality Infrastructure Behind India\'s Manufacturing Revolution.'
     },
@@ -48,14 +48,14 @@ window.MEVAD_DECK = {
     {
       id: 7, type: 'iconGrid',
       kicker: 'THE PRODUCT',
-      title: 'What every Mevad hotel includes',
+      title: 'What every Mewad hotel includes',
       items: ['Premium Reception', 'Business Lounge', 'Landscaped Courtyard', 'Café', 'Meeting Room', 'Laundry', 'High-Speed WiFi', 'Corporate-Friendly Rooms', 'Long-Stay Packages', 'Digital Check-in', 'Future EV Charging'],
       footer: 'Every building is designed for future vertical expansion from day one.'
     },
     {
       id: 8, type: 'stat',
       kicker: 'PROOF POINT',
-      title: 'Hotel Mevad Palace, Sanand — operating today',
+      title: 'Hotel Mewad Palace, Sanand — operating today',
       stats: [
         { k: 'Rooms', v: '21' },
         { k: 'Average room rate', v: '₹1,200 / night' },
@@ -152,7 +152,7 @@ window.MEVAD_DECK = {
     {
       id: 20, type: 'financials',
       kicker: 'FINANCIALS',
-      title: 'Mevad Sanand Hotel — current hotel + Phase-2, combined',
+      title: 'Mewad Sanand Hotel — current hotel + Phase-2, combined',
       footnote: true,
       rows: [
         { label: 'Current hotel (Mewad-2 + Extra Room)', investment: 15187270, netProfit: 11255860, outstanding: 3931410 },
@@ -228,7 +228,7 @@ window.MEVAD_DECK = {
       title: 'Join us in building it',
       body: 'Minimum investment ₹5 lakh, customisable, proportional ownership, annual distributions.',
       contactLabel: 'Contact',
-      contactValue: 'invest@mevad.in',
+      contactValue: 'invest@mewad.in',
       closing: 'Building the Hospitality Infrastructure Behind India\'s Manufacturing Revolution.'
     }
   ]

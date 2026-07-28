@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MEVAD — SITE BEHAVIOUR
+   MEWAD — SITE BEHAVIOUR
    Renders every data-driven region from data/projects.js, then wires
    navigation, reveal, counters and the accordion.
    ========================================================================== */
@@ -8,7 +8,7 @@
   'use strict';
 
   /* Language-aware dataset — Hindi overrides are merged in by prefs.js. */
-  function D() { return window.MevadPrefs ? window.MevadPrefs.data() : window.MEVAD; }
+  function D() { return window.MewadPrefs ? window.MewadPrefs.data() : window.MEWAD; }
 
   var $  = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
@@ -327,8 +327,8 @@
         ? +propsMount.getAttribute('data-limit') : null);
     }
 
-    if (window.MevadCalculator) {
-      window.MevadCalculator.init($('[data-calculator]'));
+    if (window.MewadCalculator) {
+      window.MewadCalculator.init($('[data-calculator]'));
     }
 
     /* Last, so every marker on the page exists before it is numbered. */
@@ -359,10 +359,10 @@
 
     /* Static page copy is snapshotted by prefs.js before this point; the
        generated regions above only exist now, so translate the whole document. */
-    if (window.MevadPrefs) window.MevadPrefs.translate(document);
+    if (window.MewadPrefs) window.MewadPrefs.translate(document);
   }
 
-  window.MevadRender = { all: renderAll };
+  window.MewadRender = { all: renderAll };
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', boot);

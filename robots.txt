@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mevad.example/sitemap.xml
+Sitemap: https://mewad.example/sitemap.xml
