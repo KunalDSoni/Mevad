@@ -102,9 +102,7 @@ window.MEWAD = {
     capitalDeployedTotal: 14900000,   // ~₹1.49 Cr, historical, real
     operatingProfitTotal: 5737000,    // ~₹57.37 L, historical, real
     capitalDeployedBreakdown: [
-      { label: 'Hotel Mewad-2', amount: null, note: 'REPLACE: category amount' },
       { label: 'Additional rooms', amount: null, note: 'REPLACE: category amount' },
-      { label: 'Hotel Mewad-3', amount: null, note: 'REPLACE: category amount' },
       { label: 'Infrastructure improvements', amount: null, note: 'REPLACE: category amount' },
       { label: 'Supporting business assets', amount: null, note: 'REPLACE: category amount' }
     ],
@@ -362,8 +360,7 @@ window.MEWAD = {
     { step: 'Hotel Mewad',        body: 'The first property opens in Sanand.' },
     { step: 'Expansion',          body: 'Operating profit is reinvested rather than distributed.' },
     { step: 'Additional rooms',   body: 'Inventory added at the original property to meet demand already on the books.' },
-    { step: 'Hotel Mewad-3',      body: 'A second property, funded by the first.' },
-    { step: 'Current operations', body: 'Multiple assets operating today under Mewad Business Hotels.' },
+    { step: 'Current operations', body: 'The property operating today under Mewad Business Hotels.' },
     { step: 'Future growth',      body: 'The next corridor, funded the same way as the last one.' }
   ],
 
@@ -376,8 +373,8 @@ window.MEWAD = {
      CAPITAL ALLOCATION - how profit became more assets
      --------------------------------------------------------------------- */
   capitalAllocation: [
-    { label: 'Capital invested',            note: '~₹1.49 Cr deployed across Hotel Mewad-2, additional rooms, Hotel Mewad-3, infrastructure and supporting assets.' },
-    { label: 'Assets created',              note: 'Additional rooms and a second operating property, not just a bigger bank balance.' },
+    { label: 'Capital invested',            note: '~₹1.49 Cr deployed across additional rooms, infrastructure and supporting assets.' },
+    { label: 'Assets created',              note: 'Additional rooms and expanded capacity, not just a bigger bank balance.' },
     { label: 'Operating profit generated',  note: '~₹57.37 L in historical operating profit.' },
     { label: 'Expansion',                   note: 'Profit reinvested into the next phase rather than distributed.' },
     { label: 'More assets',                 note: 'Each phase funds the next property.' },
@@ -459,7 +456,7 @@ window.MEWAD = {
      --------------------------------------------------------------------- */
   whyInvest: [
     'Real business - operating today, not on paper',
-    'Real assets - Hotel Mewad and Hotel Mewad-3',
+    'Real assets - Hotel Mewad, operating today',
     'Real customers - corporate accounts, not walk-ins',
     'Recurring cash flow - occupancy tied to industrial activity, not tourist seasons',
     'Manufacturing growth - the demand base is expanding independently of Mewad',
