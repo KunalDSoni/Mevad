@@ -101,9 +101,9 @@ Scaling: Mewad-2 rows × 5 (1 ÷ 0.20), Mewad-3 rows × 3.33 (1 ÷ 0.30), to pro
 
 | | Current hotel (×5) | Phase-2 (×3.33) | Combined |
 |---|---|---|---|
-| Investment | ₹95.6L | ₹3.49Cr | **~₹5.15Cr** |
-| Net profit (life-to-date) | ₹73.4L | ₹1.14Cr | **~₹2.27Cr** |
-| Outstanding | ₹22.2L | ₹2.35Cr | **~₹2.88Cr** |
+| Investment | ~₹1.52Cr | ~₹3.63Cr | **~₹5.15Cr** |
+| Net profit (life-to-date) | ~₹1.13Cr | ~₹1.14Cr | **~₹2.27Cr** |
+| Outstanding | ~₹39.3L | ~₹2.49Cr | **~₹2.88Cr** |
 
 **Every scaled figure carries a visible footnote**: *"Estimated at 100% based on
 director's reported ownership share (20% / 30%); pending audited confirmation."*

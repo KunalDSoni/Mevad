@@ -12,12 +12,12 @@ window.MevadCharts = (function () {
   function timeline(steps) {
     var w = 800, h = 160, gap = w / steps.length;
     var parts = ['<svg viewBox="0 0 ' + w + ' ' + h + '" class="chart chart-timeline">'];
-    parts.push('<line x1="20" y1="80" x2="' + (w - 20) + '" y2="80" stroke="var(--line-2)" stroke-width="2"/>');
+    parts.push('<line x1="20" y1="80" x2="' + (w - 20) + '" y2="80" style="stroke:var(--line-2)" stroke-width="2"/>');
     steps.forEach(function (s, i) {
       var cx = 20 + gap * i + gap / 2;
-      parts.push('<circle cx="' + cx + '" cy="80" r="8" fill="var(--accent)"/>');
-      parts.push('<text x="' + cx + '" y="50" text-anchor="middle" fill="var(--text-0)" font-family="var(--font-mono)" font-size="20">' + esc(s.value) + '</text>');
-      parts.push('<text x="' + cx + '" y="115" text-anchor="middle" fill="var(--text-1)" font-family="var(--font-mono)" font-size="12">' + esc(s.label) + '</text>');
+      parts.push('<circle cx="' + cx + '" cy="80" r="8" style="fill:var(--accent)"/>');
+      parts.push('<text x="' + cx + '" y="50" text-anchor="middle" style="fill:var(--text-0);font-family:var(--font-mono)" font-size="20">' + esc(s.value) + '</text>');
+      parts.push('<text x="' + cx + '" y="115" text-anchor="middle" style="fill:var(--text-1);font-family:var(--font-mono)" font-size="12">' + esc(s.label) + '</text>');
     });
     parts.push('</svg>');
     return parts.join('');
@@ -29,8 +29,8 @@ window.MevadCharts = (function () {
     cities.forEach(function (city, i) {
       var col = i % cols, row = Math.floor(i / cols);
       var cx = 100 + col * 180, cy = 60 + row * 90;
-      parts.push('<circle cx="' + cx + '" cy="' + cy + '" r="6" fill="var(--series-b)"/>');
-      parts.push('<text x="' + cx + '" y="' + (cy + 24) + '" text-anchor="middle" fill="var(--text-0)" font-family="var(--font-mono)" font-size="13">' + esc(city) + '</text>');
+      parts.push('<circle cx="' + cx + '" cy="' + cy + '" r="6" style="fill:var(--series-b)"/>');
+      parts.push('<text x="' + cx + '" y="' + (cy + 24) + '" text-anchor="middle" style="fill:var(--text-0);font-family:var(--font-mono)" font-size="13">' + esc(city) + '</text>');
     });
     parts.push('</svg>');
     return parts.join('');
@@ -42,16 +42,16 @@ window.MevadCharts = (function () {
     var feeH = (example.managementFee / total) * 150;
     var ownH = (example.toOwners / total) * 150;
     var parts = ['<svg viewBox="0 0 ' + w + ' ' + h + '" class="chart chart-waterfall">'];
-    parts.push('<rect x="60" y="' + (170 - 150) + '" width="120" height="150" fill="var(--accent-wash)" stroke="var(--line-2)"/>');
-    parts.push('<text x="120" y="' + (170 - 150 - 10) + '" text-anchor="middle" fill="var(--text-0)" font-family="var(--font-mono)" font-size="13">Distributable Profit</text>');
+    parts.push('<rect x="60" y="' + (170 - 150) + '" width="120" height="150" style="fill:var(--accent-wash);stroke:var(--line-2)"/>');
+    parts.push('<text x="120" y="' + (170 - 150 - 10) + '" text-anchor="middle" style="fill:var(--text-0);font-family:var(--font-mono)" font-size="13">Distributable Profit</text>');
 
-    parts.push('<rect x="340" y="' + (170 - feeH) + '" width="120" height="' + feeH + '" fill="var(--series-a)"/>');
-    parts.push('<text x="400" y="' + (170 - feeH - 10) + '" text-anchor="middle" fill="var(--text-0)" font-family="var(--font-mono)" font-size="13">Management Fee (' + (example.managementFeePct * 100) + '%)</text>');
+    parts.push('<rect x="340" y="' + (170 - feeH) + '" width="120" height="' + feeH + '" style="fill:var(--series-a)"/>');
+    parts.push('<text x="400" y="' + (170 - feeH - 10) + '" text-anchor="middle" style="fill:var(--text-0);font-family:var(--font-mono)" font-size="13">Management Fee (' + (example.managementFeePct * 100) + '%)</text>');
 
-    parts.push('<rect x="580" y="' + (170 - ownH) + '" width="120" height="' + ownH + '" fill="var(--series-b)"/>');
-    parts.push('<text x="640" y="' + (170 - ownH - 10) + '" text-anchor="middle" fill="var(--text-0)" font-family="var(--font-mono)" font-size="13">To Owners</text>');
+    parts.push('<rect x="580" y="' + (170 - ownH) + '" width="120" height="' + ownH + '" style="fill:var(--series-b)"/>');
+    parts.push('<text x="640" y="' + (170 - ownH - 10) + '" text-anchor="middle" style="fill:var(--text-0);font-family:var(--font-mono)" font-size="13">To Owners</text>');
 
-    parts.push('<line x1="40" y1="170" x2="760" y2="170" stroke="var(--line-2)" stroke-width="2"/>');
+    parts.push('<line x1="40" y1="170" x2="760" y2="170" style="stroke:var(--line-2)" stroke-width="2"/>');
     parts.push('</svg>');
     return parts.join('');
   }
@@ -63,13 +63,19 @@ window.MevadCharts = (function () {
     var zero = 190;
     var scale = 90 / max;
     var parts = ['<svg viewBox="0 0 ' + w + ' ' + h + '" class="chart chart-trend">'];
-    parts.push('<line x1="0" y1="' + zero + '" x2="' + w + '" y2="' + zero + '" stroke="var(--line-2)"/>');
+    parts.push('<line x1="0" y1="' + zero + '" x2="' + w + '" y2="' + zero + '" style="stroke:var(--line-2)"/>');
     series.forEach(function (r, i) {
       var total = r.mewad2 + r.mewad3 + r.extra;
       var barH = Math.abs(total) * scale;
       var y = total >= 0 ? zero - barH : zero;
-      parts.push('<rect x="' + (i * barW + 2) + '" y="' + y + '" width="' + (barW - 4) + '" height="' + barH + '" fill="var(--series-b)"/>');
+      var fillVar = total >= 0 ? 'var(--series-b)' : 'var(--series-a)';
+      parts.push('<rect x="' + (i * barW + 2) + '" y="' + y + '" width="' + (barW - 4) + '" height="' + barH + '" style="fill:' + fillVar + '"/>');
+      if (i % 4 === 0) {
+        parts.push('<text x="' + (i * barW + barW / 2) + '" y="' + (zero + 14) + '" text-anchor="middle" style="fill:var(--text-1);font-family:var(--font-mono)" font-size="9">' + esc(r.m) + '</text>');
+      }
     });
+    parts.push('<text x="6" y="' + (zero - 4) + '" style="fill:var(--text-1);font-family:var(--font-mono)" font-size="10">₹0</text>');
+    parts.push('<text x="6" y="16" style="fill:var(--text-1);font-family:var(--font-mono)" font-size="10">₹' + Math.round(max / 1000) + 'K</text>');
     parts.push('</svg>');
     return parts.join('');
   }

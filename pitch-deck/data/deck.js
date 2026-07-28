@@ -155,8 +155,8 @@ window.MEVAD_DECK = {
       title: 'Mevad Sanand Hotel — current hotel + Phase-2, combined',
       footnote: true,
       rows: [
-        { label: 'Current hotel (Mewad-2 + Extra Room)', investment: 9563830, netProfit: 7341230, outstanding: 2222600 },
-        { label: 'Phase-2 (Mewad-3 + Shade Work Exp)', investment: 34872610, netProfit: 11420533, outstanding: 23452077 },
+        { label: 'Current hotel (Mewad-2 + Extra Room)', investment: 15187270, netProfit: 11255860, outstanding: 3931410 },
+        { label: 'Phase-2 (Mewad-3 + Shade Work Exp)', investment: 36274890, netProfit: 11420533, outstanding: 24854357 },
         { label: 'Combined', investment: 51462160, netProfit: 22676393, outstanding: 28785767, isTotal: true }
       ],
       assumptions: [

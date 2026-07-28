@@ -102,11 +102,20 @@ html, body {
 }
 .deck-counter { color: var(--text-1); font-size: 0.85rem; }
 
+.chart { width: 100%; height: auto; max-height: 40vh; }
+
+.fin-table { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 0.9rem; }
+.fin-table th, .fin-table td { text-align: left; padding: 0.5rem 1rem 0.5rem 0; border-bottom: 1px solid var(--line-1); }
+.fin-table .fin-total { font-weight: bold; border-top: 2px solid var(--line-2); }
+
 @media print {
   .deck-nav { display: none; }
+  @page { size: landscape; margin: 0; }
+  html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .slide {
     display: flex !important;
     page-break-after: always;
-    min-height: 100vh;
+    min-height: auto;
+    height: 100vh;
   }
 }

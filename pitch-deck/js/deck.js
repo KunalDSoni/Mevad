@@ -63,11 +63,13 @@ window.MevadDeck = (function () {
       return header(s) + svg;
     },
     financials: function (s) {
-      var rows = '<div class="item-grid">' + s.rows.map(function (r) {
-        return '<div>' + esc(r.label) + ' — Investment: ₹' + r.investment.toLocaleString('en-IN') +
-               ', Net profit: ₹' + r.netProfit.toLocaleString('en-IN') +
-               ', Outstanding: ₹' + r.outstanding.toLocaleString('en-IN') + '</div>';
-      }).join('') + '</div>';
+      var rows = '<table class="fin-table"><thead><tr><th>Entity</th><th>Investment</th><th>Net Profit</th><th>Outstanding</th></tr></thead><tbody>' +
+        s.rows.map(function (r) {
+          var cls = r.isTotal ? ' class="fin-total"' : '';
+          return '<tr' + cls + '><td>' + esc(r.label) + '</td><td>₹' + r.investment.toLocaleString('en-IN') +
+                 '</td><td>₹' + r.netProfit.toLocaleString('en-IN') +
+                 '</td><td>₹' + r.outstanding.toLocaleString('en-IN') + '</td></tr>';
+        }).join('') + '</tbody></table>';
       var targets = '<div class="stat-row">' + s.targets.map(function (t) {
         return '<div><div class="stat-k">' + esc(t.k) + '</div><div class="stat-v">' + esc(t.v) + '</div></div>';
       }).join('') + '</div>';
