@@ -703,6 +703,10 @@ section { position: relative; }
   .grid--3, .grid--2 { grid-template-columns: 1fr; }
 }
 
+.chain-group + .chain-group { margin-top: clamp(2rem, 4vw, 3rem); }
+.chain-group__label { display: block; margin-bottom: 1.25rem; }
+.grid--live { grid-template-columns: 1fr; }
+
 .card {
   background: var(--ink-1);
   padding: clamp(1.5rem, 3vw, 2.15rem);

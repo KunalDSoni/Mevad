@@ -154,25 +154,43 @@
     }).join('');
   }
 
+  function propertyCard(p) {
+    var live = p.status === 'Operational';
+    return '<div class="card">' +
+      '<div class="card__meta">' +
+        '<span class="label">' + p.state + '</span>' +
+        '<span class="chip' + (live ? ' chip--accent' : '') + '">' + p.status + '</span>' +
+      '</div>' +
+      '<h3>' + p.name + '</h3>' +
+      '<p style="color:var(--text-2);font-family:var(--font-mono);font-size:.75rem;margin-bottom:.9rem">' +
+        p.corridor + ' · ' + p.keys + ' ' + D().words.keys + ' · ' + p.opened + '</p>' +
+      '<p>' + p.blurb + '</p>' +
+      '<div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.15rem">' +
+        p.anchors.map(function (a) { return '<span class="chip">' + a + '</span>'; }).join('') +
+      '</div>' +
+    '</div>';
+  }
+
   function renderProperties(mount, limit) {
     if (!mount) return;
     var list = limit ? D().properties.slice(0, limit) : D().properties;
-    mount.innerHTML = list.map(function (p) {
-      var live = p.status === 'Operational';
-      return '<div class="card">' +
-        '<div class="card__meta">' +
-          '<span class="label">' + p.state + '</span>' +
-          '<span class="chip' + (live ? ' chip--accent' : '') + '">' + p.status + '</span>' +
-        '</div>' +
-        '<h3>' + p.name + '</h3>' +
-        '<p style="color:var(--text-2);font-family:var(--font-mono);font-size:.75rem;margin-bottom:.9rem">' +
-          p.corridor + ' · ' + p.keys + ' ' + D().words.keys + ' · ' + p.opened + '</p>' +
-        '<p>' + p.blurb + '</p>' +
-        '<div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.15rem">' +
-          p.anchors.map(function (a) { return '<span class="chip">' + a + '</span>'; }).join('') +
-        '</div>' +
+    var live = list.filter(function (p) { return p.status === 'Operational'; });
+    var pipeline = list.filter(function (p) { return p.status !== 'Operational'; });
+
+    var html = '';
+    if (live.length) {
+      html += '<div class="chain-group">' +
+        '<span class="label label--accent chain-group__label">' + D().words.chainLiveLabel + '</span>' +
+        '<div class="grid grid--live">' + live.map(propertyCard).join('') + '</div>' +
       '</div>';
-    }).join('');
+    }
+    if (pipeline.length) {
+      html += '<div class="chain-group">' +
+        '<span class="label chain-group__label">' + D().words.chainPipelineLabel + '</span>' +
+        '<div class="grid grid--3">' + pipeline.map(propertyCard).join('') + '</div>' +
+      '</div>';
+    }
+    mount.innerHTML = html;
   }
 
   function renderStructures(mount) {
