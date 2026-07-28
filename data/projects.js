@@ -402,12 +402,8 @@ window.MEWAD = {
      --------------------------------------------------------------------- */
   faq: [
     {
-      q: 'What happens if a single anchor factory shuts down?',
-      a: 'No Mewad site depends on one tenant. Each property is underwritten against a minimum count of independent anchor employers within a fixed radius, across more than one sector, so that the closure of any single plant is absorbed rather than fatal.'
-    },
-    {
-      q: 'Industrial ADR is lower than city hotels. Why is that good?',
-      a: 'It is not good on its own - it is good in combination. Lower rate, far higher and steadier occupancy, near-zero acquisition cost and no seasonal trough produce a RevPAR that is less impressive in a peak month and considerably more reliable across a decade. You are buying the shape of the curve, not its highest point.'
+      q: 'Who operates the hotels?',
+      a: 'Mewad operates every property in the chain in-house. The brand, the standards and the corporate rate agreements are the asset; outsourcing operations would give away the thing that makes the demand contractual.'
     },
     {
       q: 'What is the 20% management fee for?',
@@ -426,8 +422,12 @@ window.MEWAD = {
       a: 'By selling your stake - in a hotel, or later in the parent company - by agreement with Mewad or to an incoming investor. Neither is a listed instrument, and neither should be treated as liquid. Plan on the full horizon.'
     },
     {
-      q: 'Who operates the hotels?',
-      a: 'Mewad operates every property in the chain in-house. The brand, the standards and the corporate rate agreements are the asset; outsourcing operations would give away the thing that makes the demand contractual.'
+      q: 'What happens if a single anchor factory shuts down?',
+      a: 'No Mewad site depends on one tenant. Each property is underwritten against a minimum count of independent anchor employers within a fixed radius, across more than one sector, so that the closure of any single plant is absorbed rather than fatal.'
+    },
+    {
+      q: 'Industrial ADR is lower than city hotels. Why is that good?',
+      a: 'It is not good on its own - it is good in combination. Lower rate, far higher and steadier occupancy, near-zero acquisition cost and no seasonal trough produce a RevPAR that is less impressive in a peak month and considerably more reliable across a decade. You are buying the shape of the curve, not its highest point.'
     }
   ],
 
