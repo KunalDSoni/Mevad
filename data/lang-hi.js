@@ -358,7 +358,7 @@ window.MEVAD_HI = {
 
     /* Chain */
     'The chain': 'श्रृंखला',
-    'Five corridors. One operating standard.': 'पाँच गलियारे। एक संचालन मानक।',
+    'One hotel open. Four more corridors underwritten.': 'एक होटल परिचालन में। चार और गलियारे प्रगति पर।',
     'Each property is underwritten against the industrial base around it - the count of anchor employers, the sector mix, and the distance to the gate.':
       'हर संपत्ति अपने आसपास के औद्योगिक आधार पर आँकी जाती है - एंकर नियोक्ताओं की संख्या, क्षेत्रों का मिश्रण, और गेट तक की दूरी।',
     'We build where the trucks are.': 'हम वहाँ बनाते हैं जहाँ ट्रक हैं।',
