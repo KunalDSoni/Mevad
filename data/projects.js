@@ -165,10 +165,10 @@ window.MEWAD = {
      THE ASSET — what one Mewad hotel is
      --------------------------------------------------------------------- */
   asset: {
-    intro: 'Engineered for a guest who arrives at 2am, works a 12-hour shift, and stays for months. Not for a honeymoon.',
+    intro: 'Engineered for a guest who arrives anytime, works a 12-hour shift, and stays for months. Not for a honeymoon.',
     guestSide: [
-      'Checks in at 2am after a shift change, not a flight.',
-      'Kitchen serves hot meals at 3am and 3pm — when shifts turn over, not brunch hours.',
+      'Checks in anytime after a shift change, not a flight.',
+      'Kitchen serves hot meals 24x7 — when shifts turn over, not brunch hours.',
       'Packed three shirts for a six-month posting; laundry is industrial-grade, same-day, included.',
       'Sleeps through daylight: blackout curtains, sound isolation, a desk and wired ethernet instead of a view.'
     ],

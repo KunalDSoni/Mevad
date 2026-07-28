@@ -383,7 +383,7 @@ window.MEWAD_HI = {
 
     /* Asset */
     'The asset': 'संपत्ति',
-    'Built for the guest who arrives at 2am.': 'उस मेहमान के लिए बना जो रात 2 बजे पहुँचता है।',
+    'Built for the guest who arrives anytime.': 'उस मेहमान के लिए बना जो कभी भी पहुँचता है।',
     'Engineered around a person who works a twelve-hour shift and stays for months. Every design decision follows from that, and none of them follow from a brochure.':
       'ऐसे व्यक्ति को ध्यान में रखकर बनाया गया जो बारह घंटे की शिफ़्ट करता है और महीनों रुकता है। हर डिज़ाइन निर्णय इसी से निकला है, किसी विज्ञापन पुस्तिका से नहीं।',
     'Property specification': 'संपत्ति विशिष्टियाँ',
@@ -557,7 +557,7 @@ window.MEWAD_HI = {
     /* index.html — why Mewad wins */
     'Why Hotel Mewad wins': 'होटल मेवाड़ क्यों जीतता है',
     'Built for the guest': 'उस मेहमान के लिए बना',
-    'who arrives at 2am.': 'जो रात 2 बजे पहुँचता है।',
+    'who arrives anytime.': 'जो कभी भी पहुँचता है।',
     'Corporate customers, repeat business, a location chosen for the plants next door, and a cost base built to match. None of it photographs well. All of it is why the anchor plant signs an annual rate agreement instead of putting people in a lodge.':
       'कॉर्पोरेट ग्राहक, दोहराया जाने वाला व्यवसाय, पड़ोस के संयंत्रों के लिए चुना गया स्थान, और उसी के अनुरूप लागत आधार। इनमें से कुछ भी तस्वीर में अच्छा नहीं लगता। इसी सबके कारण एंकर संयंत्र लोगों को लॉज में ठहराने के बजाय वार्षिक दर अनुबंध करता है।',
     'A city hotel treats a long-stay guest as an anomaly. A Mewad hotel is built for them: forty per cent of keys are long-stay inventory, the kitchen runs to shift timings, and the laundry is sized for a guest who packed three shirts for a six-month posting.':
