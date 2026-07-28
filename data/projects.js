@@ -71,17 +71,6 @@ window.MEVAD = {
        and the Sources section stays hidden, so the site never shows a
        reference it cannot honour. Never cite a source that does not state
        the number it is attached to. */
-    headline: [
-      { value: 0,  suffix: '',  label: 'Organised industrial hotel chains in India',       note: 'Mevad is the first',
-        source: { label: '', url: '' } },
-      { value: 40, suffix: '+', label: 'Anchor factories within 5km of a typical site',    note: 'Demand does not need to be marketed',
-        source: { label: '', url: '' } },
-      { value: 92, suffix: '%', label: 'Of industrial-corridor demand is weekday',         note: 'Counter-cyclical to leisure hotels',
-        source: { label: '', url: '' } },
-      { value: 0,  suffix: '%', label: 'OTA commission on contracted corporate stays',     note: 'Booked direct, on rate agreements',
-        source: { label: '', url: '' } }
-    ],
-
     // Illustrative annual occupancy, Jan–Dec. The single most important
     // chart on the site: stability vs seasonality.
     occupancy: {

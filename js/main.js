@@ -114,18 +114,6 @@
 
   /* --- Renderers --------------------------------------------------------- */
 
-  function renderStats(mount) {
-    if (!mount) return;
-    mount.innerHTML = D().market.headline.map(function (s, i) {
-      return '<div class="stat">' +
-        '<div class="stat__value"><span data-count="' + s.value + '" data-suffix="' + s.suffix + '">0</span>' +
-          '<span data-source="market.headline.' + i + '.source"></span></div>' +
-        '<div class="stat__label">' + s.label + '</div>' +
-        '<div class="stat__note">' + s.note + '</div>' +
-      '</div>';
-    }).join('');
-  }
-
   function renderDemand(mount) {
     if (!mount) return;
     mount.innerHTML = D().demand.map(function (d) {
@@ -327,7 +315,6 @@
     var bar = $('.placeholder-bar');
     if (bar) bar.textContent = D().words.placeholderNotice;
 
-    renderStats($('[data-render="stats"]'));
     renderDemand($('[data-render="demand"]'));
     renderAssetSpecs($('[data-render="asset-specs"]'));
     renderAssetFeatures($('[data-render="asset-features"]'));
