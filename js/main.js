@@ -331,10 +331,6 @@
         ? +propsMount.getAttribute('data-limit') : null);
     }
 
-    if (window.MevadCharts) {
-      window.MevadCharts.supplyGap($('[data-chart="supply-gap"]'), D().market.supplyGap);
-    }
-
     if (window.MevadCalculator) {
       window.MevadCalculator.init($('[data-calculator]'));
     }

@@ -50,21 +50,6 @@ window.MEVAD_HI = {
       ]
     },
 
-    market: {
-      supplyGap: {
-        unit: 'प्रति 1,000 औद्योगिक कर्मचारियों पर संगठित होटल कमरे',
-        benchmark: { label: 'व्यावसायिक क्षेत्र मानक' },
-        corridors: [
-          { name: 'साणंद, गुज' },
-          { name: 'दहेज, गुज' },
-          { name: 'हालोल, गुज' },
-          { name: 'चाकण, महा' },
-          { name: 'श्री सिटी, आंध्र' },
-          { name: 'होसुर, तमि' }
-        ]
-      }
-    },
-
     demand: [
       {
         num: '01',
@@ -304,18 +289,6 @@ window.MEVAD_HI = {
       '<strong>कम ADR। अधिक और अधिक स्थिर RevPAR।</strong> यही अदला-बदली पूरा प्रस्ताव है, और अधिकांश निवेशक इसे उल्टा समझते हैं। मेवाड़ का कमरा वह दर कभी नहीं पाएगा जो दिसंबर में समुद्रतट का सुइट पाता है। पर वह जुलाई में खाली भी कभी नहीं रहेगा।',
     'You are not buying the highest point on the curve. You are buying <strong>the shape of the curve</strong> - and over a ten-year hold, shape beats peak.':
       'आप वक्र का सबसे ऊँचा बिंदु नहीं खरीद रहे। आप <strong>वक्र का आकार</strong> खरीद रहे हैं - और दस साल की अवधि में आकार शिखर से बड़ा पड़ता है।',
-
-    /* Exhibit 2 */
-    'Exhibit 02: supply': 'प्रदर्श 02: आपूर्ति',
-    'India is building factories faster than it is building beds.': 'भारत कारखाने बिस्तरों से तेज़ बना रहा है।',
-    'PLI, Gati Shakti and the freight corridors have moved hundreds of thousands of manufacturing jobs into industrial estates. Organised hospitality did not follow.':
-      'PLI, गति शक्ति और माल गलियारों ने लाखों विनिर्माण नौकरियाँ औद्योगिक क्षेत्रों में पहुँचा दीं। संगठित आतिथ्य पीछे नहीं आया।',
-    'Organised hotel rooms per 1,000 industrial workers': 'प्रति 1,000 औद्योगिक कर्मचारियों पर संगठित होटल कमरे',
-    'Selected corridors, against the business-district benchmark.': 'चुनिंदा गलियारे, व्यावसायिक क्षेत्र के मानक के मुकाबले।',
-    'Every corridor above runs at a fraction of the benchmark. That gap is not a forecast or a projection - it is the current state of the ground, and it is why an engineer flying into Dahej tonight will sleep in an unbranded lodge or commute from Vadodara.':
-      'ऊपर का हर गलियारा मानक के एक अंश पर चल रहा है। यह अंतर कोई पूर्वानुमान या प्रक्षेपण नहीं - यह ज़मीन की मौजूदा हालत है, और इसीलिए आज रात दहेज पहुँचने वाला इंजीनियर या तो बेनाम लॉज में सोएगा या वडोदरा से आना-जाना करेगा।',
-    'Supply gaps this wide usually close fast. This one has not, because building a hotel for factories requires you to want the least glamorous asset in hospitality. <strong>That reluctance is the moat.</strong>':
-      'इतने चौड़े आपूर्ति अंतर आमतौर पर जल्दी भर जाते हैं। यह नहीं भरा, क्योंकि कारखानों के लिए होटल बनाने का अर्थ है आतिथ्य की सबसे कम चमकदार संपत्ति चाहना। <strong>यही अनिच्छा हमारी खाई है।</strong>',
 
     /* Demand */
     'The demand engine': 'मांग का इंजन',

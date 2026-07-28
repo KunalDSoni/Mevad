@@ -71,21 +71,6 @@ window.MEVAD = {
        and the Sources section stays hidden, so the site never shows a
        reference it cannot honour. Never cite a source that does not state
        the number it is attached to. */
-    // Organised hotel rooms per 1,000 industrial workers, by corridor.
-    // The supply gap, made visible.
-    supplyGap: {
-      source: { label: '', url: '' },
-      unit: 'organised hotel rooms per 1,000 industrial workers',
-      benchmark: { label: 'Business-district benchmark', value: 24, source: { label: '', url: '' } },
-      corridors: [
-        { name: 'Sanand, GJ',    value: 2.1 },
-        { name: 'Dahej, GJ',     value: 1.4 },
-        { name: 'Halol, GJ',     value: 2.8 },
-        { name: 'Chakan, MH',    value: 3.6 },
-        { name: 'Sri City, AP',  value: 1.9 },
-        { name: 'Hosur, TN',     value: 3.1 }
-      ]
-    }
   },
 
   /* ---------------------------------------------------------------------
