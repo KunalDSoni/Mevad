@@ -745,6 +745,17 @@ section { position: relative; }
   .card:hover { transform: none; }
 }
 
+/* Task 4's gridStagger() adds .reveal (for the one-time entrance stagger)
+   and a per-card inline transition-delay to .card elements inside grids.
+   Both the .reveal transition shorthand (0.7s) and that inline delay would
+   otherwise leak into the hover transition forever after the entrance
+   animation completes. Restore the intended 0.25s hover timing and zero
+   the delay once a card has finished revealing (.is-in applied). */
+.card.reveal.is-in {
+  transition: background 0.25s var(--ease), transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  transition-delay: 0s;
+}
+
 .card__meta {
   display: flex;
   justify-content: space-between;

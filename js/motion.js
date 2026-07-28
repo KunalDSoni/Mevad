@@ -50,7 +50,7 @@
       window.Motion.animate(
         el,
         { opacity: [0, 1], transform: ['translateY(14px)', 'translateY(0)'] },
-        { duration: 0.6, delay: i * 0.08, easing: [0.22, 1, 0.36, 1] }
+        { duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }
       );
     });
   }
@@ -58,8 +58,15 @@
   /* Card-grid stagger: for every .grid that currently carries .reveal on the
      *container* (audit finding #2), move reveal-behaviour onto the direct
      children instead and stagger them, so cards fade in one-by-one rather
-     than all at once. Runs once at boot, before js/main.js's reveal()
-     IntersectionObserver starts observing - so it must run before that. */
+     than all at once. Runs once at boot. Must run after js/main.js's
+     renderAll() has populated the page's data-render mount points (e.g. the
+     .grid sections on index.html are empty until renderAll() fills them
+     from data/projects.js) - otherwise there would be no .grid.reveal
+     children here to stagger. This is guaranteed: boot() below only runs on
+     DOMContentLoaded, and js/main.js's own DOMContentLoaded-triggered
+     renderAll() has already completed by then, since js/main.js's script
+     tag and its DOMContentLoaded listener registration both happen before
+     js/motion.js's script tag runs. */
   function gridStagger() {
     var grids = $$('.grid.reveal');
     if (!grids.length) return;
@@ -130,11 +137,11 @@
         var relY = (e.clientY - rect.top) / rect.height - 0.5;
         window.Motion.animate(btn, {
           transform: 'translate(' + (relX * MAX_PULL * 2) + 'px, ' + (relY * MAX_PULL * 2) + 'px)'
-        }, { duration: 0.3, easing: [0.22, 1, 0.36, 1] });
+        }, { duration: 0.3, ease: [0.22, 1, 0.36, 1] });
       });
 
       btn.addEventListener('mouseleave', function () {
-        window.Motion.animate(btn, { transform: 'translate(0px, 0px)' }, { duration: 0.4, easing: [0.22, 1, 0.36, 1] });
+        window.Motion.animate(btn, { transform: 'translate(0px, 0px)' }, { duration: 0.4, ease: [0.22, 1, 0.36, 1] });
       });
     });
   }
@@ -152,27 +159,54 @@
     var target = $('#mark-vacation');
     if (!target || !window.RoughNotation || prefersReducedMotion()) return;
 
-    var strokeColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-bg').trim();
+    var annotation = null;
+    var shown = false;
 
-    var annotation = window.RoughNotation.annotate(target, {
-      type: 'underline',
-      color: strokeColor || '#FDFDF1',
-      strokeWidth: 2,
-      padding: 2
-    });
+    function currentStrokeColor() {
+      return getComputedStyle(document.documentElement).getPropertyValue('--accent-bg').trim() || '#FDFDF1';
+    }
 
-    if (!('IntersectionObserver' in window)) { annotation.show(); return; }
-
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          annotation.show();
-          io.unobserve(entry.target);
-        }
+    function createAndShow() {
+      annotation = window.RoughNotation.annotate(target, {
+        type: 'underline',
+        color: currentStrokeColor(),
+        strokeWidth: 2,
+        padding: 2
       });
-    }, { threshold: 0.5 });
+      annotation.show();
+      shown = true;
+    }
 
-    io.observe(target);
+    if (!('IntersectionObserver' in window)) {
+      createAndShow();
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            createAndShow();
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      io.observe(target);
+    }
+
+    /* Rough Notation's SVG stroke is a plain color baked in at annotate()
+       time - it can't consume a CSS custom property, so it never updates
+       automatically when the theme toggle (js/prefs.js) flips
+       <html data-theme>. Watch for that attribute change and, if the mark
+       has already been shown, remove and re-create it with the freshly
+       read --accent-bg value so the underline stays visible against the
+       new theme's background. */
+    var themeObserver = new MutationObserver(function () {
+      if (!shown || !annotation) return;
+      annotation.remove();
+      annotation = null;
+      shown = false;
+      createAndShow();
+    });
+    themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
   }
 
   /* Draws in any .chart__line path present in the DOM, using the
