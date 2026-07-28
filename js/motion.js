@@ -36,8 +36,38 @@
     });
   }
 
+  /* Hero entrance: staggers [data-hero-stagger] children on page load, once.
+     Uses Motion's animate() directly rather than the IntersectionObserver
+     .reveal system, since the hero is always in view on load - there is
+     nothing to "scroll into". */
+  function heroEntrance() {
+    var items = $$('[data-hero-stagger]');
+    if (!items.length || !window.Motion) return;
+
+    if (prefersReducedMotion()) return;
+
+    items.forEach(function (el, i) {
+      window.Motion.animate(
+        el,
+        { opacity: [0, 1], transform: ['translateY(14px)', 'translateY(0)'] },
+        { duration: 0.6, delay: i * 0.08, easing: [0.22, 1, 0.36, 1] }
+      );
+    });
+  }
+
   window.MewadMotion = {
     prefersReducedMotion: prefersReducedMotion,
-    staggerReveal: staggerReveal
+    staggerReveal: staggerReveal,
+    heroEntrance: heroEntrance
   };
+
+  function boot() {
+    heroEntrance();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
 })();
