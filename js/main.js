@@ -229,9 +229,9 @@
     if (!mount) return;
     var cities = D().expansionCities;
     var pins = cities.map(function (c, i) {
-      return '<g class="map-svg__pin reveal" style="transition-delay:' + (i * 120) + 'ms" transform="translate(' + c.x + ',' + c.y + ')">' +
-        '<circle r="1.6" fill="' + (c.status === 'Operating' ? 'var(--accent-ink)' : 'var(--text-3)') + '"/>' +
-        '<text class="map-svg__label" x="2.4" y="0.6">' + c.name + '</text>' +
+      return '<g class="map-svg__pin reveal" style="transition-delay:' + (i * 120) + 'ms">' +
+        '<circle cx="' + c.x + '" cy="' + c.y + '" r="1.6" fill="' + (c.status === 'Operating' ? 'var(--accent-ink)' : 'var(--text-3)') + '"/>' +
+        '<text class="map-svg__label" x="' + (c.x + 2.4) + '" y="' + (c.y + 0.6) + '">' + c.name + '</text>' +
       '</g>';
     }).join('');
     mount.innerHTML = '<svg class="map-svg" viewBox="0 0 100 100" role="img" aria-label="Expansion corridor map">' + pins + '</svg>';
