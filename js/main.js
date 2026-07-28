@@ -183,10 +183,11 @@
     var rows = D().performance.capitalDeployedBreakdown;
     mount.innerHTML = '<div class="cap-chart">' + rows.map(function (r) {
       var known = typeof r.amount === 'number';
+      var pct = known ? Math.round((r.amount / D().performance.capitalDeployedTotal) * 100) : 100;
       return '<div class="cap-chart__row">' +
         '<span class="cap-chart__label">' + r.label + '</span>' +
         '<div class="cap-chart__track">' +
-          '<div class="cap-chart__bar' + (known ? '' : ' cap-chart__bar--placeholder') + '" style="width:' + (known ? '100' : '100') + '%"></div>' +
+          '<div class="cap-chart__bar' + (known ? '' : ' cap-chart__bar--placeholder') + '" style="width:' + pct + '%"></div>' +
         '</div>' +
         (known ? '' : '<span class="placeholder-tag">' + r.note + '</span>') +
       '</div>';
@@ -238,12 +239,11 @@
     }).join('') + '</ul>';
   }
 
-  function renderFounder(mount) {
-    if (!mount) return;
-    var quoteEl = $('[data-render-founder-quote]', mount);
-    var bodyEl = $('[data-render-founder-body]', mount);
-    if (quoteEl) quoteEl.textContent = D().founder.quote;
-    if (bodyEl) bodyEl.textContent = D().founder.body;
+  function renderFounder() {
+    var q = $('[data-render-founder-quote]');
+    var b = $('[data-render-founder-body]');
+    if (q) q.textContent = D().founder.quote;
+    if (b) b.textContent = D().founder.body;
   }
 
   function propertyCard(p) {
@@ -427,7 +427,7 @@
     renderProof($('[data-render="proof"]'));
     renderPhilosophy($('[data-render="philosophy"]'));
     renderWhyInvest($('[data-render="why-invest"]'));
-    renderFounder($('[data-render="founder"]'));
+    renderFounder();
     renderAssetSpecs($('[data-render="asset-specs"]'));
     renderAssetFeatures($('[data-render="asset-features"]'));
     renderStructures($('[data-render="structures"]'));
