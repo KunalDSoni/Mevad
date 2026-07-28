@@ -127,34 +127,40 @@ window.MEVAD = {
      --------------------------------------------------------------------- */
   demand: [
     {
-      title: 'Commissioning teams',
+      num: '01',
+      title: 'New-factory crews',
       stay: '4–9 months',
-      body: 'A new production line arrives with 30–50 engineers who must be housed continuously until it runs. This is a purchase order, not a booking.'
+      body: 'Housed until the production line runs. 30–50 engineers on a purchase order, not a booking.'
     },
     {
-      title: 'EPC contractors',
+      num: '02',
+      title: 'Plant construction teams',
       stay: '6–24 months',
-      body: 'Plant construction runs for years. Project managers, site supervisors and QA staff rotate through the same block of rooms for the duration.'
+      body: 'The same block of rooms, booked out for years while the plant is built.'
     },
     {
-      title: 'OEM service engineers',
+      num: '03',
+      title: 'Emergency repair engineers',
       stay: '3–15 nights',
-      body: 'Every machine on the floor has a service contract behind it. When it stops, someone flies in that night - at whatever rate is available.'
+      body: 'In that night, whatever the rate, when a machine on the floor stops.'
     },
     {
-      title: 'Auditors & buyers',
+      num: '04',
+      title: 'Quality inspectors',
       stay: '2–6 nights',
-      body: 'Quality audits, vendor inspections and buying visits run on fixed calendars, and they run whether or not it is tourist season.'
+      body: 'Fixed audit and buyer-visit calendar, all year, tourist season or not.'
     },
     {
-      title: 'Corporate transferees',
+      num: '05',
+      title: 'Relocating staff',
       stay: '1–3 months',
-      body: 'Staff relocating to a plant need bridge accommodation before family housing. Paid by the employer, on a corporate rate agreement.'
+      body: 'Bridge housing before family housing, paid by the employer.'
     },
     {
+      num: '06',
       title: 'Training cohorts',
       stay: '1–4 weeks',
-      body: 'Apprentice batches and dealer trainings fill rooms in blocks, booked months ahead against an annual training budget.'
+      body: 'Booked months ahead in batches, against an annual training budget.'
     }
   ],
 

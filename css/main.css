@@ -745,6 +745,64 @@ section { position: relative; }
   color: var(--accent);
 }
 
+/* --- Demand table ---------------------------------------------------------- */
+
+.demand-table {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border-top: 2px solid var(--line-3);
+}
+
+.demand-col {
+  border-right: 1px solid var(--line-1);
+  padding: 1.5rem 1rem;
+}
+.demand-col:last-child { border-right: none; }
+
+.demand-col .demand-num {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.demand-col h3 {
+  font-size: 1rem;
+  margin: 0.9rem 0 0.5rem;
+  line-height: 1.25;
+}
+
+.demand-col .demand-stay {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.demand-col p { color: var(--text-2); font-size: 0.8125rem; line-height: 1.5; margin: 0; }
+
+.demand-close {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  padding-top: clamp(1.5rem, 3vw, 2rem);
+  border-top: 2px solid var(--line-3);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  line-height: 1.35;
+  max-width: 42ch;
+}
+
+@media (max-width: 900px) {
+  .demand-table { grid-template-columns: repeat(3, 1fr); }
+  .demand-col:nth-child(3n) { border-right: none; }
+}
+@media (max-width: 620px) {
+  .demand-table { grid-template-columns: 1fr 1fr; }
+  .demand-col:nth-child(even) { border-right: none; }
+}
+
 /* --- Figure / charts ------------------------------------------------------ */
 
 .figure {

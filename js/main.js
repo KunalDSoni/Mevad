@@ -129,9 +129,10 @@
   function renderDemand(mount) {
     if (!mount) return;
     mount.innerHTML = D().demand.map(function (d) {
-      return '<div class="card">' +
-        '<div class="card__meta"><span class="label">' + D().words.typicalStay + '</span><span class="chip chip--accent">' + d.stay + '</span></div>' +
+      return '<div class="demand-col">' +
+        '<span class="demand-num">' + d.num + '</span>' +
         '<h3>' + d.title + '</h3>' +
+        '<span class="demand-stay">' + d.stay.toUpperCase() + '</span>' +
         '<p>' + d.body + '</p>' +
       '</div>';
     }).join('');
