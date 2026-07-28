@@ -19,7 +19,7 @@
 
 window.MEVAD = {
 
-  PLACEHOLDER_MODE: false,
+  PLACEHOLDER_MODE: true,
 
   /* Words that JS builds strings from, rather than authoring in HTML.
      They live here so the Hindi file can override them like anything else. */
