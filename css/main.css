@@ -501,6 +501,10 @@ section { position: relative; }
   overflow: hidden;
 }
 
+.hero--compact {
+  padding-block: clamp(3rem, 7vw, 5rem) 0;
+}
+
 .hero__glow {
   position: absolute;
   top: -30%; left: 50%;
