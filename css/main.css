@@ -699,6 +699,7 @@ section { position: relative; }
   color: var(--text-3);
 }
 .versus__col--mewad .versus__list li::before { content: '+'; color: var(--accent); }
+#why-invest .versus__list li::before { content: '•'; color: var(--accent); }
 
 /* --- Cards ---------------------------------------------------------------- */
 
