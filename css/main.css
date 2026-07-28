@@ -548,6 +548,13 @@ section { position: relative; }
   box-decoration-break: clone;
 }
 
+.hero__tagline {
+  margin-top: 0.85rem;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  font-weight: 600;
+  color: var(--accent-bg);
+}
+
 .hero__lede {
   margin-top: 2rem;
   max-width: 54ch;
