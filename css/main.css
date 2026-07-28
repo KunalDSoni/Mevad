@@ -727,9 +727,17 @@ section { position: relative; }
 .card {
   background: var(--ink-1);
   padding: clamp(1.5rem, 3vw, 2.15rem);
-  transition: background 0.25s var(--ease);
+  transition: background 0.25s var(--ease), transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
-.card:hover { background: var(--ink-2); }
+.card:hover {
+  background: var(--ink-2);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px -14px var(--shadow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover { transform: none; }
+}
 
 .card__meta {
   display: flex;
