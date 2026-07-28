@@ -16,11 +16,7 @@
   /* --- Placeholder banner ------------------------------------------------ */
 
   function placeholderBanner() {
-    if (!D() || !D().PLACEHOLDER_MODE) return;
-    var bar = document.createElement('div');
-    bar.className = 'placeholder-bar';
-    bar.textContent = D().words.placeholderNotice;
-    document.body.insertBefore(bar, document.body.firstChild);
+    /* Banner UI disabled; PLACEHOLDER_MODE still gates the underlying data flag. */
   }
 
   /* --- Navigation -------------------------------------------------------- */
