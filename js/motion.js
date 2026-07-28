@@ -139,19 +139,57 @@
     });
   }
 
+  /* Exactly one Rough Notation mark on the whole site, per
+     docs/ui-roadmap.md's explicit warning against overusing hand-drawn
+     annotation on a precise, engineering-drawing brand. Triggers once when
+     scrolled into view, using the same IntersectionObserver pattern as
+     reveal() in js/main.js. The stroke color is resolved from the current
+     theme's --accent-bg custom property at call time (rather than
+     hardcoded) since --accent-bg flips between dark and light themes
+     (css/main.css) and Rough Notation's SVG stroke can't consume a CSS
+     custom property directly. */
+  function emphasisMarks() {
+    var target = $('#mark-vacation');
+    if (!target || !window.RoughNotation || prefersReducedMotion()) return;
+
+    var strokeColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-bg').trim();
+
+    var annotation = window.RoughNotation.annotate(target, {
+      type: 'underline',
+      color: strokeColor || '#FDFDF1',
+      strokeWidth: 2,
+      padding: 2
+    });
+
+    if (!('IntersectionObserver' in window)) { annotation.show(); return; }
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          annotation.show();
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    io.observe(target);
+  }
+
   window.MewadMotion = {
     prefersReducedMotion: prefersReducedMotion,
     staggerReveal: staggerReveal,
     heroEntrance: heroEntrance,
     gridStagger: gridStagger,
     animateValueChange: animateValueChange,
-    magneticButtons: magneticButtons
+    magneticButtons: magneticButtons,
+    emphasisMarks: emphasisMarks
   };
 
   function boot() {
     gridStagger();
     heroEntrance();
     magneticButtons();
+    emphasisMarks();
   }
 
   if (document.readyState === 'loading') {
