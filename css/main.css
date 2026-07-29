@@ -501,6 +501,10 @@ section { position: relative; }
   overflow: hidden;
 }
 
+.hero--compact {
+  padding-block: clamp(3rem, 7vw, 5rem) 0;
+}
+
 .hero__glow {
   position: absolute;
   top: -30%; left: 50%;
@@ -528,13 +532,15 @@ section { position: relative; }
   width: 6px; height: 6px;
   border-radius: 50%;
   background: var(--accent-bg);
-  box-shadow: 0 0 0 0 rgba(253, 253, 241, 0.6);
-  animation: pulse 2.6s infinite;
+  --pulse-color: rgba(253, 253, 241, 0.6);
+  --pulse-spread: 9px;
+  box-shadow: 0 0 0 0 var(--pulse-color);
+  animation: ring-pulse 2.6s infinite;
 }
 
-@keyframes pulse {
-  70%  { box-shadow: 0 0 0 9px rgba(253, 253, 241, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(253, 253, 241, 0); }
+@keyframes ring-pulse {
+  70%  { box-shadow: 0 0 0 var(--pulse-spread) transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
 }
 
 .hero h1 { max-width: 14ch; }
@@ -727,9 +733,28 @@ section { position: relative; }
 .card {
   background: var(--ink-1);
   padding: clamp(1.5rem, 3vw, 2.15rem);
-  transition: background 0.25s var(--ease);
+  transition: background 0.25s var(--ease), transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
-.card:hover { background: var(--ink-2); }
+.card:hover {
+  background: var(--ink-2);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px -14px var(--shadow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover { transform: none; }
+}
+
+/* Task 4's gridStagger() adds .reveal (for the one-time entrance stagger)
+   and a per-card inline transition-delay to .card elements inside grids.
+   Both the .reveal transition shorthand (0.7s) and that inline delay would
+   otherwise leak into the hover transition forever after the entrance
+   animation completes. Restore the intended 0.25s hover timing and zero
+   the delay once a card has finished revealing (.is-in applied). */
+.card.reveal.is-in {
+  transition: background 0.25s var(--ease), transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  transition-delay: 0s;
+}
 
 .card__meta {
   display: flex;
@@ -760,12 +785,14 @@ section { position: relative; }
   border-color: var(--accent-line);
   background: var(--accent-wash);
   color: var(--accent);
-  animation: chip-pulse 2.6s ease-in-out infinite;
+  --pulse-color: var(--accent-wash);
+  --pulse-spread: 4px;
+  animation: ring-pulse-symmetric 2.6s ease-in-out infinite;
 }
 
-@keyframes chip-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 var(--accent-wash); }
-  50% { box-shadow: 0 0 0 4px var(--accent-wash); }
+@keyframes ring-pulse-symmetric {
+  0%, 100% { box-shadow: 0 0 0 0 var(--pulse-color); }
+  50% { box-shadow: 0 0 0 var(--pulse-spread) var(--pulse-color); }
 }
 
 @media (prefers-reduced-motion: reduce) {

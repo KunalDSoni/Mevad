@@ -315,6 +315,12 @@
         .replace('{occ}', occ)
         .replace('{adr}', inrGroup(adr));
 
+      var prevIrrText = {};
+      root.querySelectorAll('.result').forEach(function (card, i) {
+        var irrEl = card.querySelector('.result__irr');
+        if (irrEl) prevIrrText[i] = irrEl.textContent;
+      });
+
       ui.results.innerHTML = results.map(function (r) {
         var neg = r.irr !== null && r.irr < 0;
         return '<div class="result' + (r === best && results.length > 1 ? ' is-best' : '') + '">' +
@@ -338,6 +344,18 @@
       }).join('');
 
       if (window.MewadPrefs) window.MewadPrefs.translate(ui.results);
+
+      if (window.MewadMotion) {
+        root.querySelectorAll('.result').forEach(function (card, i) {
+          var irrEl = card.querySelector('.result__irr');
+          if (!irrEl) return;
+          var finalText = irrEl.textContent;
+          if (prevIrrText[i] !== undefined && prevIrrText[i] !== finalText) {
+            irrEl.textContent = prevIrrText[i];
+            window.MewadMotion.animateValueChange(irrEl, finalText);
+          }
+        });
+      }
     }
 
     /* Events */

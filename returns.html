@@ -11,6 +11,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/main.css">
+<script src="https://cdn.jsdelivr.net/npm/motion@11/dist/motion.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
 </head>
 <body>
 
@@ -31,14 +34,14 @@
   </div>
 </header>
 
-<section class="hero" style="padding-block:clamp(3rem,7vw,5rem) 0">
+<section class="hero hero--compact">
   <div class="gridlines" aria-hidden="true"></div>
   <div class="wrap hero__inner">
-    <span class="label label--accent">Returns calculator</span>
-    <h1 style="font-size:clamp(2.25rem,5.5vw,4rem);margin-top:1.25rem;max-width:18ch">
+    <span class="label label--accent" data-hero-stagger>Returns calculator</span>
+    <h1 style="font-size:clamp(2.25rem,5.5vw,4rem);margin-top:1.25rem;max-width:18ch" data-hero-stagger>
       Every assumption, exposed.
     </h1>
-    <p class="hero__lede">
+    <p class="hero__lede" data-hero-stagger>
       Most investment calculators are a marketing device with a slider attached.
       This one lets you break it. Drag occupancy to 40%, cut the rate, extend the
       hold - and see which structure survives.
@@ -155,5 +158,6 @@
 <script src="js/prefs.js"></script>
 <script src="js/calculator.js"></script>
 <script src="js/main.js"></script>
+<script src="js/motion.js"></script>
 </body>
 </html>
